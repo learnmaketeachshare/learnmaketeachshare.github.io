@@ -4,8 +4,8 @@ title:  "Practicing curious kindness."
 date:   2018-08-15 16:11:43 -0400
 categories: curious kindness
 ---
-For me the phrase "Learn Make Teach Share" represents both an ethic and a practice that helps
-weave more curiousity and kindness into.
+For me the phrase "Learn Make Teach Share" represents both an ethic and a practice that
+helps weave more curiousity and kindness into our interactions with each other.
 
 I greatly enjoy making all sorts of things both beautiful and utilitarian but
 the my peak experiences have all come helping to create that deep full-body
