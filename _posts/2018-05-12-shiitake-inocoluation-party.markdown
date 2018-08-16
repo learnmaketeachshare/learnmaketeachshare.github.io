@@ -11,7 +11,8 @@ A small group ... and it was raining ... but we had lots of fun!
 
 We ended up inoculating and sharing about 75 Red Oak and Red Maple logs.
 
-A couple weeks earlier Forest and I were delivering and unloading logs from his ancient Land Rover.
+A couple weeks earlier Forest and I were gathering, delivering and unloading logs we collected
+in the woods with his ancient Land Rover.
 
 ![gathering logs]({{site.url}}/assets/images/mushrooms/20180512/gathering logs.jpg)
 
