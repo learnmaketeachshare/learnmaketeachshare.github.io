@@ -14,7 +14,7 @@ and Spring for the last few years. We usually hold them behind Forest's house at
 Forest and I supply materials, tools, and some assembly line to help
 the work move smoothly. We also have been cutting and collecting logs for inocolulation.
 
-In from collecting inthe woods with Forest's Landrover filled with Red Oak.
+Forest's Landrover is filled with Red Oak after collecting logs we cut in the woods.
 ![Red Oak in Forests Landrover]({{site.url}}/assets/images/mushrooms/red-oak-in-forests-landrover.jpg)
 
 Low stack of Red Oak ready for inoculation.
@@ -147,6 +147,9 @@ makes growth in that direction easier.
 When the mycelium in the logs starts a fruiting it usually only takes about 5-7 days for a tiny
 button poking through the bark to grow into a full-sized mushroom! If you have your logs
 someplace you only get to once every 3-4 weeks you could miss a fruiting entirely!
+
+This is how fast they grow over just four days!
+{% include youtubeplayer.html id="3-j1gR_BRjs" %}
 
 If you can it's also helpful to have them someplace where it is possible to water them if
 there ends up being a summer drought.
