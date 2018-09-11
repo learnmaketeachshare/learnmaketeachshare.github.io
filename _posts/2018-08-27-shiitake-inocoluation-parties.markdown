@@ -329,7 +329,7 @@ _[Night Velvet](https://www.fieldforest.net/Shiitake-Night-Velvet-Sawdust-Spawn/
 
 #### PoHu
 
-We've had good Fall and Spring fruitings from PoHu oyter mushrooms.
+We've had good Fall and Spring fruitings from PoHu oyster mushrooms.
 
 ![PoHu Oyster]({{site.url}}/assets/images/mushrooms/pohu-oyster-mushroom.jpg)
 
