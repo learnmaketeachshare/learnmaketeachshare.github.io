@@ -3,7 +3,6 @@ layout: post
 title:  "Shiitake Inoculation Parties."
 date:   2018-08-27
 categories: shiitake oyster inoculation
-toc: true
 ---
 
 ## Inoculation parties early November and late March.
@@ -243,7 +242,7 @@ We've been buying our supplies from [fieldforest.net](https://www.fieldforest.ne
 
 1. [Mushroom Spawn](https://www.fieldforest.net/Mushroom-Spawn-by-mushroom-species/departments/1/): this is mycelium that has been grown on sterile sawdust. We buy five pound bags for $25-30.
 2. [Cheese wax](https://www.fieldforest.net/Cheese-Wax-10-lbs/productinfo/CW10/). This is heated and used to seal the holes filled with mycelium spawn as well as to seal injuries in the bark of the log. We usually buy 10 pound blocks for about $30.
-3. [Special drill bit](https://www.fieldforest.net/12mm-Soft-Steel-Drill-Screw-Tip-Bit-With-Stop-PRE-CHIPPED/productinfo/12C/0) that works in an angle grinder. This bit make drilling just the right holes very fast, accurate and easy. Usually need a new one for $14 after a couple years.
+3. [Special drill bit](https://www.fieldforest.net/12mm-Soft-Steel-Drill-Screw-Tip-Bit-With-Stop-PRE-CHIPPED/productinfo/12C/0) that works in an angle grinder. This bit make drilling just the right holes very fast, accurate and easy. Have needed to replace after about 500 logs. Cost $14.
 4. Angle grinder for use with the special drill bit along with a $35 [angle grinder adaptor for special drill bit](https://www.fieldforest.net/Angle-Grinder-Adapter/productinfo/W-AGA/). Haven't had to replace this yet.
 5. [Brass inoculation tool](https://www.fieldforest.net/Palm-Style-Brass-Inoculator/productinfo/PT) for stuffing drilled holes with spawn.
 6. Hot plate and pan for melting the cheese wax along with foam brushes for applying the wax.
