@@ -47,7 +47,7 @@ was enjoying doing something optimistic together.
 
 We usually start around 10-11, have a pot luck lunch around 1, and finish around 3-4.
 
-### Good logs for growing Shiitakes and when to cut them.
+## Logs for growing Shiitakes and when to cut them.
 
 White Oak seems to be one of the very best trees for growing Shiitakes,
 Red Oak is fine also. We've also grown them on Red Maple and Beech.
@@ -86,7 +86,7 @@ Another good time to cut logs is in the early Spring before the buds swell. Arou
 here that usually means mid-March. As this point the tree still hasn't used much of the
 food energy stored last season.
 
-### Good logs for growing Oysters.
+## Logs for growing Oysters.
 
 Oyster mushrooms like to grow on some of the softer hardwoods.
 Any of these species should work well:
@@ -105,7 +105,7 @@ I've also seen uncultivated Oysters growing well on Sugar Maple and Beech logs.
 _Pohu Oyster mushrooms growing on an Aspen log._
 ![Pohu Oysters growing on an Aspen log]({{site.url}}/assets/images/mushrooms/naomis-pohu-oysters.jpg)
 
-### After inoculation it usually takes about a year before before first fruiting.
+## After inoculation it usually takes about a year before before first fruiting.
 
 After inoculation the logs will usually need a full growing season before the mycelium
 has built up enough energy to start a first fruiting. Mycelium grows best when the
@@ -136,7 +136,7 @@ the log -- however it's good to avoid introducing other fungi.
 _I've started placing flat rocks around the trees I lean the logs on so the bottom of the log is not in contact with the ground._
 ![standing logs on rocks]({{site.url}}/assets/images/mushrooms/standing-logs-on-rocks.jpg)
 
-### Signs things are progressing properly in the first year after inoculation.
+## Signs the mycelium is growing well in the first year after inoculation.
 
 Mushroom spawn is made by growing a specific strain of mycelium in a sterile sawdust medium.
 We usually buy spawn in 5 pound bags just before the inoculation party.
@@ -161,7 +161,7 @@ _First visible spots of Shiitake mycelium just after appearing on end of log._
 _After another couple of months the white spots of mycelium on the ends of the logs will be getting much larger._
 ![White mycelium spots after four months]({{site.url}}/assets/images/mushrooms/after-four-months.jpg)
 
-### It's important to keep your logs someplace where you visit often.
+## It's important to keep your logs someplace where you visit often.
 
 When the mycelium in the logs starts a fruiting it usually only takes about 5-7 days for a tiny
 button poking through the bark to grow into a full-sized mushroom! If you have your logs
@@ -173,15 +173,24 @@ _This is how fast a little Shiitake grows over just four days!_
 It's helpful to be able to water your logs if the weather ends up hot and dry and
 there is no rain for several weeks.
 
-### Forcing a log to fruit
+## Forcing a log to fruit
 
 After a log has fruited for the first time and then after the mycelium has grown and
 stored enough new energy reserves you can encourage a log to start a fruiting by
 exposing it to a temperature and moisture shock.
 
 My logs are stacked next to a cold steam with regular flow so I just throw them
-into the stream for a day. When the flow is high I made a temorary boom out of rope
-chunks of Black Birch to keep the floating logs from washing downstream.
+into the stream for a day. I have to be a bit careful to to soak the logs when there
+might be a heavy rain or the logs can get washed down stream.
+
+We might find them if they haven't traveled too far!
+
+_Finding a Shiitake log that had floated downstream after a heavy rain._
+![Finding a Shiitake log that had floated downstream after a heavy rain]({{site.url}}/assets/images/mushrooms/finding-shiitake-log-downstream.jpg)
+
+After a long period of heavy stream flow when I couldn't soak any logs I made a
+boom out of rope and chunks of Black Birch to use when I need to keep the soaking
+logs from washing downstream.
 
 _Using a temporary homemade boom to keep logs from floating away in periods of high flow._
 ![Using a homemade boom to keep logs from floating away]({{site.url}}/assets/images/mushrooms/using-a-homemade-boom-to-keep-logs-from-floating-away.jpg)
@@ -199,7 +208,7 @@ After a log has fruited it's important to wait until the mycelium has again buil
 biological energy for a subsequent fruiting. This usually means 7-8 weeks of good mycelium
 growing weather: relatively warm and regular soaking rains (or the equivalent watering).
 
-### What can you expect during the second and subsequent years after inoculation?
+## What can you expect during the second and subsequent years after inoculation?
 
 In the second year you can expect some logs to have larger fruitings with many mushrooms.
 
@@ -211,7 +220,7 @@ log in a fruiting.
 
 Normally Shiitake logs will produce significant numbers of mushrooms for at least 3-5 years.
 
-### Drying Shiitakes.
+## Drying Shiitakes.
 
 Dried Shiitakes keep for months if you store them in a light and air-tight container.
 
@@ -220,7 +229,10 @@ I've used a small food dehydrator. Drying outside on a screen in sunny dry condi
 _A good harvest ... and an abundance that makes the food dehydrator very useful._
 ![A good harvest]({{site.url}}/assets/images/mushrooms/a-good-harvest.jpg)
 
-### Tools and supplies.
+_Whole dried Shiitakes._
+![whole dried Shiitakes]({{site.url}}/assets/images/mushrooms/whole-dried-shiitakes.jpg)
+
+## Tools and supplies.
 
 We've been buying our supplies from [fieldforest.net](https://www.fieldforest.net).
 
@@ -234,26 +246,92 @@ We've been buying our supplies from [fieldforest.net](https://www.fieldforest.ne
 _Supplies and tools for an inoculation party._
 ![Supplies for an inoculation party]({{site.url}}/assets/images/mushrooms/supplies-for-inoculation-party.jpg)
 
-### Strains we have tried.
+## Strains we have tried.
 
-#### Wide range Shiitake strains.
+### Wide range Shiitake strains.
 
-- [WR46](https://www.fieldforest.net/Wide-Range-Strains/products/32/): a wide-range strain that will fruit from Spring through Fall. The mycelium develops relatively quickly (6-9months at 75 degrees until first fruiting and the logs recover quickly after the fruiting.
-  ![Large W46 Shiitake]({{site.url}}/assets/images/mushrooms/large-w46-shiitake.jpg)
-- [West Wind](https://www.fieldforest.net/Shiitake-West-Wind-Sawdust-Spawn/productinfo/SWW/): West Wind features a fast spawn run, large, thick, first flush mushrooms, and heavy yields, making it a great strain choice for new growers. West Wind is also slightly more drought tolerant than other WR strains, and shows a slight preference for red oak over white oak. Fruits naturally in the spring and fall.
-- [Beltane](https://www.fieldforest.net/Shiitake-Beltane-Sawdust-Spawn/productinfo/SBT/): Beltane is named after the Celtic May Day, which celebrates the return of vitality to the growing season. This new strain prefers May weather for the heaviest seasonal fruiting, but produces quality mushrooms mid-summer in a cool, shaded woods after dunking in cold water. Firm, caramel-colored caps dusted with white fibrils darken to cocoa brown as caps flatten. Fruiting temp ranges from 54-75° F.
-- [Native Harvest](https://www.fieldforest.net/Shiitake-Native-Harvest-Sawdust-Spawn/productinfo/SNH/): naturalized on our farm several years ago, this strain has been tested from North to South and the results are the same: a very fast, vigorous strain with excellent quality. First found on oak, it is also a good producer on Red Maple. Unlike other wide range species, Native Harvest™ also gives a late fall flush; an added bonus for the Thanksgiving table! Spawn run is 6 to 12 months.
+#### WR46
+_[WR46](https://www.fieldforest.net/Wide-Range-Strains/products/32/) description from Field and Forest:_
 
-#### Warm wather Shiitake strains.
+> WR46 is a wide-range strain that will fruit from Spring through Fall. The mycelium
+> develops relatively quickly (6-9 months at 75 degrees until first fruiting and the
+> logs recover quickly after the fruiting.
 
-- [Night Velvet](https://www.fieldforest.net/Shiitake-Night-Velvet-Sawdust-Spawn/productinfo/SNV/): a warm weather strain (that behaves more like a wide-range strain) that will fruit from mid-Spring to early-Fall. Typically the mycelium will take 9-12 months at 75 degrees to develop before the first fruitings. After the first fruiting both strains will respond well to "forcing" a fruiting by soaking the logs for a day in cold water.
+![W46 Shiitake]({{site.url}}/assets/images/mushrooms/large-w46-shiitake.jpg)
 
-#### Oyster strains.
+#### West Wind
 
-- [PoHu](https://www.fieldforest.net/Oyster-PoHu-Pleurotus-ostreatus-Sawdust-Spawn/productinfo/SPH/): this oyster strain is the most “wide range” of all our Oyster strains. Expect multiple fruitings throughout the growing season, including summer. PoHu is a heavy producer and grows many ocher to white colored mushrooms in thick clusters, perfect for farm markets and hungry homegrowers.
-  ![PoHu Oyster mushroom]({{site.url}}/assets/images/mushrooms/pohu-oyster-mushroom.jpg)
-- [Kira](https://www.fieldforest.net/Oyster-Kira-Pleurotus-ostreatus-Sawdust-Spawn/productinfo/SKR/): the Kira Oyster’s color moves from blue gray to nearly white, finishing with large dusky clusters of savory oysters. The hallmark of this strain is its ability to adapt to a wide range of wood types with multiple fruitings across the season. Most fruiting for this oyster occurs in the spring and fall, with a fruiting temp range of 40-60° F. Kira is like a cool weather version of PoHu with its prolific nature, and at F&FP, it’s the beloved oyster of spring.
+_[West Wind](https://www.fieldforest.net/Shiitake-West-Wind-Sawdust-Spawn/productinfo/SWW/) description from Field and Forest:_
 
-#### Lions Mane
+> West Wind features a fast spawn run, large, thick, first flush mushrooms, and heavy yields, making
+> it a great strain choice for new growers. West Wind is also slightly more drought tolerant than
+> other WR strains, and shows a slight preference for red oak over white oak. Fruits naturally in
+> the spring and fall.
+
+![West Wind Shiitake]({{site.url}}/assets/images/mushrooms/west-wind.jpg)
+
+#### Beltane
+
+_[Beltane](https://www.fieldforest.net/Shiitake-Beltane-Sawdust-Spawn/productinfo/SBT/) description from Field and Forest:_
+
+> Beltane is named after the Celtic May Day, which celebrates the return of vitality to the growing
+> season. This new strain prefers May weather for the heaviest seasonal fruiting, but produces quality
+> mushrooms mid-summer in a cool, shaded woods after dunking in cold water. Firm, caramel-colored caps
+> dusted with white fibrils darken to cocoa brown as caps flatten. Fruiting temp ranges from 54-75° F.
+
+![Beltane Shiitake]({{site.url}}/assets/images/mushrooms/beltane.jpg)
+
+
+#### Native Harvest
+
+_[Native Harvest](https://www.fieldforest.net/Shiitake-Native-Harvest-Sawdust-Spawn/productinfo/SNH/) description from Field and Forest:_
+
+> We naturalized Native Harvest on our farm several years ago, this strain has been
+> tested from North to South and the results are the same: a very fast, vigorous
+> strain with excellent quality. First found on oak, it is also a good producer on
+> Red Maple. Unlike other wide range species, Native Harvest™ also gives a late fall
+> flush; an added bonus for the Thanksgiving table! Spawn run is 6 to 12 months.
+
+![Native Harvest Shiitake]({{site.url}}/assets/images/mushrooms/native-harvest.jpg)
+
+### Warm wather Shiitake strains.
+
+#### Night Velvet
+
+_[Night Velvet](https://www.fieldforest.net/Shiitake-Night-Velvet-Sawdust-Spawn/productinfo/SNV/) description from Field and Forest:_
+
+> Night Velvet is a warm weather strain (that behaves more like a wide-range strain)
+> that will fruit from mid-Spring to early-Fall. Typically the mycelium will take
+> 9-12 months at 75 degrees to develop before the first fruitings. After the first
+> fruiting both strains will respond well to "forcing" a fruiting by soaking the logs
+> for a day in cold water.
+
+![Night Velvet Shiitake]({{site.url}}/assets/images/mushrooms/night-velvet.jpg)
+
+### Oyster strains.
+
+#### PoHu
+
+_[PoHu](https://www.fieldforest.net/Oyster-PoHu-Pleurotus-ostreatus-Sawdust-Spawn/productinfo/SPH/) description from Field and Forest:_
+
+> The PoHu oyster strain is the most “wide range” of all our Oyster strains. Expect multiple fruitings
+> throughout the growing season, including summer. PoHu is a heavy producer and grows many ocher to
+> white colored mushrooms in thick clusters, perfect for farm markets and hungry homegrowers.
+
+![PoHu Oyster]({{site.url}}/assets/images/mushrooms/pohu-oyster-mushroom.jpg)
+
+#### Kira
+
+_[Kira](https://www.fieldforest.net/Oyster-Kira-Pleurotus-ostreatus-Sawdust-Spawn/productinfo/SKR/) description from Field and Forest:_
+
+> The Kira oyster’s color moves from blue gray to nearly white, finishing with large dusky clusters
+> of savory oysters. The hallmark of this strain is its ability to adapt to a wide range of wood
+> types with multiple fruitings across the season. Most fruiting for this oyster occurs in the
+> spring and fall, with a fruiting temp range of 40-60° F. Kira is like a cool weather version
+> of PoHu with its prolific nature, and at F&FP, it’s the beloved oyster of spring.
+
+Don't have any pictures of Kira oyster mushrooms yet. First inoculation was in Fall 2017.
+
+### Lions Mane
 
 Fall 2017 Kathy Becker brought Beech logs and Lions Mane in plug form to share. She reports that we should expect the initial mycelium growth before first fruiting to take about two years.
