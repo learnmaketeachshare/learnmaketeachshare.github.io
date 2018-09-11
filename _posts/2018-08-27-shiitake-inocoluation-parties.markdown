@@ -3,7 +3,10 @@ layout: post
 title:  "Shiitake Inoculation Parties."
 date:   2018-08-27
 categories: shiitake oyster inoculation
+toc: true
 ---
+
+## Inoculation parties early November and late March.
 
 Forest Voges and I have been hosting community Shiitake Inoculation parties every Fall
 and Spring for the last few years. We usually hold them behind Forest's house at
@@ -11,10 +14,10 @@ and Spring for the last few years. We usually hold them behind Forest's house at
 
 ![Pretty Shiitakes]({{site.url}}/assets/images/mushrooms/pretty-shiitakes.jpg)
 
-Forest and I supply materials, tools, and some assembly line systems  to help
+We supply materials, tools, and some assembly line systems  to help
 the work move smoothly. We also have been cutting and collecting logs for inocolulation.
 
-_Forest's Landrover is filled with Red Oak logs for inoculation after collecting what we
+_Forest's Landrover filled with Red Oak logs for inoculation after collecting what we
 earlier cut in the woods._
 ![Red Oak in Forests Landrover]({{site.url}}/assets/images/mushrooms/red-oak-in-forests-landrover.jpg)
 
