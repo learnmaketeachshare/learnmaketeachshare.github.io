@@ -2,7 +2,8 @@
 layout: post
 title:  "Shiitake Inoculation Parties."
 date:   2018-08-27
-categories: shiitake oyster inoculation
+categories: [ mushroom ]
+tags: [ mushroom, shiitake, oyster, inoculation]
 ---
 
 ## Inoculation parties early November and late March.

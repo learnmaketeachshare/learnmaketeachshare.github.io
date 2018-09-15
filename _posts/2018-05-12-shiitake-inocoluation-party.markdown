@@ -2,7 +2,8 @@
 layout: post
 title:  "Shiitake Inoculation Party, Spring 2018."
 date:   2018-05-12 16:11:43 -0400
-categories: shiitake inoculation
+categories: [ mushroom ]
+tags: [ mushroom, shiitake, oyster, inoculation]
 ---
 
 A small group ... and it was raining ... but we had lots of fun!
