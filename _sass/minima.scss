@@ -50,9 +50,23 @@ $on-laptop:        800px !default;
   "minima/syntax-highlighting"
 ;
 
+$lightlightgray: #F4F4F4;
+
 .iframe-container {
-  margin: 2px 0px 5px 0px;
-  padding: 3px 5px;
+  margin: 5px 0px 5px 0px;
+  padding: 5px 0.5em;
   border-radius: 5px;
   border: 1px solid lightgray;
+  background:  $lightlightgray;
+}
+
+.caption {
+  font-style: italic;
+  font-size: 95%;
+  padding-left: 1em;
+  padding-right: 3em;
+}
+
+code {
+  font-size: 85%;
 }
