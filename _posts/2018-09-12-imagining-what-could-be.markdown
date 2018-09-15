@@ -41,14 +41,14 @@ My initial JavaScript implementation started reasonably fast at about 50 model s
 
 You can run annotated versions of Avalanche2D-JS at eight different points in its development here: [JavaScript computational model and visualization: 50x performance improvement](https://stepheneb.github.io/a2d-versions/){:target="_blank"}
 
-Data I collected on performance improvement during the initial development sprint in 2011. I've never had the chance to use a log scale on the Y axis in a performance graph like this before.
+Data I collected on performance improvement during the initial development sprint in 2011. I've never had the chance to use a log scale on the Y axis in a performance graph like this before!
 
 ![avalanche2d-js performanceimprovement](https://stepheneb.github.io/avalanche2d-js/images/avalanche2d-js-performance.png)
 
 
 ### Should we rewrite Molecular Workbench from scratch in JavaScript?
 
-At this point I knew that JavaScript had the computational performance for all kinds of modeling and was surprised when I had trouble getting folks to buy in to this approach.
+At this point I knew that JavaScript had the computational performance for all kinds of modeling but was surprised when I had trouble getting folks to buy in to this approach.
 
 I think there were three aspects to their concerns:
 
@@ -56,7 +56,9 @@ I think there were three aspects to their concerns:
 2. The Java version of Molecular Workbench has a very extensive set of features, authorability, and extensibility and in the beginning of the grant it wasn't clear how many of these features we would need to implement in the browser to be successful.
 3. Most of our resources came from NSF grants. This was only the second large grant from a foundation and our first from the Google Foundation. I think the perceived risk of not using the resources in the grant from the Google Foundation effectively made people more conservative in what they could imagine.
 
-I perceived the risk quite differently. I wanted to create a more general framework for computational and visual modeling in order to inspire innovation and collaboration between projects and groups.
+I perceived the risk quite differently.
+
+I wanted to create a more general framework for computational and visual modeling in order to inspire innovation and collaboration between projects and groups.
 
 At that time almost all of funding for Concord Consortium came as science education research grants from the National Science Foundation. We never got grants directly for the development of technology instead technology developed in a project supported the research goals. As much as I could I encouraged development of technology in one project to build on development in earlier  projects and contribute to new projects. This wasn't as easy as it might have been if our funding wasn't based on research grants. In order to get a research grant you need to propose something profoundly new that has a reasonable chance of being successful and providing great value. Often that also meant developing prototypes of new technology as quickly as possible without the funding for generalization.
 
@@ -68,17 +70,17 @@ In order to convince the team about the performance aspect I decided to build th
 
 ### A fast and simple molecular simulation in JavaScript
 
-In early November 2011 I posted this gist: [Simple Molecules](https://gist.github.com/stepheneb/1343331){:target="_blank"} which implemened a 2-D molecular model using simplified neutral molecules interacting with each other via Lennard-Jones potential forces.
+In early November 2011 I posted this gist: [Simple Molecules](https://gist.github.com/stepheneb/1343331){:target="_blank"} which implemened a 2-D molecular model using a simple model of neutral molecules interacting with each other via Lennard-Jones potential forces.
 
 #### Simple Molecules
 
-While the model is running you interactively you can change:
+While the model is running you can interactively change:
 
 - Number of molecules.
 - Temperature of the system.
 - Lennard-Jones potential force coefficients.
 
-{% include iframe.html width="780px" height="420px" src="https://cdn.rawgit.com/stepheneb/1343331/raw/4858e3d892ce0f2ef91cd61e3457478472bcc9c8/index.html" %}
+{% include iframe.html width="790px" height="420px" src="https://cdn.rawgit.com/stepheneb/1343331/raw/4858e3d892ce0f2ef91cd61e3457478472bcc9c8/index.html" %}
 
 <div class="caption">
 Click the **Go** button to start the model.
@@ -89,9 +91,9 @@ The Lennard-Jones potential force model implements an an attractive force betwee
 - The coefficient for the attractive force is called epsilon. Epsilon specifies the depth of the potential well between each pair of molecules. Epsilon can be changed by dragging the circular handle at the bottom of the valley in the graph up or down.
 - The coefficient for the distance at which the force changes from attractive to repulsive is called sigma. Sigma specifies a finite distance at which the inter-particle potential is zero. Sigma can be changed by dragging the circular handle pinned to the X-axis on the graph left or right
 
-At every step of the model a new acceleration is calculated for each molecule by summing the Lennard-Jones potential forces between each pair of molecules in the system. The new values for accelerations are then used to update the velocities of each molecule. A much simpler collision physics is used when molecules bounce off the container walls.
+At each step of the model a new acceleration is calculated for every molecule by summing the Lennard-Jones potential forces between each pair of molecules in the system. The new values for accelerations are then used to update the velocities of each molecule. A much simpler collision physics is used when molecules bounce off the container walls.
 
-As far as I know this was the very first JavaScript 2-D molecular simulation which implemented both a computational engine calculating inter-molecular forces and kinematics and a dynamic visualization of the molecular kinematics.
+As far as I know this was the very first JavaScript 2-D molecular simulation which implemented both a computational engine calculating inter-molecular forces and kinematics along with a dynamic visualization of the molecular kinematics.
 
 ## The Lab framework
 
