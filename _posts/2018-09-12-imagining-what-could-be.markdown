@@ -93,7 +93,7 @@ The Lennard-Jones potential force model implements an an attractive force betwee
 
 At each step of the model a new acceleration is calculated for every molecule by summing the Lennard-Jones potential forces between each pair of molecules in the system. The new values for accelerations are then used to update the velocities of each molecule. A much simpler collision physics is used when molecules bounce off the container walls.
 
-As far as I know this was the very first JavaScript 2-D molecular simulation which implemented both a computational engine calculating inter-molecular forces and kinematics along with a dynamic visualization of the molecular kinematics.
+As far as I know this is the very first JavaScript 2-D molecular simulation which implemented both a computational engine calculating inter-molecular forces and kinematics along with a dynamic visualization of the molecular kinematics.
 
 ## The Lab framework
 
