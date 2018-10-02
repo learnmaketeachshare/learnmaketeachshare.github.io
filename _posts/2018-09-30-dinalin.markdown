@@ -36,9 +36,13 @@ While finishing the second top with Delft spray lacquer I added a dried flower c
 
 ![Dinalin flower]({{site.url}}/assets/images/dinalin/dinalin-flower.jpg){:height="400px"}
 
-## Here's what it sounds like now:
+### Here's what it sounds like now when I'm not completely awake:
 
 {% include youtubeplayer.html id="HJcOnS9AVag" %}
+
+### My guitar-building mentor John Fabel playing it with the original Adirondack Spruce top.
+
+{% include youtubeplayer.html id="kmwK0yo08N8" %}
 
 ## Original design and build, March 2015
 
@@ -55,14 +59,13 @@ I designed a simple three layer section where the neck connects to the body. The
 _Hard to see the details with all the clamps and the picture out of focus._
 ![original neck assembly]({{site.url}}/assets/images/dinalin/original/original-gluing-layer-neck-assembly.jpg){:height="400px"}
 
-
 After the glue set up I created curves on the outer edges of this assembly to glue the sides to.
 
 This assembly ended up being a very strong, stable, and simple way to join the neck to the body. When I make another I'll probably adapt this assembly to support a truss rod.
 
-### No time to build a mold and bending the one piece side by hand.
+### Bending the one piece side by hand -- no time to build a mold.
 
-I didn't have time to make a mold to shape and hold the sides and I had a 40" piece of thin spalted beech panel already cut so I first used heat to bend the side panel using the single panel of beech. The curves on each side weren't symmetrical but they were close.
+I didn't have time to make a mold to shape and hold the sides and I had a 40" piece of thin spalted beech panel already cut so I just one long side panel by hand trying to get close to the curves I had drawn. The side weren't perfectly symmetrical but they were close.
 
 _Clamping bent sides to neck assembly: top view._
 ![clamping sides to neck assembly: top]({{site.url}}/assets/images/dinalin/original/original-clamping-sides-to-neck-assembly-top.jpg){:height="400px"}
@@ -133,11 +136,11 @@ Notes:
 
 #### Cutting and reinforcing the soundhole in the top.
 
-After shaping and sanding the braces on the top I found a plastic lid that seemed to be about the right size for a sound hole, traced a circle, drilled a starting hole and used a coping saw blade to cut out the sound hole.
+After shaping and sanding the braces on the top I found a plastic lid that seemed to be about the right size for the sound hole, used it to trace a circle, drilled a starting hole and then used a coping saw blade to cut out the sound hole.
 
 ![cutting sound hole by hand]({{site.url}}/assets/images/dinalin/original/original-cutting-soundhole-by-hand.jpg){:height="400px"}
 
-I added six pieces Spruce to make a rough hexagon of reinforcement around the sound hole and then recut the hole and sanded the edges smooth.
+I added a second layer with six pieces cut from top panel scrap in a rough hexagon to reinforce the edge of the sound hole.
 
 ![gluing sound hole reinforcement]({{site.url}}/assets/images/dinalin/original/original-gluing-sound-hole-reinforcement.jpg){:height="400px"}
 
@@ -171,7 +174,7 @@ Unfortunately I don't have any pictures so I'm going to include one here from a 
 
 #### Gluing the top on.
 
-All the glue used was LMI Yellow Instrument glue.
+Note: all the glue used was LMI Yellow Instrument glue.
 
 ![getting ready to glue top on]({{site.url}}/assets/images/dinalin/original/original-gluing-top-1.jpg){:height="400px"}
 
@@ -187,7 +190,7 @@ I used another piece of clear Beech for the fretboard. The gluing surface will s
 
 #### Using brads to terminate and hold the strings.
 
-I didn't think this would really last all that long but using tiny nails hammered through the top and into the solid Beech end block was a very quick way to make a way to terminate the end of the strings.
+I didn't think this would really last all that long but using tiny nails hammered through the top and into the solid Beech end block was a very quick way to hold the end of the strings.
 
 ![string termination with nails]({{site.url}}/assets/images/dinalin/original/original-string-termination-nails.jpg){:height="400px"}
 
@@ -199,9 +202,11 @@ I had fun figuring out a shape I liked for the headstock and the position for th
 
 #### Making a lightweight pushdown bridge with Butternut.
 
-The original bridge was just made from Butternut, a relatively soft and light hardwood. This bridge is not glued down and is held in place by the downward force of the strings. When I change the strings I reposition the distance and angle of the bridge until the string octave played on the 12th fret are the same as the octave harmonics produced when just lightly fingering the string above the 12th fret,
+The original bridge was just made from Butternut, a relatively soft and light hardwood. This bridge is not glued down and is held in place by the downward force of the strings. When I change the strings I reposition the distance and angle of the bridge until the string octave played on the 12th fret are the same as the octave harmonics produced when just lightly fingering the string above the 12th fret.
 
 ![butternut bridge]({{site.url}}/assets/images/dinalin/original/original-butternut-bridge.jpg){:height="400px"}
+
+Later I made another bridge from Butternut with a small strip of Manzanita glued to the top to provide better wear where the strings dig in.
 
 #### Ready by birthday.
 
