@@ -23,7 +23,7 @@ Basics:
 - Tuning: open D; D3, A3, D4, F#4
 - Bridge: unglued (held down by string tension), butternut with manzanita strip
 
-Originally the top was made from Adirondack Spruce which sounded great. After developing a crack when I grasped the body too hard picking it up I replaced it with a slightly stronger Spruce (unknown species).
+Originally the top was made from Adirondack Spruce which sounded great. After developing a crack when I grasped the body too hard picking it up I replaced it with a new top of the same wood that was slightly thicker and slightly stronger bracing.
 
 When I built it I terminated the strings by hooking them over little nails. Later I brazed short pieces of drill rod at an angle into a metal plate, drilled and countersunk two holes into the plate and screwed this plate into the tail of the instrument.
 
@@ -36,7 +36,7 @@ While finishing the second top with Delft spray lacquer I added a dried flower c
 
 ![Dinalin flower]({{site.url}}/assets/images/dinalin/dinalin-flower.jpg){:height="400px"}
 
-### Here's what it sounds like now when I'm not completely awake:
+### Here's what it sounds like now when I'm not completely awake.
 
 {% include youtubeplayer.html id="HJcOnS9AVag" %}
 
@@ -44,7 +44,7 @@ While finishing the second top with Delft spray lacquer I added a dried flower c
 
 {% include youtubeplayer.html id="kmwK0yo08N8" %}
 
-## Original design and build, March 2015
+## Original design and build: March 2015.
 
 I did the original design and build over a period of two weeks in March 2015 and wanted to finish it in time to give it as a present for my wife's birthday. I started sketching the design on Saturday night and two weeks later it was complete except for frets.
 
@@ -219,4 +219,120 @@ And it was strumable on the morning of Dina's birthday!
 
 ![strummable]({{site.url}}/assets/images/dinalin/original/original-present.jpg){:height="400px"}
 
+## A new top and other improvements: Jan 2016.
 
+The Adirondack Spruce top sounded great. I enjoyed the clarity and sustain when playing softly and if I was hanging out near a fire with a number of inebriated people playing and singing loudly with more commitment than precision I could hammer the strings with a large stiff pick and the initial very loud attack would more than represent my commitment!
+
+The top was definitely strong enough to withstand the downward force from the strings ... but it was a bit too fragile with the way I sometimes handled and/or abused the instrument. One day when I picked it grasping the body with one hand I cracked the top near the edge.
+
+![crack in original top]({{site.url}}/assets/images/dinalin/crack-in-original-top.jpg){:height="400px"}
+
+I made a new top that was stronger in the following ways:
+
+1. A tiny bit thicker.
+2. The braces we just a bit bigger and were made of a denser stronger White Spruce.
+2. Continued the main top cross brace all the way to the edge instead of feathered out just before the edge.
+
+I also replaced the slowly bending brad nails used to hold the strings with a brazed and machined part that is much stronger and more durable.
+
+### First step removing existing fretboard and top.
+
+I used a special silicone pad to heat the and remove the fretboard and then the top. At high temperatures the LMI Yellow instrument glue starts to soften and it becomes possible to separate glue joints with little or no damage using very thin prying/scraping knives.
+
+![removing original top]({{site.url}}/assets/images/dinalin/removing-original-top.jpg){:height="400px"}
+
+Since I was replacing the original top I didn't try and remove it with no damage at all.
+
+_The body and neck cleaned up after removing original top and fretboard._
+
+![original top removed]({{site.url}}/assets/images/dinalin/original-top-removed.jpg){:height="400px"}
+
+The two flat panels next to the cleaned up body are the new slightly thicker panels of Adirondack Spruce for the new top.
+
+### Gluing two panels together to create new top.
+
+I was further along in building guitars and I used this tool I had made for reliably gluing thin panels together.
+
+The edges of the two panel sections to be glued have already been made perfectly flat and straight and covered with glue. They are brought together on the four lower members which are flat, straight, and parallel. The triangular wedges are placed on top of the two panels. Then the rope is wound over each triangular wedge, around the edge of a panel section, under a lower section, back around the edge of the opposite panel section and then back around the triangular wedge.
+
+![gluing 2 pieces of new top together]({{site.url}}/assets/images/dinalin/gluing-2-pieces-of-new-top-together.jpg){:height="400px"}
+
+Once this is all set up the wedges are driven gently inward which tightens the rope. This does two very useful things:
+
+1. It causes the ropes to tighten and drive the bottom of the wedges into the panels pinning them agains the lower flat, straight, and parallel rails.
+2. It also causes the ropes to tighten on the outside edges of both panels driving the two panels together and clamping the glue joint.
+
+### Gluing main cross brace on new top.
+
+The bottom of the brace is curved to an 8' radius and is being glued to the top using the compression sticks in the go-bar deck to clamp the assembly onto the 8' radius cylindrical sanding dish.
+
+![gluing cross brace]({{site.url}}/assets/images/dinalin/gluing-cross-brace.jpg){:height="400px"}
+
+### A more elegant way to cut and reinforce the sound hole.
+
+By this time I had created a precision circle-cutting jig for my old router which I was using to cut sound holes for the guitars I was making.
+
+
+To create the reinforcement for the edge of the sound hole I first used the circle cutting system to  create a disk that was about 20 mm greater in diameter than the sound hole I wanted and glued it to the top. The reinforcing disk grain is oriented 90 degrees to the grain in the top to increase the overall strength of the lamination.
+
+![gluing soundhole reinforcement disk]({{site.url}}/assets/images/dinalin/gluing-soundhole-reinforcement-2.jpg){:height="400px"}
+
+I used a 1/2" rod to center the disk with the center of the sound hole in the top and then glued the two together.
+
+In the next photo the router with the circle cutting jig is upside down and the top is resting on a polycarbonate base and rotating on a 1/2" steel pin attached to the polycarbonate base. The router has a 3/32" diameter bit which cuts out a circle as the top is rotated on the 1/2" pin.
+
+_Cutting sound hole through top and reinforcing disk._
+![cutting soundhole]({{site.url}}/assets/images/dinalin/cutting-soundhole.jpg){:height="400px"}
+
+It's important to be precise and gentle at the very end of the rotation that cuts the circle because once the cut is complete the top is no longer securely registered to the rotational axis of the 1/2" pin.
+
+_Completed sound hole with cross-grain reinforcement_
+![sound hole reinforcement closeup]({{site.url}}/assets/images/dinalin/sound-hole-reinforcement-closeup.jpg){:height="400px"}
+
+#### More about the router-based circle cutting system.
+
+The center disk is what's left after completing the cut.
+
+![circle cutting router jig]({{site.url}}/assets/images/dinalin/circle-cutting-router-jig.jpg){:height="400px"}
+
+The polycarbonate base is screwed to six tapped holes in a block of mycarta, a dense thermoplastic resin and linen laminate.
+
+The router can be moved closer or further from the 1/2" guide pin and then clamped on the two hardened steel rails.
+
+The threaded shaft in the upper right with the red faucet handle has a 1 mm pitch and goes through a threaded insert in the mycarta block. When the router is snug agains the end of this shaft one clockwise rotation of the red handle will move the router 1 mm away from the 1/2" guide pin and increase the diameter of the circle by 2 mm.
+
+### Gluing the top diagonal braces using the go-bar deck and radius dish.
+
+The bottom glue surface of these braces have also been curved to an 8' radius.
+
+![using gobar deck to glue cross braces]({{site.url}}/assets/images/dinalin/using-gobar-deck-to-glue-cross-braces.jpg){:height="400px"}
+
+### Shaping and sanding the top and bottom braces.
+
+![top and bottom with braces]({{site.url}}/assets/images/dinalin/top-and-bottom-with-braces.jpg){:height="400px"}
+
+### Almost final shape of top braces.
+
+![top braces carved]({{site.url}}/assets/images/dinalin/top-braces-carved.jpg){:height="600px"}
+
+I feathered the outer ends of the diagonal braces so they ended just at the inner edge of the side reinforcing strips.
+
+The cross brace was feather down to a thickness of about 0.8 mm at the outer edge of the side. This meant I needed to cut precise notches in the sides and associated reinforcing strips before completing the gluing of the new top.
+
+### A new stronger machined steel string termination system.
+
+The small brad nails which held the strings at the tail end of the instrument had been slowly bending so I designed a much stronger system to replace them.
+
+The drill rods are just slightly smaller than the diameter of the cylindrical eyes on the end of the guitar strings and the are brazed into the steel plate at an angle that is perpendicular to the angle of the string. This plate is screwed into the Beech end block glued into the sides at the tail of the instrument.
+
+![stronger string end termination]({{site.url}}/assets/images/dinalin/stronger-string-end-termination.jpg){:height="400px"}
+
+
+_A jig for drilling angled holes in the steel plate_
+![drilling angled holes in string terminations]({{site.url}}/assets/images/dinalin/drilling-angled-holes-in-string-terminations.jpg){:height="400px"}
+
+_Drilling countersinks for attachment screws._
+![machining strip of string termination elements]({{site.url}}/assets/images/dinalin/machining-strip-of-string-termination-elements.jpg){:height="400px"}
+
+_Brazing drill rod into steel plate._
+![brazing  drill rod into steel plate]({{site.url}}/assets/images/dinalin/brazing-string-termination-element.jpg){:width="600px"}
