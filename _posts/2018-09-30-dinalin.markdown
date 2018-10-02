@@ -6,15 +6,17 @@ categories: [ instruments ]
 tags: [ dinalin, guitar, dulcimer, mandolin ]
 ---
 
-## Make up and build an instrument from scratch in two weeks?
+## Imagine, design, and build an instrument from scratch in two weeks?
 
-In Early March 2015 I was in the middle of a long-term project learning to build two guitars from scratch. I was doing this with a small group mentored by a good friend John Fabel.  Considering we only met once a week and we were starting with logs it became obvious the process would continue for quite a while at a deliciously deliberate pace.
+In Early March 2015 I was in the middle of a long-term project learning to build guitars from scratch. I was doing this with a small group mentored by a good friend John Fabel. Since I already had experience making all kinds of things I also ended up making many tools and making tools to make tools.
 
-One Saturday I decided I wanted to design and build an instrument as fast as possible -- and inspired by a friends Merlin I drew up rough plans for a very simple guitar-dulcimer-mandolin hybrid. Two weeks later I was able to strum it.
+Considering we only met once a week, some of the other folks had almost no wood-working experience and we were starting with logs it became obvious to me the process would continue for quite a while at a deliciously deliberate pace.
+
+One Saturday two weeks before my wife's birthday I decided I wanted to design and build an instrument as fast as possible -- and inspired by a friends Merlin I drew up rough plans for a very simple guitar-dulcimer-mandolin hybrid. Two weeks later I was able to strum it.
 
 ## Dinalin: a hybrid guitar-dulcimer-mandolin.
 
-I was making this as a surprise for my wife Dina so decided to call this new instrument a Dinalin.
+I was making this for my wife Dina so decided to call this new instrument a Dinalin.
 
 Basics:
 
@@ -36,6 +38,10 @@ While finishing the second top with Delft spray lacquer I added a dried flower c
 
 ![Dinalin flower]({{site.url}}/assets/images/dinalin/dinalin-flower.jpg){:height="400px"}
 
+I enjoy taking it with me if I am going to have to wait somewhere. Lots of people are intrigued and stop and ask me what it is. I tell them that I made it up and it's sort of a hybrid between a guitar, mandolin, and dulcimer. Some accept that description but a large minority respond, "Yes, but what is it?". I then tell them it's a Dinalin. A number of these folks seem mildly disturbed because it's not an instrument they have heard of and I remind them that that makes sense since it is the only one and I made it up.
+
+If people look interested I ask them if they want to play it. I'm able to convince about half the people who start off saying, "Oh no, I don't know how to play that." to try it. I explain that since it has an open tuning they can just strum it without fretting. The next simple thing to try is to strum it while fretting the high F#4 string. If they play a note that sounds bad just go up or down one fret and it will all be OK again.
+
 ### Here's what it sounds like now when I'm not completely awake.
 
 {% include youtubeplayer.html id="HJcOnS9AVag" %}
@@ -54,7 +60,7 @@ I can enjoy going way down geeky cul-de-sacs as much as any nerd however I also 
 
 I used a piece of clear straight beech to make the neck. I cut the end off at a 15 degree angle, glued ears to it, flattened both sides of the angle cut, flipped the headstock over and glued the angle cut on the headstock to the flat bottom side of the neck.
 
-I designed a simple three layer section where the neck connects to the body. The neck itself is glued between two other soft sections of beech in the top layer. Below that is a section of White Spruce with the grain oriented across the instrument. The bottom layer was another two pieces of Beech. Then these three layers were flattened and glued together.
+I designed a simple three layer section where the neck connects to the body. The neck itself is glued between two other sections of beech in the top layer. Below that is a section of White Spruce with the grain oriented across the instrument. The bottom layer was another two pieces of Beech. These three layers were then surfaced and glued together.
 
 _Hard to see the details with all the clamps and the picture out of focus._
 ![original neck assembly]({{site.url}}/assets/images/dinalin/original/original-gluing-layer-neck-assembly.jpg){:height="400px"}
@@ -183,25 +189,25 @@ Note: all the glue used was LMI Yellow Instrument glue.
 
 ![gluing top on]({{site.url}}/assets/images/dinalin/original/original-gluing-top-2.jpg){:height="400px"}
 
-#### Attaching the fretboard.
+### Attaching the fretboard.
 
 I used another piece of clear Beech for the fretboard. The gluing surface starts along the mahogany shim strip on the neck and extends to just past the 15th fret position on the top, however in order to get this ready in time for Dina's birthday I just used double-stick tape to hold the fretboard in position!
 
 ![getting ready to attach the fretboard]({{site.url}}/assets/images/dinalin/original/original-in-jig-with-fretboard.jpg){:height="400px"}
 
-#### Using brads to terminate and hold the strings.
+### Using brad nails to terminate and hold the strings.
 
 I didn't think this would really last all that long but using tiny nails hammered through the top and into the solid Beech end block was a very quick way to hold the end of the strings.
 
 ![string termination with nails]({{site.url}}/assets/images/dinalin/original/original-string-termination-nails.jpg){:height="400px"}
 
-#### Shaping the headstock and installing mandolin tuners.
+### Shaping the headstock and installing mandolin tuners.
 
 I had fun figuring out a shape I liked for the headstock and the position for the mandolin tuners that would result in straight string pulls.
 
 ![headstock with straight string pulls]({{site.url}}/assets/images/dinalin/original/original-headstock-straight-pulls.jpg){:height="400px"}
 
-#### Making a lightweight pushdown bridge with Butternut.
+### Making a lightweight pushdown bridge with Butternut.
 
 The original bridge was made from Butternut, a relatively soft and light hardwood. This bridge is not glued down and is held in place by the downward force of the strings. When I change the strings I place the bridge in roughly the correct location and tune the strings. Then I reposition the distance and angle of the bridge until the pitches of each strings octave note played on the 12th fret are the same as the octave harmonic produced when just lightly fingering the string directly above the 12th fret during the initial part of a pluck.
 
@@ -209,7 +215,7 @@ The original bridge was made from Butternut, a relatively soft and light hardwoo
 
 Later I made another bridge from Butternut with a small strip of Manzanita glued to the top to provide a harder, tougher surface for the grooves where the strings run through.
 
-#### Ready by Dina's birthday!
+### Ready by Dina's birthday!
 
 The fretboard (without frets) is just held down with double-stick tape but it's relatively complete and sounds nice!
 
@@ -218,6 +224,20 @@ The fretboard (without frets) is just held down with double-stick tape but it's 
 And it was strumable on the morning of Dina's birthday!
 
 ![strummable]({{site.url}}/assets/images/dinalin/original/original-present.jpg){:height="400px"}
+
+### Frets.
+
+I used a long ruler with 0.01" resolution, a good magnifying glass and bright lights to mark out the positions for the frets. I made a sort of a sliding miter box with an inspection hole cut in the miter box slot over the middle of the fret board. The sliding miter box had side rails to keep it aligned with the fret board. I used the magnifying glass to align it with a mark, clamped the side rails to fretboard, and used a Japanese pull saw to cut the fret slots.
+
+### Pultruded carbon fiber rods laminated on the back of the neck.
+
+After fretting, restringing, and playing I thought the neck had just a bit more curve than ideal. I hadn't designed it with a truss rod so I laminated two pultruded carbon fiber rectangular rods on the back of the neck and covered them with Hard Maple so the neck wouldn't bend any more. It hasn't -- but the next one should have some kind of truss rod.
+
+### Empirical compensation of saddle and nut.
+
+I made a nut with Manzanita and a new Butternut bridge with a small strip of Manzanita glued along the top.
+
+I then started an an iterative empirical process to develop reasonable compensation offsets for the saddle and nut. Putting a tiny radius with a very fine file on the sharp leading edges of the tuner peg holes and a good string winder turned out to be very useful in this process.
 
 ## A new top and other improvements: Jan 2016.
 
@@ -336,3 +356,7 @@ _Drilling countersinks for attachment screws._
 
 _Brazing drill rod into steel plate._
 ![brazing  drill rod into steel plate]({{site.url}}/assets/images/dinalin/brazing-string-termination-element.jpg){:width="600px"}
+
+## Chord fingerings for open D.
+
+Still to be written ...
