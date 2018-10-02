@@ -309,7 +309,7 @@ It's important to be precise and gentle at the very end of the rotation that cut
 _Completed sound hole with cross-grain reinforcement_
 ![sound hole reinforcement closeup]({{site.url}}/assets/images/dinalin/sound-hole-reinforcement-closeup.jpg){:height="400px"}
 
-#### More about the router-based circle cutting system.
+### More about the router-based circle cutting system.
 
 The center disk is what's left after completing the cut.
 
