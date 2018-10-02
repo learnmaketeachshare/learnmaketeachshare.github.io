@@ -23,7 +23,7 @@ Basics:
 - Tuning: open D; D3, A3, D4, F#4
 - Bridge: unglued (held down by string tension), butternut with manzanita strip
 
-Originally the top was made from Adirondack Spruce which sounded great. After developing a crack when I grasped the body too hard picking it up I replaced it with a slightly stronger Spruce (unknown species) that.
+Originally the top was made from Adirondack Spruce which sounded great. After developing a crack when I grasped the body too hard picking it up I replaced it with a slightly stronger Spruce (unknown species).
 
 When I built it I terminated the strings by hooking them over little nails. Later I brazed short pieces of drill rod at an angle into a metal plate, drilled and countersunk two holes into the plate and screwed this plate into the tail of the instrument.
 
@@ -65,7 +65,7 @@ This assembly ended up being a very strong, stable, and simple way to join the n
 
 ### Bending the one piece side by hand -- no time to build a mold.
 
-I didn't have time to make a mold to shape and hold the sides and I had a 40" piece of thin spalted beech panel already cut so I just one long side panel by hand trying to get close to the curves I had drawn. The side weren't perfectly symmetrical but they were close.
+I didn't have time to make a mold to shape and hold the sides and I had a 40" piece of thin spalted beech panel already cut so I just used heat to bend the one long side panel by hand trying to get close to the curves I had drawn. The side weren't perfectly symmetrical but they were close.
 
 _Clamping bent sides to neck assembly: top view._
 ![clamping sides to neck assembly: top]({{site.url}}/assets/images/dinalin/original/original-clamping-sides-to-neck-assembly-top.jpg){:height="400px"}
@@ -107,20 +107,19 @@ The gluing surface on the edges where the top and bottom are glued to the sides 
 _Gluing curved strips to reinforce where top and bottom are glued to sides._
 ![gluing curved strips to reinforce where top and bottom are glued to sides]({{site.url}}/assets/images/dinalin/original/original-gluing-binding.jpg){:height="400px"}
 
-#### Gluing the curved braces onto the back.
+#### Gluing the slightly curved braces onto the back.
 
 _Preparing to glue curved braces to back in 8' cylindrical radius dish._
 ![preparing to glue curved back braces]({{site.url}}/assets/images/dinalin/original/original-preparing-back-braces.jpg){:height="400px"}
 
 This is all happening in the go-bar deck shown below. The go-bar deck also has a solid top (not visible in this picture) and any number long of springy flexible pieces of wood can be placed in a tensioned curve to provide compression to hold the braces against the top or bottom.
 
-_Gluing curved reinforcing strips to the top in go-bar deck._
+_Gluing curved braces to the top in go-bar deck._
 ![gluing curved braces to top in go-bar deck]({{site.url}}/assets/images/dinalin/original/original-gluing-curved-braces-to-top.jpg){:height="400px"}
 
+I shaped and sanded the back braces and got it ready to glue to the side. Look closely and you can see the curved reinforcing strips glued to the top of the side.
 
-I shaped and sanded the back braces and got it ready to glue to the sides. Look closely and you can see the curved reinforcing strips glued to the top of the side.
-
-#### Gluing the curved back onto the sides.
+#### Gluing the slightly curved back onto the sides.
 
 _Getting ready to glue back to sides._
 ![getting ready to glue back to sides]({{site.url}}/assets/images/dinalin/original/original-gluing-beech-back-1.jpg){:height="400px"}
@@ -134,7 +133,7 @@ Notes:
 - Look close and you can clearly see the three glued layers of the neck assembly at the top of the photo. The middle whiter wood is the White Spruce.
 - The braces have been glued to the top sitting to the right and still need to be shaped and sanded.
 
-#### Cutting and reinforcing the soundhole in the top.
+#### Cutting out and reinforcing the soundhole in the top.
 
 After shaping and sanding the braces on the top I found a plastic lid that seemed to be about the right size for the sound hole, used it to trace a circle, drilled a starting hole and then used a coping saw blade to cut out the sound hole.
 
@@ -168,23 +167,25 @@ It turned out be be a good thing when I ended up with a small curve in the longi
 
 The other function of sanding the gluing surfaces with the cylindrical sanding dish was to make the right angle on that gluing surface so the slight curve already established in the top when (with the glued curved braces) extends in a continuous form right to the edge of the body.
 
-Unfortunately I don't have any pictures so I'm going to include one here from a bit further on in the process. The strings are close to parallel with the fretboard and continue to the top or the bridge where the angle down to the string termination points. Later after adding frets I had to reduce the height of the bridge a bit to lower the strings a so they were closer to the fretboard.
+Unfortunately I don't have any pictures so I'm going to include one here from a bit further on in the process. You can see the strings are extending away close to parallel with the fretboard and continue to the top of the bridge where they angle down to the string termination points.
+
+Later after adding frets I reduced the height of the bridge a bit to lower the strings so they were closer to the fretboard.
 
 ![strings going over bridge]({{site.url}}/assets/images/dinalin/original/original-assembled-without-frets.jpg){:height="400px"}
 
 #### Gluing the top on.
 
-Note: all the glue used was LMI Yellow Instrument glue.
-
 ![getting ready to glue top on]({{site.url}}/assets/images/dinalin/original/original-gluing-top-1.jpg){:height="400px"}
 
-Note: you can see a thin piece of mahogany already glued to the top of the neck. This piece is the same thickness as the top so that later I can glue the fretboard across both the neck and the top.
+You can see a thin piece of mahogany already glued to the top of the neck. This piece is the same thickness as the top so that later I can glue the fretboard across both the neck and the top.
+
+Note: all the glue used was LMI Yellow Instrument glue.
 
 ![gluing top on]({{site.url}}/assets/images/dinalin/original/original-gluing-top-2.jpg){:height="400px"}
 
 #### Attaching the fretboard.
 
-I used another piece of clear Beech for the fretboard. The gluing surface will start along the mahogany shim strip on the neck and extends to just past the 15th fret position on the top. However in order to get this ready in time for Dina's birthday I just used double-stick tape to hold the fretboard in position!
+I used another piece of clear Beech for the fretboard. The gluing surface starts along the mahogany shim strip on the neck and extends to just past the 15th fret position on the top, however in order to get this ready in time for Dina's birthday I just used double-stick tape to hold the fretboard in position!
 
 ![getting ready to attach the fretboard]({{site.url}}/assets/images/dinalin/original/original-in-jig-with-fretboard.jpg){:height="400px"}
 
@@ -202,13 +203,13 @@ I had fun figuring out a shape I liked for the headstock and the position for th
 
 #### Making a lightweight pushdown bridge with Butternut.
 
-The original bridge was just made from Butternut, a relatively soft and light hardwood. This bridge is not glued down and is held in place by the downward force of the strings. When I change the strings I reposition the distance and angle of the bridge until the string octave played on the 12th fret are the same as the octave harmonics produced when just lightly fingering the string above the 12th fret.
+The original bridge was made from Butternut, a relatively soft and light hardwood. This bridge is not glued down and is held in place by the downward force of the strings. When I change the strings I place the bridge in roughly the correct location and tune the strings. Then I reposition the distance and angle of the bridge until the pitches of each strings octave note played on the 12th fret are the same as the octave harmonic produced when just lightly fingering the string directly above the 12th fret during the initial part of a pluck.
 
 ![butternut bridge]({{site.url}}/assets/images/dinalin/original/original-butternut-bridge.jpg){:height="400px"}
 
-Later I made another bridge from Butternut with a small strip of Manzanita glued to the top to provide better wear where the strings dig in.
+Later I made another bridge from Butternut with a small strip of Manzanita glued to the top to provide a harder, tougher surface for the grooves where the strings run through.
 
-#### Ready by birthday.
+#### Ready by Dina's birthday!
 
 The fretboard (without frets) is just held down with double-stick tape but it's relatively complete and sounds nice!
 
