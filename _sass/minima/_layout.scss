@@ -238,10 +238,10 @@
   }
 
   h3 {
-    @include relative-font-size(1.4);
+    @include relative-font-size(1.35);
 
     @include media-query($on-laptop) {
-      @include relative-font-size(1.375);
+      @include relative-font-size(1.325);
     }
   }
 
