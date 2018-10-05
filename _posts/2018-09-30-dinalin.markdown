@@ -23,13 +23,13 @@ Basics:
 - Tuning: open D; D3, A3, D4, F#4
 - Bridge: unglued (held down by string tension), butternut with manzanita strip
 
-Originally the top was made from Adirondack Spruce which sounded great. After developing a crack when I grasped the body too hard picking it up I replaced it with a new top of the same wood that was slightly thicker and slightly stronger bracing.
+Originally the top was made from Adirondack spruce which sounded great. After developing a crack when I grasped the body too hard picking it up I replaced it with a new top of the same wood that was slightly thicker and slightly stronger bracing.
 
 When I built it I terminated the strings by hooking them over little nails. Later I brazed short pieces of drill rod at an angle into a metal plate, drilled and countersunk two holes into the plate and screwed this plate into the tail of the instrument.
 
 Here's what it looks like now:
 
-_Four strings, 600 mm scale length, tuned to an open D: D A D F#_
+_Four strings, 600 mm scale length, tuned to an open D: D3, A3, D4, F#4_
 ![Dinalin whole]({{site.url}}/assets/images/dinalin/dinalin-whole.jpg)
 
 While finishing the second top with Delft spray lacquer I added a dried flower collected by my Dad in the desert outside of Tucson by gently laying it in a wet coat of lacquer before adding a couple more coats.
@@ -46,13 +46,13 @@ If people look interested I ask them if they want to play it. I'm able to convin
 
 {% include youtubeplayer.html id="HJcOnS9AVag" %}
 
-### My guitar-building mentor John Fabel playing it with the original Adirondack Spruce top.
+### My guitar-building mentor John Fabel playing it with the original Adirondack spruce top.
 
 {% include youtubeplayer.html id="kmwK0yo08N8" %}
 
 ## Original design and build: March 2015.
 
-I did the original design and build over a period of two weeks in March 2015 and wanted to finish it in time to give it as a present for my wife's birthday. I started sketching the design on Saturday night and two weeks later it was complete except for frets.
+I created the original design and built it over a period of two weeks in March 2015. I wanted to finish it as a present for my wife's birthday. I started sketching the design on Saturday night and two weeks later it was complete except for frets.
 
 I can enjoy going way down geeky cul-de-sacs as much as any nerd however I also find being in a situation where I have to keep making the best reasonable decision as quickly as possible exhilarating.
 
@@ -60,7 +60,7 @@ I can enjoy going way down geeky cul-de-sacs as much as any nerd however I also 
 
 I used a piece of clear straight beech to make the neck. I cut the end off at a 15 degree angle, glued ears to it, flattened both sides of the angle cut, flipped the headstock over and glued the angle cut on the headstock to the flat bottom side of the neck.
 
-I designed a simple three layer section where the neck connects to the body. The neck itself is glued between two other sections of beech in the top layer. Below that is a section of White Spruce with the grain oriented across the instrument. The bottom layer was another two pieces of Beech. These three layers were then surfaced and glued together.
+I designed a simple three layer section where the neck connects to the body. The neck itself is glued between two other sections of beech in the top layer. Below that is a section of white spruce with the grain oriented across the instrument. The bottom layer was another two pieces of beech. These three layers were then surfaced and glued together.
 
 _Hard to see the details with all the clamps and the picture out of focus._
 ![original neck assembly]({{site.url}}/assets/images/dinalin/original/original-gluing-layer-neck-assembly.jpg){:height="400px"}
@@ -71,37 +71,42 @@ This assembly ended up being a very strong, stable, and simple way to join the n
 
 ### Bending the one piece side by hand -- no time to build a mold.
 
-I didn't have time to make a mold to shape and hold the sides and I had a 40" piece of thin spalted beech panel already cut so I just used heat to bend the one long side panel by hand trying to get close to the curves I had drawn. The side weren't perfectly symmetrical but they were close.
+I had a beautiful 40" long piece of spalted beech to use for the sides.
+
+In a guitar normally there are two curved side panels that gently clamped in a shaped mold and are joined by gluing to blocks at the head and tail.
+
+I didn't have time to make a mold so I bend the single long side panel by hand by gently moving it back and forth and applying force over a heated section of heavy aluminum pipe.
+
+When the wood is just starting to warm up it resists an applied bending force a spings back to its original shape when the force is removed. When the wood gets hot enough the lignin, which is sort of a thermoplastic between the cells, starts to soften and the longitudinal cells on the outer edge of the curve start to slide past each other just a bit.
+
+In order to get the lignin soft enough to bend the panel the aluminum tube is usually hot enough to burn the wood if left in one place too long so it's important to always keep the panel moving back and forth.
+
+I tried to get close to the curves I had drawn. The side weren't perfectly symmetrical but they were close.
 
 _Clamping bent sides to neck assembly: top view._
 ![clamping sides to neck assembly: top]({{site.url}}/assets/images/dinalin/original/original-clamping-sides-to-neck-assembly-top.jpg){:height="400px"}
 
-_Clamping bent sides to neck assembly: bottom view._
-![clamping sides to neck assembly: top]({{site.url}}/assets/images/dinalin/original/original-clamping-sides-to-neck-assembly-bottom.jpg){:height="400px"}
-
-The sides didn't have to extend all the way to the end on the bottom because later this back section would be curved.
-
-### Making the back and top panels out of Beech and Adirondack Spruce.
+### Making the back and top panels out of beech and Adirondack spruce.
 
 #### Preparing the panel edges for gluing.
 
 Both the back and top were made out of two pieces glued together. Before gluing the two edges had to be perfectly flat and straight.
 
-_Straightening back panel edges before gluing._
+_Straightening back panel beech edges before gluing._
 ![straightening back panel edges before gluing]({{site.url}}/assets/images/dinalin/original/original-straightening-back-panels-for-gluing.jpg){:height="400px"}
 
 #### Rough trimming the back panel.
 
-Getting ready to trim the glued back panel a bit larger than the shape of the body.
+Getting ready to trim the glued beech back panel a bit larger than the shape of the body.
 
-Also note the Beech end block glued onto the interior of the sides at the end. This will serve as a stable strong element for securely terminating the strings.
+Also note the beech end block glued onto the interior of the sides at the end. This will serve as a stable strong element for securely terminating the strings.
 
 _Tracing shape of sides onto back panel._
 ![tracing shape of sides onto back panel]({{site.url}}/assets/images/dinalin/original/original-tracing-back-shape.jpg){:height="400px"}
 
-#### Sanding a 8' radius curve into the braces for the top and bottom panels.
+#### Sanding an eight foot radius curve into the braces for the top and bottom panels.
 
-The braces for both the top and back were shaped and then glued to their respective panels using an cylindrical dish with an eight foot radius surfaced with sandpaper.
+The braces for both the top and back were shaped and then glued to their respective panels using an eight foot radius cylindrical dish surfaced with sandpaper.
 
 _Sanding radius curves on back braces._
 ![sanding radius curves on back braces: top]({{site.url}}/assets/images/dinalin/original/original-creating-back-brace-radius.jpg){:height="400px"}
@@ -115,28 +120,28 @@ _Gluing curved strips to reinforce where top and bottom are glued to sides._
 
 #### Gluing the slightly curved braces onto the back.
 
-_Preparing to glue curved braces to back in 8' cylindrical radius dish._
+_Preparing to glue curved braces to back in eight foot cylindrical radius dish._
 ![preparing to glue curved back braces]({{site.url}}/assets/images/dinalin/original/original-preparing-back-braces.jpg){:height="400px"}
 
-This is all happening in the go-bar deck shown below. The go-bar deck also has a solid top (not visible in this picture) and any number long of springy flexible pieces of wood can be placed in a tensioned curve to provide compression to hold the braces against the top or bottom.
+This is all happening in the go-bar deck shown below. There is a solid top (not visible in this picture) and any number long of springy flexible pieces of wood can be placed in a curve to provide compression to hold the braces against the top or bottom.
 
 _Gluing curved braces to the top in go-bar deck._
 ![gluing curved braces to top in go-bar deck]({{site.url}}/assets/images/dinalin/original/original-gluing-curved-braces-to-top.jpg){:height="400px"}
 
-I shaped and sanded the back braces and got it ready to glue to the side. Look closely and you can see the curved reinforcing strips glued to the top of the side.
-
 #### Gluing the slightly curved back onto the sides.
 
-_Getting ready to glue back to sides._
+I shaped and sanded the braces on the back and got it ready to glue to the side. Look closely and you can see the curved reinforcing strips glued on the edge of the side.
+
+_Getting ready to glue back to side._
 ![getting ready to glue back to sides]({{site.url}}/assets/images/dinalin/original/original-gluing-beech-back-1.jpg){:height="400px"}
 
-Using lots and lots of clamps to glue the back to the sides.
+Using lots and lots of clamps to glue the back to the side.
 
-![gluing the back to sides]({{site.url}}/assets/images/dinalin/original/original-gluing-beech-back-2.jpg){:height="400px"}
+![gluing the back to side]({{site.url}}/assets/images/dinalin/original/original-gluing-beech-back-2.jpg){:height="400px"}
 
 Notes:
 - I don't have any pictures of how the back of the neck assembly was curved with a bandsaw, rasps, and sanding before this step.
-- Look close and you can clearly see the three glued layers of the neck assembly at the top of the photo. The middle whiter wood is the White Spruce.
+- Look close and you can clearly see the three glued layers of the neck assembly at the top of the photo. The middle whiter wood is the white spruce.
 - The braces have been glued to the top sitting to the right and still need to be shaped and sanded.
 
 #### Cutting out and reinforcing the soundhole in the top.
@@ -151,17 +156,21 @@ I added a second layer with six pieces cut from top panel scrap in a rough hexag
 
 #### Setting the proper angle for the neck to body join.
 
-At this point I'm almost ready to glue the top on but the whole instrument would not have worked correctly if I had. To be playable the strings have to be close to the frets on the fretboard. My design was also for a bridge that was held in place by string tension. To hold the bridge down the strings needed to cross over the bridge and then angle down to termination points at the tail of the body. At this point the top of the sides defined a glue-able surface that just extended the plane of the fretboard.
+At this point I'm almost ready to glue the top on but the whole instrument would not have worked correctly if I had. To be playable the strings have to be close to the frets on the fretboard.
 
-One way of thinking about what I had to do was to angle the neck and fretboard down away from the plane of the top. When building a guitar the joint where the neck attaches to the body is very carefully and precisely done to get this angle just right. In this design however I had already extremely secured the neck into the three-layer body assembly lamination so it was not going to move at all.
+I was planning to use a bridge held in place just by string tension. To do this the strings need to cross over the bridge and then angle down somewhat to termination points at the tail of the body.
 
-Without any real data or analysis to guide me I thought a one inch height of the bridge above the top would be high enough to provide the right down pressure from the strings to the bridge to:
+At this point the top of the sides defined a glue-able surface that just extended parallel to the plane of the fretboard.
+
+One way of thinking about what I had to do was to angle the neck and fretboard down down just a bit away from the plane of the top. When building a guitar the joint where the neck attaches to the body is very carefully and precisely done to get this angle just right. However I had already secured the neck with a three-layer glued neck-body assembly lamination so it was not going to move at all.
+
+Without any real data or analysis to guide me I decided a one inch height of the bridge above the top would be high enough to provide the right down pressure from the strings to the bridge to:
 
 1. Hold the bridge in place.
 2. Effectively transmit energy in the vibrating strings through the bridge to the top.
-3. Wouldn't create so much downward pressure to cause flattening or even crack the top.
+3. Don't create so much downward pressure to cause flattening or crack the top.
 
-To get that angle I turned the body over and sanded the sides and reinforcing strips in the 8' cylindrical sanding dish putting most of my downward pressure on the tail end of the top.
+To get the right angle I turned the body over and sanded the sides and reinforcing strips in the eight foot cylindrical sanding dish putting most of my downward pressure on the tail end of the top.
 
 I had already calculated where the bridge wold go on the top and I'd regularly pause and use a long straight edge to see how much lower the top (to be glued on after this step) was below the extension of the fretboard plane.
 
@@ -169,13 +178,11 @@ Surprisingly this was actually very easy and quick to do precisely.
 
 One issue when either sanding with a block or against a block is ending up with a curved surface as the block or object rocks a bit moving back and forth. In this particular case having a small curve added in the sanding process just made the top look a bit better. I had curved the top with just a cylindrical sanding dish instead of spherical dish because it was much easier to make. The top itself also had the flexibility to be bent into a slight compound curve.
 
-It turned out be be a good thing when I ended up with a small curve in the longitudinal direction in the surface I was about to glue the top to.
-
 The other function of sanding the gluing surfaces with the cylindrical sanding dish was to make the right angle on that gluing surface so the slight curve already established in the top when (with the glued curved braces) extends in a continuous form right to the edge of the body.
 
 Unfortunately I don't have any pictures so I'm going to include one here from a bit further on in the process. You can see the strings are extending away close to parallel with the fretboard and continue to the top of the bridge where they angle down to the string termination points.
 
-Later after adding frets I reduced the height of the bridge a bit to lower the strings so they were closer to the fretboard.
+Later after adding frets I reduced the height of the bridge a bit to lower the strings so they were closer to the fretboard. This made it easier to play.
 
 ![strings going over bridge]({{site.url}}/assets/images/dinalin/original/original-assembled-without-frets.jpg){:height="400px"}
 
@@ -191,13 +198,13 @@ Note: all the glue used was LMI Yellow Instrument glue.
 
 ### Attaching the fretboard.
 
-I used another piece of clear Beech for the fretboard. The gluing surface starts along the mahogany shim strip on the neck and extends to just past the 15th fret position on the top, however in order to get this ready in time for Dina's birthday I just used double-stick tape to hold the fretboard in position!
+I used another piece of clear beech for the fretboard. The gluing surface starts along the mahogany shim strip on the neck and extends to just past the 15th fret position on the top, however in order to get this ready in time for Dina's birthday I just used double-stick tape to hold the fretboard in position!
 
 ![getting ready to attach the fretboard]({{site.url}}/assets/images/dinalin/original/original-in-jig-with-fretboard.jpg){:height="400px"}
 
 ### Using brad nails to terminate and hold the strings.
 
-I didn't think this would really last all that long but using tiny nails hammered through the top and into the solid Beech end block was a very quick way to hold the end of the strings.
+I didn't think this would really last all that long but using tiny nails hammered through the top and into the solid beech end block was a very quick way to hold the end of the strings.
 
 ![string termination with nails]({{site.url}}/assets/images/dinalin/original/original-string-termination-nails.jpg){:height="400px"}
 
@@ -207,13 +214,13 @@ I had fun figuring out a shape I liked for the headstock and the position for th
 
 ![headstock with straight string pulls]({{site.url}}/assets/images/dinalin/original/original-headstock-straight-pulls.jpg){:height="400px"}
 
-### Making a lightweight pushdown bridge with Butternut.
+### Making a lightweight pushdown bridge with butternut.
 
-The original bridge was made from Butternut, a relatively soft and light hardwood. This bridge is not glued down and is held in place by the downward force of the strings. When I change the strings I place the bridge in roughly the correct location and tune the strings. Then I reposition the distance and angle of the bridge until the pitches of each strings octave note played on the 12th fret are the same as the octave harmonic produced when just lightly fingering the string directly above the 12th fret during the initial part of a pluck.
+The original bridge was made from butternut, a relatively soft and light hardwood. This bridge is not glued down and is held in place by the downward force of the strings. When I change the strings I place the bridge in roughly the correct location and tune the strings. Then I reposition the distance and angle of the bridge until the pitche of each strings octave note played on the 12th fret matches the octave harmonic produced when just lightly fingering the string directly above the 12th fret during the initial part of a pluck.
 
 ![butternut bridge]({{site.url}}/assets/images/dinalin/original/original-butternut-bridge.jpg){:height="400px"}
 
-Later I made another bridge from Butternut with a small strip of Manzanita glued to the top to provide a harder, tougher surface for the grooves where the strings run through.
+Later I made another bridge from butternut with a small strip of manzanita glued to the top to provide a harder, tougher surface for the grooves where the strings run through.
 
 ### Ready by Dina's birthday!
 
@@ -227,7 +234,7 @@ And it was strumable on the morning of Dina's birthday!
 
 ### Frets.
 
-I used a long ruler with 0.01" resolution, a good magnifying glass and bright lights to mark out the positions for the frets. I made a sort of a sliding miter box with an inspection hole cut in the miter box slot over the middle of the fret board. The sliding miter box had side rails to keep it aligned with the fret board. I used the magnifying glass to align it with a mark, clamped the side rails to fretboard, and used a Japanese pull saw to cut the fret slots.
+I used a long ruler with markings at 0.01" intervals, a good magnifying glass and bright lights to mark out the positions for the frets. I made a sort of a sliding miter box with an inspection hole cut in the miter box slot over the middle of the fret board. The sliding miter box had side rails to keep it aligned with the fret board. I used the magnifying glass to align it with a mark, clamped the side rails to fretboard, and used a Japanese pull saw to cut the fret slots.
 
 ### Pultruded carbon fiber rods laminated on the back of the neck.
 
@@ -235,13 +242,13 @@ After fretting, restringing, and playing I thought the neck had just a bit more 
 
 ### Empirical compensation of saddle and nut.
 
-I made a nut with Manzanita and a new Butternut bridge with a small strip of Manzanita glued along the top.
+I made a nut with manzanita and a new butternut bridge with a small strip of manzanita glued along the top.
 
-I then started an an iterative empirical process to develop reasonable compensation offsets for the saddle and nut. Putting a tiny radius with a very fine file on the sharp leading edges of the tuner peg holes and a good string winder turned out to be very useful in this process.
+I then started an iterative empirical process to develop reasonable compensation offsets for the saddle and nut. Putting a tiny radius with a very fine file on the sharp leading edges of the tuner peg holes and a good string winder turned out to be very useful in this process.
 
 ## A new top and other improvements: Jan 2016.
 
-The Adirondack Spruce top sounded great. I enjoyed the clarity and sustain when playing softly and if I was hanging out near a fire with a number of inebriated people playing and singing loudly with more commitment than precision I could hammer the strings with a large stiff pick and the initial very loud attack would more than represent my commitment!
+The Adirondack spruce top sounded great. I enjoyed the clarity and sustain when playing softly and if I was hanging out near a fire with a number of inebriated people playing and singing loudly with more commitment than precision I could hammer the strings with a large stiff pick and the initial very loud attack would more than represent my commitment!
 
 The top was definitely strong enough to withstand the downward force from the strings ... but it was a bit too fragile with the way I sometimes handled and/or abused the instrument. One day when I picked it grasping the body with one hand I cracked the top near the edge.
 
@@ -250,28 +257,28 @@ The top was definitely strong enough to withstand the downward force from the st
 I made a new top that was stronger in the following ways:
 
 1. A tiny bit thicker.
-2. The braces we just a bit bigger and were made of a denser stronger White Spruce.
-2. Continued the main top cross brace all the way to the edge instead of feathered out just before the edge.
+2. The braces were just a bit bigger and made of a denser stronger white spruce.
+2. Continued the main top cross brace all the way to the edge instead of feathering it out just before the reinforcing strips glued to the side.
 
-I also replaced the slowly bending brad nails used to hold the strings with a brazed and machined part that is much stronger and more durable.
+I also replaced the brad nails used to hold the strings with a brazed and machined part that is much stronger and more durable.
 
 ### First step removing existing fretboard and top.
 
-I used a special silicone pad to heat the and remove the fretboard and then the top. At high temperatures the LMI Yellow instrument glue starts to soften and it becomes possible to separate glue joints with little or no damage using very thin prying/scraping knives.
+I used a silicone heating pad to soften the glue used when the fretboard and top were installed. At high temperatures the LMI Yellow instrument glue starts to soften and it becomes possible to separate glue joints with little or no damage using very thin prying/scraping knives.
 
 ![removing original top]({{site.url}}/assets/images/dinalin/removing-original-top.jpg){:height="400px"}
 
-Since I was replacing the original top I didn't try and remove it with no damage at all.
+Since I was replacing the original top I didn't worry about causing damage to the original top.
 
 _The body and neck cleaned up after removing original top and fretboard._
 
 ![original top removed]({{site.url}}/assets/images/dinalin/original-top-removed.jpg){:height="400px"}
 
-The two flat panels next to the cleaned up body are the new slightly thicker panels of Adirondack Spruce for the new top.
+The two flat panels next to the cleaned up body are the new slightly thicker panels of Adirondack spruce for the new top.
 
 ### Gluing two panels together to create new top.
 
-I was further along in building guitars and I used this tool I had made for reliably gluing thin panels together.
+At this point I was further along in the process of building guitars and I used this tool I had made for reliably gluing thin panels together.
 
 The edges of the two panel sections to be glued have already been made perfectly flat and straight and covered with glue. They are brought together on the four lower members which are flat, straight, and parallel. The triangular wedges are placed on top of the two panels. Then the rope is wound over each triangular wedge, around the edge of a panel section, under a lower section, back around the edge of the opposite panel section and then back around the triangular wedge.
 
@@ -279,51 +286,50 @@ The edges of the two panel sections to be glued have already been made perfectly
 
 Once this is all set up the wedges are driven gently inward which tightens the rope. This does two very useful things:
 
-1. It causes the ropes to tighten and drive the bottom of the wedges into the panels pinning them agains the lower flat, straight, and parallel rails.
+1. It causes the ropes to tighten and drive the bottom of the wedges into the panels pinning them against the lower flat, straight, and parallel rails.
 2. It also causes the ropes to tighten on the outside edges of both panels driving the two panels together and clamping the glue joint.
 
 ### Gluing main cross brace on new top.
 
-The bottom of the brace is curved to an 8' radius and is being glued to the top using the compression sticks in the go-bar deck to clamp the assembly onto the 8' radius cylindrical sanding dish.
+The bottom of the brace is curved to an eight foot radius and is being glued to the top using the compression sticks in the go-bar deck to clamp the assembly onto the eight foot radius cylindrical sanding dish.
 
 ![gluing cross brace]({{site.url}}/assets/images/dinalin/gluing-cross-brace.jpg){:height="400px"}
 
 ### A more elegant way to cut and reinforce the sound hole.
 
-By this time I had created a precision circle-cutting jig for my old router which I was using to cut sound holes for the guitars I was making.
+By this time I had also created a precision circle-cutting jig for my old router which I was using to cut sound holes for the guitars I was making.
 
-
-To create the reinforcement for the edge of the sound hole I first used the circle cutting system to  create a disk that was about 20 mm greater in diameter than the sound hole I wanted and glued it to the top. The reinforcing disk grain is oriented 90 degrees to the grain in the top to increase the overall strength of the lamination.
+To create the reinforcement for the edge of the sound hole I first used the circle cutting system to  create a disk that was about 20 mm greater in diameter than the sound hole I wanted and then glued it to the top. The grain in the reinforcing disk is shifted 90 degrees from the grain orientation in the top to increase the overall strength of the lamination.
 
 ![gluing soundhole reinforcement disk]({{site.url}}/assets/images/dinalin/gluing-soundhole-reinforcement-2.jpg){:height="400px"}
 
-I used a 1/2" rod to center the disk with the center of the sound hole in the top and then glued the two together.
+I used a one half inch steel pin to center the disk with the center of the sound hole in the top and then glued the two together.
 
-In the next photo the router with the circle cutting jig is upside down and the top is resting on a polycarbonate base and rotating on a 1/2" steel pin attached to the polycarbonate base. The router has a 3/32" diameter bit which cuts out a circle as the top is rotated on the 1/2" pin.
+In the next photo the router with the circle cutting jig is upside down and the top is resting on a polycarbonate base and rotating on the steel pin attached to the polycarbonate base. The router has a 3/32" diameter bit which cuts out a circle as the top is rotated on the steel pin.
 
 _Cutting sound hole through top and reinforcing disk._
 ![cutting soundhole]({{site.url}}/assets/images/dinalin/cutting-soundhole.jpg){:height="400px"}
 
-It's important to be precise and gentle at the very end of the rotation that cuts the circle because once the cut is complete the top is no longer securely registered to the rotational axis of the 1/2" pin.
+It's important to be precise and gentle at the very end of the rotation that cuts the circle because once the cut is complete the top is no longer securely registered to the rotational axis of the steel pin.
 
 _Completed sound hole with cross-grain reinforcement_
 ![sound hole reinforcement closeup]({{site.url}}/assets/images/dinalin/sound-hole-reinforcement-closeup.jpg){:height="400px"}
 
-### More about the router-based circle cutting system.
+### More about the router-based circle cutting jig.
 
-The center disk is what's left after completing the cut.
+The center disk is what's left after completing the circle cut.
 
 ![circle cutting router jig]({{site.url}}/assets/images/dinalin/circle-cutting-router-jig.jpg){:height="400px"}
 
-The polycarbonate base is screwed to six tapped holes in a block of mycarta, a dense thermoplastic resin and linen laminate.
+The polycarbonate base is screwed to six tapped holes in a block of Micarta, a dense thermoplastic resin and linen laminate.
 
-The router can be moved closer or further from the 1/2" guide pin and then clamped on the two hardened steel rails.
+The router can be moved closer or further from the steel guide pin and then clamped on the two hardened steel rails.
 
-The threaded shaft in the upper right with the red faucet handle has a 1 mm pitch and goes through a threaded insert in the mycarta block. When the router is snug agains the end of this shaft one clockwise rotation of the red handle will move the router 1 mm away from the 1/2" guide pin and increase the diameter of the circle by 2 mm.
+The threaded shaft in the upper right with the red faucet handle has a 1 mm pitch and goes through a threaded insert in the Micarta block. When the router is snug against the end of this shaft one clockwise rotation of the red handle will move the router 1 mm away from the steel guide pin and increase the diameter of the circle by 2 mm.
 
 ### Gluing the top diagonal braces using the go-bar deck and radius dish.
 
-The bottom glue surface of these braces have also been curved to an 8' radius.
+The bottom glue surface of these braces have also been curved to an eight foot radius.
 
 ![using gobar deck to glue cross braces]({{site.url}}/assets/images/dinalin/using-gobar-deck-to-glue-cross-braces.jpg){:height="400px"}
 
@@ -343,7 +349,7 @@ The cross brace was feather down to a thickness of about 0.8 mm at the outer edg
 
 The small brad nails which held the strings at the tail end of the instrument had been slowly bending so I designed a much stronger system to replace them.
 
-The drill rods are just slightly smaller than the diameter of the cylindrical eyes on the end of the guitar strings and the are brazed into the steel plate at an angle that is perpendicular to the angle of the string. This plate is screwed into the Beech end block glued into the sides at the tail of the instrument.
+The drill rods are just slightly smaller than the diameter of the cylindrical eyes on the end of the guitar strings and the are brazed into the steel plate at an angle that is perpendicular to the angle of the string. This plate is screwed into the beech end block glued into the sides at the tail of the instrument.
 
 ![stronger string end termination]({{site.url}}/assets/images/dinalin/stronger-string-end-termination.jpg){:height="400px"}
 
