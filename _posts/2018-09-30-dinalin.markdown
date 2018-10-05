@@ -343,7 +343,7 @@ The bottom glue surface of these braces have also been curved to an eight foot r
 
 I feathered the outer ends of the diagonal braces so they ended just at the inner edge of the side reinforcing strips.
 
-The cross brace was feather down to a thickness of about 0.8 mm at the outer edge of the side. This meant I needed to cut precise notches in the sides and associated reinforcing strips before completing the gluing of the new top.
+The cross brace was feathered down to a thickness of about 0.8 mm at the outer edge of the side. This meant I needed to cut precise mortices in the sides and associated reinforcing strips to receive the braces before completing the gluing of the new top.
 
 ### A new stronger machined steel string termination system.
 
