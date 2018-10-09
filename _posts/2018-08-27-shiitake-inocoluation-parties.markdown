@@ -252,11 +252,11 @@ We've been buying our supplies from [fieldforest.net](https://www.fieldforest.ne
 _Supplies and tools for an inoculation party._
 ![Supplies for an inoculation party]({{site.url}}/assets/images/mushrooms/supplies-for-inoculation-party.jpg)
 
-## Strains we have tried.
+## Mushroom strains we have tried.
 
 ### Wide range Shiitake strains.
 
-#### WR46
+#### WR46 shiitake mushrooms.
 
 These grow well and some have the most amazing textured caps!
 
@@ -269,7 +269,7 @@ _[WR46](https://www.fieldforest.net/Wide-Range-Strains/products/32/) description
 > logs recover quickly after the fruiting.
 
 
-#### West Wind
+#### West Wind shiitake mushrooms.
 
 Red Oak is quite abundant around here so we have tried this strain also.
 
@@ -282,8 +282,7 @@ _[West Wind](https://www.fieldforest.net/Shiitake-West-Wind-Sawdust-Spawn/produc
 > other WR strains, and shows a slight preference for red oak over white oak. Fruits naturally in
 > the spring and fall.
 
-
-#### Beltane
+#### Beltane shiitake mushrooms.
 
 Beltane has a darker cap and were quite large in this fruiting.
 
@@ -296,7 +295,7 @@ _[Beltane](https://www.fieldforest.net/Shiitake-Beltane-Sawdust-Spawn/productinf
 > mushrooms mid-summer in a cool, shaded woods after dunking in cold water. Firm, caramel-colored caps
 > dusted with white fibrils darken to cocoa brown as caps flatten. Fruiting temp ranges from 54-75° F.
 
-#### Native Harvest
+#### Native Harvest shiitake mushrooms.
 
 Red Maple is also abundant locally and Native Harvest is reported to grow well on it.
 
@@ -312,7 +311,7 @@ _[Native Harvest](https://www.fieldforest.net/Shiitake-Native-Harvest-Sawdust-Sp
 
 ### Warm wather Shiitake strains.
 
-#### Night Velvet
+#### Night Velvet shiitake mushrooms.
 
 I like how dark the Night Velvet caps are.
 
@@ -328,7 +327,7 @@ _[Night Velvet](https://www.fieldforest.net/Shiitake-Night-Velvet-Sawdust-Spawn/
 
 ### Oyster strains.
 
-#### PoHu
+#### PoHu oyster mushrooms.
 
 We've had good Fall and Spring fruitings from PoHu oyster mushrooms.
 
@@ -340,9 +339,20 @@ _[PoHu](https://www.fieldforest.net/Oyster-PoHu-Pleurotus-ostreatus-Sawdust-Spaw
 > throughout the growing season, including summer. PoHu is a heavy producer and grows many ocher to
 > white colored mushrooms in thick clusters, perfect for farm markets and hungry homegrowers.
 
-#### Kira
+#### Kira oyster mushrooms.
 
-Don't have any pictures of Kira oyster mushrooms yet. First inoculation was in Fall 2017.
+Oct 9 2018: I think these are Kira Oyster mushrooms just starting on a Bigtooth Aspen (Populus grandidentata) log.
+
+_Kira oysters just starting to bud on Bigtooth Aspen log_
+![Kira oysters just budding on Bigtooth Aspen log.]({{site.url}}/assets/images/mushrooms/oyster-logs-20181009/bigtooth-aspen-oyster-log-1.jpg){:height="400px"}
+
+_Kira oysters closeups_
+
+![Kira oysters just budding on Bigtooth Aspen log.]({{site.url}}/assets/images/mushrooms/oyster-logs-20181009/kira-oyster-babies-1.jpg){:height="400px"}
+
+![Kira oysters just budding on Bigtooth Aspen log.]({{site.url}}/assets/images/mushrooms/oyster-logs-20181009/kira-oyster-babies-2.jpg){:height="400px"}
+
+
 
 _[Kira](https://www.fieldforest.net/Oyster-Kira-Pleurotus-ostreatus-Sawdust-Spawn/productinfo/SKR/) description from Field and Forest:_
 
@@ -352,6 +362,6 @@ _[Kira](https://www.fieldforest.net/Oyster-Kira-Pleurotus-ostreatus-Sawdust-Spaw
 > spring and fall, with a fruiting temp range of 40-60° F. Kira is like a cool weather version
 > of PoHu with its prolific nature, and at F&FP, it’s the beloved oyster of spring.
 
-### Lions Mane
+### Lions Mane mushrooms.
 
 Fall 2017 Kathy Becker brought Beech logs and Lions Mane in plug form to share. She reports that we should expect the initial mycelium growth before first fruiting to take about two years.
