@@ -343,15 +343,14 @@ _[PoHu](https://www.fieldforest.net/Oyster-PoHu-Pleurotus-ostreatus-Sawdust-Spaw
 
 Oct 9 2018: I think these are Kira Oyster mushrooms just starting on a Bigtooth Aspen (Populus grandidentata) log.
 
-_Kira oysters just starting to bud on Bigtooth Aspen log_
-![Kira oysters just budding on Bigtooth Aspen log.]({{site.url}}/assets/images/mushrooms/oyster-logs-20181009/bigtooth-aspen-oyster-log-1.jpg){:height="400px"}
+_Kira oysters just starting to bud on bigtooth aspen log_
+![Kira oysters just budding on Bigtooth Aspen log.]({{site.url}}/assets/images/mushrooms/oyster-logs-20181009/bigtooth-aspen-oyster-log-1.jpg)
 
 _Kira oysters closeups_
 
-![Kira oysters just budding on Bigtooth Aspen log.]({{site.url}}/assets/images/mushrooms/oyster-logs-20181009/kira-oyster-babies-1.jpg){:height="400px"}
+![Kira oysters just budding on bigtooth aspen log.]({{site.url}}/assets/images/mushrooms/oyster-logs-20181009/kira-oyster-babies-1.jpg)
 
-![Kira oysters just budding on Bigtooth Aspen log.]({{site.url}}/assets/images/mushrooms/oyster-logs-20181009/kira-oyster-babies-2.jpg){:height="400px"}
-
+![Kira oysters just budding on bigtooth aspen log.]({{site.url}}/assets/images/mushrooms/oyster-logs-20181009/kira-oyster-babies-2.jpg)
 
 
 _[Kira](https://www.fieldforest.net/Oyster-Kira-Pleurotus-ostreatus-Sawdust-Spawn/productinfo/SKR/) description from Field and Forest:_
