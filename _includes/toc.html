@@ -86,5 +86,5 @@
     {% endif %}
 {% endcapture %}{% assign tocWorkspace = '' %}
 {% if nodes.size > 1 %}
-  {{ my_toc | prepend: "**Table of contents**" | markdownify | strip }}
+  {{ my_toc | prepend: "**Table of contents** _(click on links to jump directly to that section)_" | markdownify | strip }}
 {% endif %}
