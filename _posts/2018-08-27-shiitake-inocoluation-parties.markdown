@@ -10,12 +10,12 @@ tags: [ mushroom, shiitake, oyster, inoculation]
 
 Forest Voges and I have been hosting community Shiitake Inoculation parties every Fall
 and Spring for the last few years. We usually hold them behind Forest's house at
-206 Cooleyville Rd,Shutesbury, MA 01072.
+206 Cooleyville Rd, Shutesbury, MA 01072.
 
 ![Pretty Shiitakes]({{site.url}}/assets/images/mushrooms/pretty-shiitakes.jpg)
 
 We supply materials, tools, and some assembly line systems  to help
-the work move smoothly. We also have been cutting and collecting logs for inocolulation.
+the work move smoothly. We also have been cutting and collecting logs for inoculation.
 
 _Forest's Landrover filled with Red Oak logs for inoculation after collecting what we
 earlier cut in the woods._
@@ -52,7 +52,7 @@ We usually start around 10-11, have a pot luck lunch around 1, and finish around
 It's important to use trees that have a great deal of stored food energy. It's this stored
 food energy that the mushroom mycelium processes and uses to intermittently create
 fruiting bodies to spread spores. While most of the mushroom exists in the
-form of a web of mycelium growing throughouut the log the visible fruiting bodies
+form of a web of mycelium growing throughout the log the visible fruiting bodies
 are what we pick and what everybody refers to as mushrooms.
 
 Deciduous trees have the least food energy in the late Spring and early summer. They have used up
@@ -67,7 +67,7 @@ diameters from 3-6 inches and lengths from 28 to 36-40 inches. This usually mean
 that is 8 inches in diameter at the base is terrific.
 
 After cutting, the logs need to rest for two or three weeks before inoculation. A healthy tree
-has anti-fungal properties and it important to let these properties dissapate before introducing
+has anti-fungal properties and it important to let these properties dissipate before introducing
 the mushroom mycelium we want to grow in the log.
 
 After cutting, the logs should be placed in low stacks just above the ground and protected from
@@ -126,7 +126,7 @@ the logs might be getting ready to fruit stand them up and lean them against a t
 There are two problems to be aware of if the mushrooms start to fruit while the logs are
 in a low stack.
 
-1. You might not see them if they start growing on the bottoim of the log.
+1. You might not see them if they start growing on the bottom of the log.
 2. Some will end up growing into the side of the log next in the stack and end up mishapen.
 
 It will be both easier to see and pick mushrooms that are fruiting when the logs are
@@ -187,6 +187,14 @@ log in a fruiting.
 
 Normally Shiitake logs will produce significant numbers of mushrooms for at least 3-5 years.
 
+## After a log has fruited when will it fruit again?
+
+After a log has fruited the mycelium has to first build up reserves of biological energy before a subsequent fruiting might kick off. This usually means at least 7-8 weeks of good mycelium growing weather: relatively warm and regular soaking rains (or the equivalent watering). After the mycelium has processed enough of the food energy in the log a number of different environmental triggers might contribute to the start of a fruiting such as large changes in moisture or temperature as might occur in a cold soaking rain. Physical shock can also contribute to the conditions which trigger a fruiting. If you aren't specifically forcing a log to fruit you will want to check regularly to see if a fruiting has started especially after a long cold rain. As the weather gets colder the growth of mycelium in a log slows.
+
+If there is no rain for several weeks and the weather conditions are dry the logs will start to dry out. As a log gets dryer the growth of the mycelium will also slow. if the log gets dry enough the mycelium will enter into a form of stasis and won't start growing again until moisture levels in the log rise again.
+
+In very dry conditions I've regularly watered my logs every four or five days to emulate the effect of a soaking rain.
+
 ## Forcing a log to fruit
 
 After a log has fruited for the first time and then after the mycelium has grown and
@@ -220,10 +228,6 @@ get more cold water.
 
 If the mycelium was ready to fruit you will have a new crop of mushrooms ready to pick in
 about a week.
-
-After a log has fruited it's important to wait until the mycelium has again built up enough
-biological energy for a subsequent fruiting. This usually means 7-8 weeks of good mycelium
-growing weather: relatively warm and regular soaking rains (or the equivalent watering).
 
 ## Drying Shiitakes.
 
@@ -309,7 +313,7 @@ _[Native Harvest](https://www.fieldforest.net/Shiitake-Native-Harvest-Sawdust-Sp
 > Red Maple. Unlike other wide range species, Native Harvest™ also gives a late fall
 > flush; an added bonus for the Thanksgiving table! Spawn run is 6 to 12 months.
 
-### Warm wather Shiitake strains.
+### Warm weather Shiitake strains.
 
 #### Night Velvet shiitake mushrooms.
 
@@ -341,10 +345,10 @@ _[PoHu](https://www.fieldforest.net/Oyster-PoHu-Pleurotus-ostreatus-Sawdust-Spaw
 
 #### Kira oyster mushrooms.
 
-Oct 9 2018: I think these are Kira Oyster mushrooms just starting on a Bigtooth Aspen (Populus grandidentata) log.
+Oct 9 2018: I think these are Kira Oyster mushrooms just starting on a bigtooth aspen (Populus grandidentata) log.
 
 _Kira oysters just starting to bud on bigtooth aspen log_
-![Kira oysters just budding on Bigtooth Aspen log.]({{site.url}}/assets/images/mushrooms/oyster-logs-20181009/bigtooth-aspen-oyster-log-1.jpg)
+![Kira oysters just budding on bigtooth aspen log.]({{site.url}}/assets/images/mushrooms/oyster-logs-20181009/bigtooth-aspen-oyster-log-1.jpg)
 
 _Kira oysters closeups_
 
