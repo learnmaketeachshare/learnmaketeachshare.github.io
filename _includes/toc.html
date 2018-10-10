@@ -84,4 +84,7 @@
         {% capture my_toc %}{: #{{ include.id }}}
 {{ my_toc | lstrip }}{% endcapture %}
     {% endif %}
-{% endcapture %}{% assign tocWorkspace = '' %}{{ my_toc | markdownify | strip }}
+{% endcapture %}{% assign tocWorkspace = '' %}
+{% if nodes.size > 1 %}
+  {{ my_toc | prepend: "**Table of contents**" | markdownify | strip }}
+{% endif %}
