@@ -189,6 +189,8 @@ Normally Shiitake logs will produce significant numbers of mushrooms for at leas
 
 ## After a log has fruited when will it fruit again?
 
+I'll often get three fruiting during the spring to fall seasons when the mushrooms normally fruit.
+
 After a log has fruited the mycelium has to first build up reserves of biological energy before a subsequent fruiting might kick off. This usually means at least 7-8 weeks of good mycelium growing weather: relatively warm and regular soaking rains (or the equivalent watering). After the mycelium has processed enough of the food energy in the log a number of different environmental triggers might contribute to the start of a fruiting such as large changes in moisture or temperature as might occur in a cold soaking rain. Physical shock can also contribute to the conditions which trigger a fruiting. If you aren't specifically forcing a log to fruit you will want to check regularly to see if a fruiting has started especially after a long cold rain. As the weather gets colder the growth of mycelium in a log slows.
 
 If there is no rain for several weeks and the weather conditions are dry the logs will start to dry out. As a log gets dryer the growth of the mycelium will also slow. if the log gets dry enough the mycelium will enter into a form of stasis and won't start growing again until moisture levels in the log rise again.
