@@ -160,5 +160,7 @@ During the tests the gain for the green LED was set to 22x and the gain for the 
 
 
 1. Forrest M. Mims III, 1992, [Sun photometer with light-emitting diodes as spectrally selective detectors](https://pdfs.semanticscholar.org/68d0/254593e8a993571cee32564a3fc295d5daf3.pdf)
-2. David R. Brooks, 2001, [Developoment of an inexpensive hendheld LED-based Sun photometer for the Globe program](https://userpages.umbc.edu/~martins/PHYS650/LED_Photometer_BrooksJGR2001.pdf)
-3. Gregory Garza, 2013, [Atmosphere Observation by the Method of LED Sun Photometry](https://pdfs.semanticscholar.org/df58/6feea8d50844e68c3d9831b5aa589415166d.pdf)
+2. HAZE-SPAN, 1998, [Haze Sun Photometer Atmospheric Network](http://haze.concord.org/)
+3. David R. Brooks, 2001, [Developoment of an inexpensive hendheld LED-based Sun photometer for the Globe program](https://userpages.umbc.edu/~martins/PHYS650/LED_Photometer_BrooksJGR2001.pdf)
+4. Gregory Garza, 2013, [Atmosphere Observation by the Method of LED Sun Photometry](https://pdfs.semanticscholar.org/df58/6feea8d50844e68c3d9831b5aa589415166d.pdf)
+5. Forrest M. Mims III, March 2015, Make, [Build a Twilight Photometer to Detect Stratospheric Particles](https://makezine.com/projects/twilight-photometer/)
