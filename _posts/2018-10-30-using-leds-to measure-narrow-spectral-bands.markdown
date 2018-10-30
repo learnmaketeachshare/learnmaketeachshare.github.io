@@ -12,8 +12,10 @@ Aerosols and ozone in the atmosphere, vegetation and water-stress in terrestrial
 
 Often narrow spectral bands of light are measured with interference filters. These are optical filters that consist of multiple layers of dielectric materials with different refractive indices and different thicknesses. Interference filters can have bandwidths as low as 10 nm however the construction is complex and a narrow bandwidth filter might need up to 100 layers which means they are expensive.
 
-For example a 25 mm diameter interference filter with a 540 nm bandpass wavelength and a 24 nm bandwidth is about $325: 
-[Chrome, ET540/24m](https://www.chroma.com/products/parts/et540-24m)
+For example a 25 mm diameter interference filter with a 550 nm bandpass wavelength and a 15 nm bandwidth (FWHM) is about $325:
+[Chroma, ET550/15m](https://www.chroma.com/products/parts/et550-15x)
+
+### Using LEDs to measure spectrally narrow bands of light
 
 Forrest Mimms pioneered the use of light-emitting-diodes as spectrally selective light detectors for sun photometry in 1992. It turns out that LEDs which normally are used to emit light can also be used to measure light. A very basic green LED from Radio Shack (part# 276-022A) might generate as much as 10 nA of current.
 
@@ -23,14 +25,22 @@ I used their [SDMC1-3](https://www.dynasil.com/catalog/mini-chrom-monochromators
 
 Optometrics supplied a calibration for the output of their tungsten light source and a spectral sensitivity the monochrometer which I combined topgether into a variable I called Monochrometer Output Power (uW).
 
-I only had a chance then to measure two LEDs.
+We developed a circuit board with a dual opamp to first convert the tiny currents produced by the LEDs to a voltage and then to amplify the voltage.
 
-1. Green LED, Radio Shack part# 276-022A, 6.3 mxd
+At the time I only had a chance to measure two LEDs.
+
+1. Green LED, Radio Shack part# 276-022A, 6.3 mcd
 2. High brightness red LED, Radio Shack part# 276-066B, 470 mcd
 
-The results are impressive -- especially for the low-brightness green LED. I'm very interested in testing more LEDs.
+The results are impressive -- especially for the low-brightness green LED which has a peak response at 550 nm and a bandwidth of 60 nm. While the bandwidth is about four times as wide as the Chroma, ET550/15m interference filter the cost is lower by about a factor of 1000.
 
 ![LED spectral sensitivity graph]({{site.url}}/assets/images/LEDs/LED-data2.gif){:width="600px"}
+
+The red LED is a high-brightness model and about 75 times brighter than the green LED when used to emit light. However when used as a light sensor the green LED has a narrower bandwidth.
+
+It is easy to see the longer response tail in the shorter wavelengths for the red LED when the same spectral response data is plotted using a log scale on the Y axis. LEDs used as sensors like the green LED with very strong rejection of out of band signals are often more useful in spectroscopy.
+
+![LED spectral sensitivity semilog graph]({{site.url}}/assets/images/LEDs/LED-data2-log.gif){:width="600px"}
 
 ### Circuit board setup for testing the green LED.
 
@@ -144,3 +154,11 @@ During the tests the gain for the green LED was set to 22x and the gain for the 
 | 790        |           |           | 10.998        |            |            |
 | 795        |           |           | 10.755        |            |            |
 | 800        |           |           | 10.513        |            |            |
+
+
+### References
+
+
+1. Forrest M. Mims III, 1992, [Sun photometer with light-emitting diodes as spectrally selective detectors](https://pdfs.semanticscholar.org/68d0/254593e8a993571cee32564a3fc295d5daf3.pdf)
+2. David R. Brooks, 2001, [Developoment of an inexpensive hendheld LED-based Sun photometer for the Globe program](https://userpages.umbc.edu/~martins/PHYS650/LED_Photometer_BrooksJGR2001.pdf)
+3. Gregory Garza, 2013, [Atmosphere Observation by the Method of LED Sun Photometry](https://pdfs.semanticscholar.org/df58/6feea8d50844e68c3d9831b5aa589415166d.pdf)
