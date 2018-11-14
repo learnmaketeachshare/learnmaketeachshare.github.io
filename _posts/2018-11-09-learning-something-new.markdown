@@ -14,7 +14,7 @@ One of the new technologies Bob Tinker and I had created together was the whole 
 
 The first and simplest of these programs was the Apple II Temperature Grapher we created in 1980 for HRM Media which used a thermistor connected to the built-in gameport.
 
-At our workshops I ran a session for teachers where I gave each of them a thermistor, some wire, a 16-pin DIP header and sone solder and a soldering iron. Almost none of them had ever soldered before and most of them had never opened the computer case either.
+At our workshops I ran a session for teachers where I gave each of them a thermistor, some wire, a 16-pin DIP header and some solder and a soldering iron. Almost none of them had ever soldered before and most of them had never opened the computer case either.
 
 Well I helped them learn to solder. We had lots of extra parts if they broke something. When they connected their new temperature probe to the computer I helped them write a 10 line BASIC program that read data from the gameport, converted it to temperature and drew a realtime graph on the screen.
 
