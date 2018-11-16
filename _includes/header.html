@@ -3,8 +3,8 @@
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
+    <img class="gravatar" style="height: 70px; float: left; margin-left: -120px; padding: 4px 8px;" src="assets/images/stephen-smiling-with-guitar-and-ella-cropped-small.jpg" />
     <div class="site-title">
-      <img class="gravatar" src="{{ site.email | to_gravatar }}?s=40" />
       <a rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
     </div>
 
@@ -26,7 +26,6 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {%- endfor -%}
-          
         </div>
       </nav>
     {%- endif -%}
