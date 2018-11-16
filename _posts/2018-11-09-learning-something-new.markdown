@@ -26,7 +26,7 @@ But something much deeper was also happening that I didn't realize the importanc
 
 Many years later at NSTA conferences I can remember many of these same teachers, who were now educational leaders in their districts, would come up to me and mention that the workshops we ran were very important to them and they all remembered the probeware workshop.
 
-I realized that something very special happens when people are in a new situation where they have agency over domains that they never expected to have agency over.
+I realized that something very special happens when people are in a new situation where they have agency over domains that they never expected to have any mastery over.
 
 The emotional energy released/generated in the probeware workshop when the teachers soldered bits together and wrote a simple program to graph temperature changed their view of what was possible for them and the people around them.
 
