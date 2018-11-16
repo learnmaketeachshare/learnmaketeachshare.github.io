@@ -24,8 +24,19 @@
   }
 }
 
+.site-image {
+  flex: 1;
+  text-align: center;
+  margin-left: -2em;
+ img {
+   height: 60px;
+   padding: 4px 2px;
+ }
+}
+
 .site-nav {
-  float: right;
+  margin-right: auto;
+  
   line-height: $base-line-height * $base-font-size * 2.25;
 
   .nav-trigger {
