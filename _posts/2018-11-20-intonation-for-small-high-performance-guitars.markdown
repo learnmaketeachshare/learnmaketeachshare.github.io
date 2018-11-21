@@ -121,11 +121,20 @@ I regenerated the same intonation data this time using the lightest fretting pre
 
 I did one more collection of intonation data however this time I worked to mute the resonances in the top lower bout by covering it with a rubbery friction fabric and piling 2300 grams of unused side mass weights on top.
 
-![White Pine top muted top with fabric and weights]({{site.url}}/assets/images/guitars/tap-testing-and-intonation/wp-muted-top-with-fabric-and-weights.jpg)
-
 The T(1,1)<sub>2</sub> resonance and presumably many more were reduced but not eliminated.
 
+I was especially interested in seeing what strings 6, 5, and 4 looked like around the T(1,1)2 resonance. 
+
 {% include iframe.html width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1129091287&amp;format=interactive" %}
+
+The T(1,1)2 resonance and presumably many more were reduced but not eliminated. The large flattening below 210 Hz and sharpening above have been reduced.
+
+I am quite surprised that the intonation errors in string 6 around 110 Hz seem to have almost disappeared.
+
+Here's what the actual at partially muting the top looked like.
+
+![White Pine top muted top with fabric and weights]({{site.url}}/assets/images/guitars/tap-testing-and-intonation/wp-muted-top-with-fabric-and-weights.jpg)
+
 
 
 
