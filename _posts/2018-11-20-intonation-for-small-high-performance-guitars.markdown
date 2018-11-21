@@ -127,7 +127,7 @@ Initially I processed the split sections into panels about 600 x 200 x 6 mm, sti
 
 I then baked one set of panels for 90 minutes and another for 270 minutes at 200 degrees in a large convection oven. The goal was to harden the resin in the pine by volatilizing the lighter components. I was not trying to dry the boards further so I included a large flat tray of water in the oven during this process.
 
-I then created a spreadsheet implementing the methods Trevor Gore describes for characterizing panels for tops and coming up with a target thickness and predicting what the mass of the top plate will be.
+I then created a spreadsheet implementing the methods Trevor Gore describes for characterizing panels for tops and coming up with a target thickness and predicting what the mass of the top plate will be. See: Contemporary Acoustic Guitar Design and Build: Gore & Gilet v1:p4-63.
 
 1. Measured length, width, depth, and mass for each tested panel and calculated density.
 2. Determined main resonant frequency for long grain, cross grain and cross-diagonal for each panel. Used a good microphone with a wide frequency response to collect data with Audacity and determined the fundamental pitch for each mode using the Spectrum Analysis feature.
