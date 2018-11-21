@@ -83,7 +83,11 @@ With the top so lightweight and efficient the main resonances in the top and bac
 
 I don't actually know whether the frequency of the string itself is being shifted or perhaps just active panel sections of the guitar. Might be interesting to also measure the string frequencies with magnetic pickups.
 
-Here's a table of the intonation errors (in cents) for the scale tones for all the strings up through fret 12 for the White Pine guitar without any additional side masses.
+Here's a graph showing the intonation errors (in cents) for the scale tones for all the strings up through fret 12 for the White Pine guitar without any additional side masses. Each string is a different color.
+
+{% include iframe.html width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1305952613&amp;format=interactive" %}
+
+Here's the table of the intonation errors (in cents) for the scale tones for all the strings up through fret 12 for the White Pine guitar without any additional side masses.
 
 {% include iframe.html width="712px" height="440px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQeQ0Ej6xr4kkQlpLHOSSiKcqdKgf2oMOzj6YbW8W6i1fxnrAjL3ZJXsN_7NMJ4WHDFxwVsXhnjatPW/pubhtml?widget=true&amp;headers=false&gid=155976817" %}
 
@@ -103,7 +107,11 @@ The back resonance has dropped about 11 Hz to 282 Hz with the addition of the tw
 
 ### Intonation errors with two 300 gram side masses added
 
-Overall many of the intonation errors have been reduced somewhat with the two added 300 gram side mass weights attached.
+Here's a graph showing the intonation errors (in cents) for the scale tones for all the strings up through fret 12 for the White Pine guitar with the two added 300 gram side mass weights attached. Each string is a different color. Overall many of the intonation errors have been reduced somewhat.
+
+{% include iframe.html width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1642036906&amp;format=interactive" %}
+
+A table of the same data.
 
 {% include iframe.html width="712px" height="440px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQeQ0Ej6xr4kkQlpLHOSSiKcqdKgf2oMOzj6YbW8W6i1fxnrAjL3ZJXsN_7NMJ4WHDFxwVsXhnjatPW/pubhtml?widget=true&amp;headers=false&gid=474419620" %}
 
