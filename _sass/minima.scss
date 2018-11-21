@@ -53,6 +53,7 @@ $on-laptop:        800px !default;
 $lightlightgray: #F4F4F4;
 
 .iframe-container {
+  width: fit-content;
   margin: 10px 0px 10px 0px;
   padding: 5px 0.5em;
   border-radius: 5px;
