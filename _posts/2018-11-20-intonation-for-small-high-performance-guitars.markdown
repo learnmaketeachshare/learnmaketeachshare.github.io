@@ -107,13 +107,28 @@ The back resonance has dropped about 11 Hz to 282 Hz with the addition of the tw
 
 ### Intonation errors with two 300 gram side masses added
 
-Here's a graph showing the intonation errors (in cents) for the scale tones for all the strings up through fret 12 for the White Pine guitar with the two added 300 gram side mass weights attached. Each string is a different color. Overall many of the intonation errors have been reduced somewhat.
+Here's a table showing the intonation errors (in cents) for the scale tones for all the strings up through fret 12 for the White Pine guitar with the two added 300 gram side mass weights attached. Overall many of the intonation errors have been reduced somewhat compared to the measurements with no side weight masses attached.
+
+{% include iframe.html width="712px" height="440px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQeQ0Ej6xr4kkQlpLHOSSiKcqdKgf2oMOzj6YbW8W6i1fxnrAjL3ZJXsN_7NMJ4WHDFxwVsXhnjatPW/pubhtml?widget=true&amp;headers=false&gid=474419620" %}
+
+Here's a graph of the same data.  Each string is a different color.
 
 {% include iframe.html width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1642036906&amp;format=interactive" %}
 
-A table of the same data.
+I regenerated the same intonation data this time using the lightest fretting pressure possible to get a clear note. This chart shows that while many of the intonation errors are less there are still similar patterns of errors.
 
-{% include iframe.html width="712px" height="440px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQeQ0Ej6xr4kkQlpLHOSSiKcqdKgf2oMOzj6YbW8W6i1fxnrAjL3ZJXsN_7NMJ4WHDFxwVsXhnjatPW/pubhtml?widget=true&amp;headers=false&gid=474419620" %}
+{% include iframe.html width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1142994428&amp;format=interactive" %}
+
+I did one more collection of intonation data however this time I worked to mute the resonances in the top lower bout by covering it with a rubbery friction fabric and piling 2300 grams of unused side mass weights on top.
+
+![White Pine top muted top with fabric and weights]({{site.url}}/assets/images/guitars/tap-testing-and-intonation/wp-muted-top-with-fabric-and-weights.jpg)
+
+The T(1,1)<sub>2</sub> resonance and presumably many more were reduced but not eliminated.
+
+{% include iframe.html width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1129091287&amp;format=interactive" %}
+
+
+
 
 ## More details on the two guitars.
 
