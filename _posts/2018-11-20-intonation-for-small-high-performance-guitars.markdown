@@ -24,7 +24,7 @@ I created these two guitars over a four year period meeting once a week with sma
 
 ## Intonation issues with small, lightweight, highly responsive tops
 
-Both guitars have extremely responsive tops that can be easily driven with light strings, are impressively loud and have have long sustains.
+Both guitars have extremely responsive tops that can be easily driven with light strings, are impressively loud and have long sustains.
 
 I setup the neck, saddle, and nut on both guitars for a reasonably low action and on the White Pine guitar added some initial offsets to the saddle and nut for intonation.
 
@@ -203,7 +203,7 @@ _Side mass weight attached._
 
 ### Heat-bent multiple-strip kerfling
 
-I enjoyed bending the sides so much that for  the White Pine top guitar I decided to build the kerfling out of multiple heat-=bent strips of cypress instead of the standard saw-cut kerfling. I think it ended up with sort of an art-deco look. Of course it's incredibly strong.
+I enjoyed bending the sides so much that for  the White Pine top guitar I decided to build the kerfling out of multiple heat-bent strips of cypress instead of the standard saw-cut kerfling. I think it ended up with sort of an art-deco look. Of course it's incredibly strong.
 
 _Multiple strips of heat-bent kerfling glued to sides._
 ![Bent kerfing glued to sides]({{site.url}}/assets/images/guitars/gluing-bent-kerfing-to-sides/03-bent-kerfing-complete.jpg)
