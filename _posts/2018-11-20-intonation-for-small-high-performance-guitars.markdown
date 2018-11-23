@@ -141,7 +141,7 @@ Trevor Gore suggested part of the problem could be an artifact of the tuner resp
 
 With the two 300 gram weights attached to the sides and the sound hole open I measured the T(1,1)<sub>2</sub> resonance at 201.2 Hz ... so perhaps I should be looking for resonances closer to 400 Hz also??
 
-I re-collected all the scale tone intonation errors by collecting audio samples of each scale tone in Audacity. I actually had to do this twice, once at 800 Hz to get high-resolution spectral data and again at 22050 Hz to get better resolution data for the pitch detect plugin to process.
+I re-collected all the scale tone intonation errors by collecting audio samples of each scale tone in Audacity. I actually had to do this twice, once at 8000 Hz to get high-resolution spectral data and again at 22050 Hz to get better resolution data for the pitch detect plugin to process.
 
 I then selected each sample and used my extended version of the Pitch Detect plugin which allows me to additionally specify an offset time to start sampling. My settings were a 0.25 s offset followed by an 0.5 s sampling period.
 
