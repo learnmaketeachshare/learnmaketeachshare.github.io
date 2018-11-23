@@ -131,12 +131,42 @@ The T(1,1)2 resonance and presumably many more were reduced but not eliminated. 
 
 I am quite surprised that the intonation errors in string 6 around 110 Hz seem to have almost disappeared.
 
-Here's what the actual at partially muting the top looked like.
+Here's a picture of what I did to partially mute the top. John Fabel suggested also trying to mute the bridge where the pins are located. Another variation I will try.
 
 ![White Pine top muted top with fabric and weights]({{site.url}}/assets/images/guitars/tap-testing-and-intonation/wp-muted-top-with-fabric-and-weights.jpg)
 
+### Maybe an octave harmonic of the T(1,1)<sub>2</sub> is causing the problem.
+
+Trevor Gore suggested part of the problem could be an artifact of the tuner responding to a resonance of 430 Hz -- a low-order harmonic of 215 Hz.
+
+With the two 300 gram weights attached to the sides and the sound hole open I measured the T(1,1)<sub>2</sub> resonance at 201.2 Hz ... so perhaps I should be looking for resonances closer to 400 Hz also??
+
+I re-collected all the scale tone intonation errors by collecting audio samples of each scale tone in Audacity. I actually had to do this twice, once at 800 Hz to get high-resolution spectral data and again at 22050 Hz to get better resolution data for the pitch detect plugin to process.
+
+I then selected each sample and used my extended version of the Pitch Detect plugin which allows me to additionally specify an offset time to start sampling. My settings were a 0.25 s offset followed by an 0.5 s sampling period.
+
+{% include iframe.html width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=88774376&amp;format=interactive" %}
+
+E2:4 is measured almost 12 cents sharp using the Audacity pitch detect plugin -- and looking at the frequency data I can see there is a harmonic right around 415 Hz (418 Hz).
+
+{% include iframe.html width="502px" height="310px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=2109803073&amp;format=interactive" %}
+
+A2:12 is another scale tone that is almost 9 cents sharp. The frequency data does not show a harmonic around 415 Hz, instead it is 439 Hz.
+
+{% include iframe.html width="502px" height="310px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1357818626&amp;format=interactive" %}
+
+A2:11 which appears to be only about 1 cent sharp does have a harmonic at 416 Hz.
+
+{% include iframe.html width="502px" height="310px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1375724333&amp;format=interactive" %}
+
+D3:12 which should be scale tone D4 at 293.7 Hz is 12 cents flat at 292.6 Hz. The first obvious harmonic is at 587 Hz which doesn't seem like it would contribute to T(1,1)<sub>2</sub> but the next harmonic at 880 might if it had enough energy.
+
+{% include iframe.html width="502px" height="310px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=365888587&amp;format=interactive" %}
 
 
+And of course B3:9, which is G#4 at 415.3 Hz is being pushed about 9 cents flat.
+
+**Note:** I collected these data **without** muting the other strings
 
 
 ## More details on the two guitars.
