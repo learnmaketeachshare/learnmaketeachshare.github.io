@@ -201,6 +201,8 @@ The notes pitched around G3, G#3, A3, and A#3 all have sharper decays than nearb
 _Intonation waveform data from A2, D3, and G3. Tracks are lined up so similar scale tones are vertically aligned._
 ![Intonation waveform data from A2, D3, and G3. Tracks are lined up so similar scale tones are vertically aligned.]({{site.url}}/assets/images/guitars/wp/top/wp-A2-D3-G3-amplitude-envelopes-20181124.jpg)
 
+**Note:** The last sample in A2 is the harmonic at the 12th fret and is a duplicate of the sample just before it which is A2 fretted at the 12th fret.
+
 
 ## More details on the two guitars.
 
