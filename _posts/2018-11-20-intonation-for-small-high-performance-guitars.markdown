@@ -168,6 +168,30 @@ And of course B3:9, which is G#4 at 415.3 Hz is being pushed about 9 cents flat.
 
 **Note:** I collected these data **without** muting the other strings
 
+### UpdateL 2018 11 24: 200 gram mass weights, chladni patterns
+
+I made a few changes and collected more intonation data and tried to force some visible chladni patterns on the top.
+
+1. Reduced the side mass weights from 300 to 200 grams.
+2. Took 0.1 mm off of frets (about 1.15 to 1.05 mm) and re-crowned.
+3. Lowered nut 0.1 mm.
+4. Lowered saddle 0.2 mm.
+
+Changes in measurement procedure:
+
+1. Collecting 12 scale tones and the 12th fret harmonic with Audacity and later generating pitches using Pitch Detect plugin,
+2. Now muting other strings during collection.
+
+Now the maximum flat intonation error is visible on the 5 and 4 stings and is deepest around 185 Hz.
+
+{% include iframe.html width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1976929423&amp;format=interactive" %}
+
+I put a loudspeaker over the sound hole (strings under tension and tuned), sprinkled black tea leaves and swept through a range of frequencies looking for resonance patterns. Didn't get very many but there was a strong resonant responses at 353, 366, and 369 Hz which is just about exactly twice the deepest intonation flattening at 185 Hz ... hmmm.
+
+_Chladni patterns from White Pine top with strings tensioned and tuned (20181124)._
+
+![Chladni patterns from White Pine top with strings tensioned and tuned, 20181124]({{site.url}}/assets/images/guitars/wp/top/chladni-20181124-catalog.jpg)
+
 
 ## More details on the two guitars.
 
