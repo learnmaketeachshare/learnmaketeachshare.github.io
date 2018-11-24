@@ -192,6 +192,15 @@ _Chladni patterns from White Pine top with strings tensioned and tuned (20181124
 
 ![Chladni patterns from White Pine top with strings tensioned and tuned, 20181124]({{site.url}}/assets/images/guitars/wp/top/chladni-20181124-catalog.jpg)
 
+An interesting aspect of collecting the intonation data in Audacity is that it's very easy to correlate the much sharper initial drop in the shape of the amplitude decay curve with notes that seem "dull" and more "thunky" when I play them compared to nearby notes.
+
+I already knew the most likely reason is coupling with a resonance that matches the scale tone -- but I find I understand the connection at a deeper level when I can combine multiple senses and representations.
+
+The notes pitched around G3, G#3, A3, and A#3 all have sharper decays than nearby notes.
+
+_Intonation waveform data from A2, D3, and G3. Tracks are lined up so similar scale tones are vertically aligned._
+![Intonation waveform data from A2, D3, and G3. Tracks are lined up so similar scale tones are vertically aligned.]({{site.url}}/assets/images/guitars/wp/top/wp-A2-D3-G3-amplitude-envelopes-20181124.jpg)
+
 
 ## More details on the two guitars.
 
