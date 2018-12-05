@@ -6,6 +6,12 @@ categories: [ software ]
 tags: [ creativity, software, technology, visualization, modeling ]
 ---
 
+## Summary
+
+Sometimes the critical constraining resource is what you can and can't imagine. In 2011 Google Foundation gave us a large un-solicited grant to recreate an HTML5 version of our Java program Molecular Workbench. I desperately wanted to shift what people imagined was possible.
+
+## The story starts here
+
 For many years I worked with [Bob Tinker](https://en.wikipedia.org/wiki/Robert_F._Tinker){:target="_blank"}. I first worked for Bob at [TERC](https://www.terc.edu/) where we created and implemented the idea of probeware -- connecting sensors and interfaces to microcomputers to support real-time collection and display of sensor data for science education. In 1995 we started [Concord Consortium](https://concord.org/){:target="_blank"} together. We could easily imagine things that didn't exist and then iteratively improve and evolve our ideas and designs all in our imagination before we started implemented them.
 
 I worked closely with Bob for a long time and it was only later that I realized that collaboratively designing things in our imaginations was unusual and this wasn't something that everybody did.
