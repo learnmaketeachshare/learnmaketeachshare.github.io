@@ -193,8 +193,10 @@ _Chladni patterns from White Pine top with strings tensioned and tuned (20181124
 ![Chladni patterns from White Pine top with strings tensioned and tuned, 20181124]({{site.url}}/assets/images/guitars/wp/top/chladni-20181124-catalog.jpg)
 
 _Frequency response of White Pine top, 200 grams side mass weights._
+
 {% include iframe.html width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1455834922&amp;format=interactive" %}
 
+There are peaks at 115.2, 152.3, 190.4, 205.1, 208.0, 240.2, 254.9, 306.6, 376.0, 441.4, and 528.3 Hz.
 
 An interesting aspect of collecting the intonation data in Audacity is that it's very easy to correlate the much sharper initial drop in the shape of the amplitude decay curve with notes that seem "dull" and more "thunky" when I play them compared to nearby notes.
 
