@@ -6,7 +6,11 @@ categories: [ instruments ]
 tags: [ guitar, building, intonation ]
 ---
 
-I've recently finished two small high-performance steel-string guitars inspired by the [1918 Martin 1-18 plans](https://www.lmii.com/plans/3540-plan-1918-martin-1-18-12-fret-to-the-body.html) Ted Nelson created for GAL.
+## Summary
+
+I've recently finished two small high-performance steel-string guitars inspired by the [1918 Martin 1-18 plans](https://www.lmii.com/plans/3540-plan-1918-martin-1-18-12-fret-to-the-body.html) Ted Nelson created for GAL. There are some interesting intonation issues I am investigating that I suspect are inherently more difficult to ameliorate because the tops have been designed to work very efficiently with lightweight steel strings.
+
+## Two guitars finished November 2018
 
 By "finished" I mean in the last couple of weeks I've finally got the bridges glued on and have done some initial work on action and intonation. The guitars of course are still changing slowly and settling in.
 
@@ -168,9 +172,9 @@ And of course B3:9, which is G#4 at 415.3 Hz is being pushed about 9 cents flat.
 
 **Note:** I collected these data **without** muting the other strings
 
-### UpdateL 2018 11 24: 200 gram mass weights, chladni patterns
+### UpdateL 2018 11 24: 200 gram mass weights, Chladni patterns
 
-I made a few changes and collected more intonation data and tried to force some visible chladni patterns on the top.
+I made a few changes and collected more intonation data and tried to force some visible Chladni patterns on the top.
 
 1. Reduced the side mass weights from 300 to 200 grams.
 2. Took 0.1 mm off of frets (about 1.15 to 1.05 mm) and re-crowned.
