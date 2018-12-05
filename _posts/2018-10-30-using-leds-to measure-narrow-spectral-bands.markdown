@@ -6,6 +6,12 @@ categories: [ hardware ]
 tags: [ LED, light, spectrum ]
 ---
 
+## Summary
+
+LEDs can be used to measure spectrally narrow bands of light by connecting them to a high-impedance current-to-voltage amplifier and treating them like inefficient photodiodes.
+
+### Using LEDs to measure spectrally narrow bands of light
+
 There's a great deal you can learn about the world around you if you can measure the intensity of light in narrow spectral bands.
 
 Aerosols and ozone in the atmosphere, vegetation and water-stress in terrestrial plants when measured from planes or satelites.
@@ -14,8 +20,6 @@ Often narrow spectral bands of light are measured with interference filters. The
 
 For example a 25 mm diameter interference filter with a 550 nm bandpass wavelength and a 15 nm bandwidth (FWHM) is about $325:
 [Chroma, ET550/15m](https://www.chroma.com/products/parts/et550-15x)
-
-### Using LEDs to measure spectrally narrow bands of light
 
 Forrest Mimms pioneered the use of light-emitting-diodes as spectrally selective light detectors for sun photometry in 1992. It turns out that LEDs which normally are used to emit light can also be used to measure light. A very basic green LED from Radio Shack (part# 276-022A) might generate as much as 10 nA of current.
 
