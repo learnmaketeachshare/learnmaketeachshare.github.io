@@ -71,8 +71,8 @@ DEPENDENCIES
   jekyll (~> 4.0.0)
   jekyll-feed (~> 0.6)
   jekyll-gravatar
-  minima (~> 2.0)
+  minima
   tzinfo-data
 
 BUNDLED WITH
-   1.17.2
+   2.2.18
