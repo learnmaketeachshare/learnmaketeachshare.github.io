@@ -6,8 +6,6 @@ categories: [ hardware ]
 tags: [ LED, light, spectrum ]
 ---
 
-## Summary
-
 LEDs can be used to measure spectrally narrow bands of light by connecting them to a high-impedance current-to-voltage amplifier and treating them like inefficient photodiodes.
 
 ### Using LEDs to measure spectrally narrow bands of light

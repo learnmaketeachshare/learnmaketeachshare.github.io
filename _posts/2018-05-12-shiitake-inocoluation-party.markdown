@@ -6,7 +6,7 @@ categories: [ mushroom ]
 tags: [ mushroom, shiitake, oyster, inoculation]
 ---
 
-A small group ... and it was raining ... but we had lots of fun!
+A small group gathered ... and it was raining ... but we had lots of fun!
 
 {% include youtubeplayer.html id="JvwVjbf5-wM" %}
 
@@ -36,4 +36,3 @@ Inoculating logs with spawn, a mixture of sawdust and Shiitake mycelium.
 Moving a finished log after covering the hole filled with spawn with melted cheese wax.
 
 ![moving finished log]({{site.url}}/assets/images/mushrooms/20180512/moving finished log.jpg)
-

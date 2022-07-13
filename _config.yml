@@ -14,24 +14,47 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Learn Make Teach Share
-header: images/stephen-smiling-with-guitar-and-ella-cropped-small.jpg
-author: Stephen Bannasch
-email: stephen.bannasch@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Be curious and kind whenever possible.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username:
-github_username:  stepheneb
-linkedin_username: stephen-bannasch-b34b3643
+
+author:
+  name: Stephen Bannasch
+  email: stephen.bannasch@gmail.com
+
+description: > # this means to ignore newlines until "show_excerpts:"
+  Learn something new.
+  Make something that entertains you or does something useful ... or both!
+  Share this with people you meet!
+  Help other folks learn how to do it.
+
+show_excerpts: true
+
+collections:
+  tags:
+    output: true
+    permalink: tags/:path/
+
+theme: minima
+minima:
+  date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    github:  stepheneb
+    twitter: stephenbannasch
+    linkedin: stephen-bannasch-b34b3643
 
 # Build settings
 markdown: kramdown
 kramdown:
   parse_block_html: true
-theme: minima
+
 plugins:
   - jekyll-feed
+  # - jekyll-remote-theme
+
+# set up remote_theme
+# remote_theme: jekyll/minima
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

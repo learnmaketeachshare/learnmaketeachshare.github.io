@@ -6,9 +6,7 @@ categories: [ instruments ]
 tags: [ dinalin, guitar, dulcimer, mandolin ]
 ---
 
-## Imagine, design, and build an instrument from scratch in two weeks?
-
-In Early March 2015 I was in the middle of a long-term project learning to build guitars from scratch. I was doing this with a small group mentored by a good friend John Fabel. Since I already had experience making all kinds of things I also ended up making many tools and making tools to make tools.
+Imagine designing and build an instrument from scratch in two weeks! In Early March 2015 I was in the middle of a long-term project learning to build guitars from scratch. I was doing this with a small group mentored by a good friend John Fabel. Since I already had experience making all kinds of things I also ended up making many tools and making tools to make tools.
 
 Considering we only met once a week, some of the other folks had almost no wood-working experience and we were starting with logs it became obvious to me the process would continue for quite a while at a deliciously deliberate pace.
 

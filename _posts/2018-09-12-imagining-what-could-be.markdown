@@ -6,8 +6,6 @@ categories: [ software ]
 tags: [ creativity, software, technology, visualization, modeling ]
 ---
 
-## Summary
-
 Sometimes the critical constraining resource is what you can and can't imagine. In 2011 Google Foundation gave us a large un-solicited grant to recreate an HTML5 version of our Java program Molecular Workbench. I desperately wanted to shift what people imagined was possible.
 
 ## The story starts here

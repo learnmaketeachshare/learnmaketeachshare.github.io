@@ -6,8 +6,6 @@ categories: [ mushroom ]
 tags: [ mushroom, shiitake, oyster, inoculation]
 ---
 
-## Inoculation parties early November and late March.
-
 Forest Voges and I have been hosting community Shiitake Inoculation parties every Fall
 and Spring for the last few years. We usually hold them behind Forest's house at
 206 Cooleyville Rd, Shutesbury, MA 01072.

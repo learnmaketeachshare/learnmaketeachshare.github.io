@@ -6,8 +6,6 @@ categories: [ mask ]
 tags: [ mask nose strip metal ]
 ---
 
-## Nose Strips for People Sewing Masks
-
 The pandemic arrived in March 202 and I wanted to do something to help. I saw lots of folks were sewing masks locally for hospitals and first responders and they were being made either without nose strips to help shape and seal the mask where it fits over a persons nose or adapting household items that might not be stiff enough to keep the shape like twist ties or pipe cleaners.
 
 I decided I could help and started making and giving away stripslike these:
@@ -110,4 +108,3 @@ Am using five pounds of the following ceramic deburring material from McMaster-C
 The vibrating motion of the tumbler causes the strips and ceramic media to continually move around each other. The multitude of tiny bumps end up smoothing all the rough and sharp edges.
 
 {% include youtubeplayer.html id="tRhPNuiJlsA" %}
-

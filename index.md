@@ -4,3 +4,5 @@
 
 layout: home
 ---
+
+### Be curious and kind whenever possible!

@@ -6,8 +6,6 @@ categories: [ instruments ]
 tags: [ guitar, building, intonation ]
 ---
 
-## Summary
-
 I've recently finished two small high-performance steel-string guitars inspired by the [1918 Martin 1-18 plans](https://www.lmii.com/plans/3540-plan-1918-martin-1-18-12-fret-to-the-body.html) Ted Nelson created for GAL. There are some interesting intonation issues I am investigating that I suspect are inherently more difficult to ameliorate because the tops have been designed to work very efficiently with lightweight steel strings.
 
 ## Two guitars finished November 2018
@@ -127,7 +125,7 @@ I did one more collection of intonation data however this time I worked to mute 
 
 The T(1,1)<sub>2</sub> resonance and presumably many more were reduced but not eliminated.
 
-I was especially interested in seeing what strings 6, 5, and 4 looked like around the T(1,1)2 resonance. 
+I was especially interested in seeing what strings 6, 5, and 4 looked like around the T(1,1)2 resonance.
 
 {% include iframe.html width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1129091287&amp;format=interactive" %}
 
@@ -314,4 +312,3 @@ I enjoyed bending the sides so much that for  the White Pine top guitar I decide
 
 _Multiple strips of heat-bent kerfling glued to sides._
 ![Bent kerfing glued to sides]({{site.url}}/assets/images/guitars/gluing-bent-kerfing-to-sides/03-bent-kerfing-complete.jpg)
-
