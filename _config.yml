@@ -54,7 +54,7 @@ plugins:
   # - jekyll-remote-theme
 
 # set up remote_theme
-# remote_theme: jekyll/minima
+remote_theme: jekyll/minima
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
