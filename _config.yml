@@ -34,7 +34,7 @@ collections:
     output: true
     permalink: tags/:path/
 
-theme: minima
+# theme: minima
 minima:
   date_format: "%b %-d, %Y"
 
@@ -49,12 +49,13 @@ markdown: kramdown
 kramdown:
   parse_block_html: true
 
-plugins:
-  - jekyll-feed
+# plugins:
+#   - jekyll-feed
+#   - jekyll-seo-tag
   # - jekyll-remote-theme
 
 # set up remote_theme
-remote_theme: jekyll/minima
+# remote_theme: jekyll/minima
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
