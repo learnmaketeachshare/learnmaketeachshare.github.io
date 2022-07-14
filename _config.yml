@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Learn Make Teach Share
+subtitle: Helping create a kinder more interesting world.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -34,7 +35,6 @@ collections:
     output: true
     permalink: tags/:path/
 
-# theme: minima
 minima:
   date_format: "%b %-d, %Y"
 
@@ -53,9 +53,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   # - jekyll-remote-theme
-
-# set up remote_theme
-# remote_theme: jekyll/minima
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
