@@ -21,8 +21,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 author:
   name: Stephen Bannasch
   email: stephen.bannasch@gmail.com
-  resume: https://stepheneb.github.io/resume.html
-  consulting: https://stepheneb.github.io/artandlogic.html
+  home: stepheneb.github.io
+  resume: stepheneb.github.io/resume.html
+  consulting: stepheneb.github.io/artandlogic.html
 
 description: > # this means to ignore newlines until "show_excerpts:"
   Learn something new.
