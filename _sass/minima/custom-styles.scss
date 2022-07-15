@@ -1,5 +1,5 @@
 h1.post-title {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 h2 {
@@ -7,9 +7,19 @@ h2 {
 }
 
 h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
   a.post-link {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
 }
 
 header {
@@ -18,6 +28,9 @@ header {
   &.subtitle {
     font-size: 0.95rem;
     font-weight: 500;
+  }
+  &.post-header {
+    margin-bottom: 1rem;
   }
 }
 
@@ -36,10 +49,12 @@ a {
     margin: 0.25rem 0;
     h3.category-head {
       margin: 0.5rem 0;
+      font-size: 1.3rem;
     }
     article.category-item {
       h4 {
-        margin: 0.5rem 0;
+        margin: 0.25rem 0;
+        font-size: 1.2rem;
       }
     }
     .category-name {
