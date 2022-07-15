@@ -2,7 +2,7 @@
 layout: post
 title:  "Splitting a large red oak log to make cutting boards."
 date:   2018-12-07
-categories: [ wood ]
+categories: [ Wood ]
 tags: [ red oak, beeswax, shutesbury]
 ---
 
@@ -40,7 +40,7 @@ The red oak boards are stickered and air-drying now.
 
 I went back and was looking at a short section cut closer to the base of the tree and was wondering if I could do something interesting with it. I was pretty tired at that point in the day but decided to split it into about 12 pie-shaped sections with steel splitting wedges and my short-handled 8 lbs sledge hammer and bring them home. Maybe I could make cutting boards??
 
-By splitting the short section into pieces I was then able to use my large bandsaw to mill very short boards with the grain running very close to perpendicular to the face of the boards. Cutting boards this way is often called quarter sawn though I usually call it radial sawing because my goal is to have each board cut on a radial line from the outside edge of the tree directly towards the center. 
+By splitting the short section into pieces I was then able to use my large bandsaw to mill very short boards with the grain running very close to perpendicular to the face of the boards. Cutting boards this way is often called quarter sawn though I usually call it radial sawing because my goal is to have each board cut on a radial line from the outside edge of the tree directly towards the center.
 
 Boards are both stronger and more stable when the grain lines are perpendicular to the face and the faces can also be more beautiful. I wouldn't know how beautiful until they dried for a couple more months.
 

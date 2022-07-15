@@ -2,7 +2,7 @@
 layout: post
 title:  "Making Nose Strips for People Sewing Masks."
 date:   2020-04-21
-categories: [ mask ]
+categories: [ Masks ]
 tags: [ mask nose strip metal ]
 ---
 

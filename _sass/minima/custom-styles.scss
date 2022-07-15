@@ -24,3 +24,25 @@ header {
 .post-list > li {
   margin-bottom: 1.25rem;
 }
+
+a {
+  font-size: 95%;
+}
+
+#categories {
+  display: flex;
+  flex-direction: column;
+  .category-group {
+    margin: 0.25rem 0;
+    h3.category-head {
+      margin: 0.5rem 0;
+    }
+    article.category-item {
+      h4 {
+        margin: 0.5rem 0;
+      }
+    }
+    .category-name {
+    }
+  }
+}

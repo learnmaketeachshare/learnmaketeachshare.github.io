@@ -2,7 +2,7 @@
 layout: post
 title:  "Learning something new can make all the difference."
 date:   2018-11-09
-categories: [ education ]
+categories: [ Education ]
 tags: [ temperature, probe, thermistor, workshop ]
 ---
 

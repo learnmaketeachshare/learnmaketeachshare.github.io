@@ -2,7 +2,7 @@
 layout: post
 title:  "Using LEDs to measure narrow spectral bands of light."
 date:   2018-10-30
-categories: [ hardware ]
+categories: [ Hardware ]
 tags: [ LED, light, spectrum ]
 ---
 

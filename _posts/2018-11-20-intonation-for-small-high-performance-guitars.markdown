@@ -2,7 +2,7 @@
 layout: post
 title:  "Intonation for small high-performance guitars."
 date:   2018-11-20
-categories: [ instruments ]
+categories: [ Instruments ]
 tags: [ guitar, building, intonation ]
 ---
 

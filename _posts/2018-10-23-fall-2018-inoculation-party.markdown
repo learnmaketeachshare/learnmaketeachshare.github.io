@@ -2,7 +2,7 @@
 layout: post
 title:  "Shiitake and Oyster Inoculation Party Fall 2018."
 date:   2018-10-22 16:11:43 -0400
-categories: [ mushroom ]
+categories: [ Mushrooms ]
 tags: [ mushroom, shiitake, oyster, inoculation]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Practicing curious kindness."
 date:   2018-08-15 16:11:43 -0400
-categories: [ about ]
+categories: [ About ]
 tags: [ curiosity, kindness ]
 ---
 For me the phrase "Learn Make Teach Share" represents both an ethic and a practice that
