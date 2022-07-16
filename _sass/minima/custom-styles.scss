@@ -22,6 +22,8 @@ p {
   margin-bottom: 0.5rem;
 }
 
+img {
+}
 header {
   font-size: 1.1rem;
   font-weight: 600;
@@ -38,7 +40,15 @@ header {
   margin-bottom: 1.25rem;
 }
 
-a {
+.post-content > ul > li {
+  list-style: none;
+  margin-bottom: 0.75rem;
+  img {
+    margin: 0.5rem 0;
+  }
+}
+
+.post-content a {
   font-size: 95%;
 }
 

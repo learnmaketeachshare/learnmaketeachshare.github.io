@@ -74,7 +74,7 @@ In order to convince the team about the performance aspect I decided to build th
 
 ### A fast and simple molecular simulation in JavaScript
 
-In early November 2011 I posted this gist: [Simple Molecules](https://gist.github.com/stepheneb/1342480){:target="_blank"} which implemened a 2-D molecular model using a simple model of neutral molecules interacting with each other via Lennard-Jones potential forces.
+In early November 2011 I posted this gist: [Simple Molecules](https://gist.github.com/stepheneb/1342480){:target="_blank"} which implemented a 2-D molecular model using a simple model of neutral molecules interacting with each other via Lennard-Jones potential forces.
 
 #### Simple Molecules
 
