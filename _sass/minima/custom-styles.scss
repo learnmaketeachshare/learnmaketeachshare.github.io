@@ -53,8 +53,11 @@ header {
 }
 
 #categories {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0rem 2rem;
   .category-group {
     margin: 0.25rem 0;
     h3.category-head {
@@ -63,8 +66,8 @@ header {
     }
     article.category-item {
       h4 {
-        margin: 0.25rem 0;
-        font-size: 1.2rem;
+        margin: 0rem 0 0.75rem 0;
+        font-size: 1.05rem;
       }
     }
     .category-name {
