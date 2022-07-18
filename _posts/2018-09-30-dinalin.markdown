@@ -2,7 +2,7 @@
 layout: post
 title:  "A hybrid guitar-dulcimer-mandolin."
 date:   2018-09-30
-categories: [ Instruments ]
+categories: [ "Making Instruments" ]
 tags: [ dinalin, guitar, dulcimer, mandolin ]
 ---
 

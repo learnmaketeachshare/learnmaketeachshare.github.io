@@ -2,13 +2,13 @@
 layout: post
 title:  "Making Nose Strips for People Sewing Masks."
 date:   2020-04-21
-categories: [ Masks ]
+categories: [ "Better Masks" ]
 tags: [ mask nose strip metal ]
 ---
 
-The pandemic arrived in March 202 and I wanted to do something to help. I saw lots of folks were sewing masks locally for hospitals and first responders and they were being made either without nose strips to help shape and seal the mask where it fits over a persons nose or adapting household items that might not be stiff enough to keep the shape like twist ties or pipe cleaners.
+The pandemic arrived in March 2020 and I wanted to do something to help. I saw lots of folks were sewing masks locally for hospitals and first responders and they were being made either without nose strips to help shape and seal the mask where it fits over a persons nose or adapting household items that might not be stiff enough to keep the shape like twist ties or pipe cleaners.
 
-I decided I could help and started making and giving away stripslike these:
+I decided I could help and started making and giving away strips like these:
 
 ![Nose Strips]({{site.url}}/assets/images/masks/nose-strips-00.jpg)
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Splitting a large red oak log to make cutting boards."
 date:   2018-12-07
-categories: [ Wood ]
+categories: [ "Playing with Wood" ]
 tags: [ red oak, beeswax, shutesbury]
 ---
 

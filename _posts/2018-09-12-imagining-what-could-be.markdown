@@ -2,7 +2,7 @@
 layout: post
 title:  "Imagining what could be."
 date:   2018-09-15
-categories: [ Software ]
+categories: [ "Creating with Software" ]
 tags: [ creativity, software, technology, visualization, modeling ]
 ---
 

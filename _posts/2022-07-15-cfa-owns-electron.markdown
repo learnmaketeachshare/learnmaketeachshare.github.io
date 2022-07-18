@@ -2,7 +2,7 @@
 layout: post
 title:  "Observing With NASA."
 date:   2022-07-15
-categories: [ Software ]
+categories: [ "Creating with Software" ]
 tags: [ nasa, software, technology, javascript, electron, astronomy ]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Thoreau's World."
 date:   2022-07-15
-categories: [ Software ]
+categories: [ "Creating with Software" ]
 tags: [ thoreau, software, technology, javascript ]
 ---
 
