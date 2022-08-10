@@ -12,7 +12,9 @@ I decided I could help and started making and giving away strips like these:
 
 ![Nose Strips]({{site.url}}/assets/images/masks/nose-strips-00.jpg)
 
-They are modeled on the strip I saw on an N95 mask. It was made out of a soft easily bendable aluminum allow. About 3.5" long and 3/16" wide.
+Between March and September 2020 I made and gave away over 29,000 nose strips.
+
+The strips are modeled on the strip I saw on an N95 mask. It was made out of a soft easily bendable aluminum allow. About 3.5" long and 3/16" wide.
 
 ![N95 Mask Nose Strip]({{site.url}}/assets/images/masks/n95-mask-01.jpg)
 
