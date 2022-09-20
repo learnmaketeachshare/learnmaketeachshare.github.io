@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 For me the phrase “Learn Make Teach Share” represents both an ethical approach and
-a practice that helps weave more curiousity and kindness into our interactions
+a practice that helps weave more curiosity and kindness into our interactions
 with each other.
 
 I greatly enjoy making all sorts of things both beautiful and utilitarian but
@@ -13,7 +13,7 @@ my favorite experiences have come from helping to create/inspire that deep full-
 smile people get when they figure out something they never knew they could do
 before.
 
-I believe those ripples of curiousity and joy make self-reinforcing waves that can help
+I believe those ripples of curiosity and joy make self-reinforcing waves that can help
 make the world more wonderful.
 
 Some simple everyday goals:
