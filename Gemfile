@@ -8,9 +8,9 @@ source 'https://rubygems.org'
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem 'jekyll', '~> 4.2.2'
+gem 'jekyll', '~> 4.3.1'
 
-gem 'jekyll-feed', '~> 0.6'
+gem 'jekyll-feed', '~> 0.17'
 gem 'jekyll-gravatar'
 gem 'jekyll-seo-tag'
 # gem 'jekyll-toc'
