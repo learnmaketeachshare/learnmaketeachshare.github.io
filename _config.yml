@@ -14,14 +14,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Learn Make Teach Share
-subtitle: Helping create a kinder more interesting world.
+subtitle: Help create a kinder more interesting world.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 author:
   name: Stephen Bannasch
   email: stephen.bannasch@gmail.com
-  home: stepheneb.github.io
+  home: https://github.com/stepheneb
   resume: stepheneb.github.io/resume.html
   consulting: stepheneb.github.io/artandlogic.html
 
@@ -44,6 +44,9 @@ minima:
   # generate social links in footer
   social_links:
     github:  stepheneb
+    mastodon:
+     - username: stepheneb
+       instance: ruby.social
     twitter: stephenbannasch
     linkedin: stephen-bannasch-b34b3643
 
