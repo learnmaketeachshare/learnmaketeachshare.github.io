@@ -16,7 +16,7 @@
 title: Learn Make Teach Share
 subtitle: Help create a kinder more interesting world.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://learnmaketeachshare.org" # the base hostname & protocol for your site, e.g. http://example.com
 
 author:
   name: Stephen Bannasch
