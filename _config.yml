@@ -33,6 +33,8 @@ description: > # this means to ignore newlines until "show_excerpts:"
 
 show_excerpts: true
 
+rss_icon: true
+
 collections:
   tags:
     output: true
@@ -47,7 +49,6 @@ minima:
     mastodon:
      - username: stepheneb
        instance: ruby.social
-    twitter: stephenbannasch
     linkedin: stephen-bannasch-b34b3643
 
 # Build settings
