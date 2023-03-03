@@ -4,6 +4,10 @@ title:  "Shiitake Inoculation Parties."
 date:   2018-08-27
 categories: [ "Growing Mushrooms" ]
 tags: [ mushroom, shiitake, oyster, inoculation]
+image:
+  path: /assets/images/mushrooms/pretty-shiitakes.jpg
+  height: 120
+  width: 111
 ---
 
 Forest Voges and I have been hosting community Shiitake Inoculation parties every Fall
