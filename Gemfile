@@ -8,7 +8,7 @@ source 'https://rubygems.org'
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem 'jekyll', '~> 4.3.2'
+gem 'jekyll', '~> 4.3.3'
 
 gem 'jekyll-feed', '~> 0.17'
 gem 'jekyll-gravatar'
@@ -36,4 +36,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Performance-booster for watching directories on Windows
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 
-gem "webrick", "~> 1.8.1"
+gem 'webrick', '~> 1.8.1'
