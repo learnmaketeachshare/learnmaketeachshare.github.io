@@ -1,0 +1,17 @@
+# Block OpenAI ChatGPT
+# https://platform.openai.com/docs/gptbot
+User-agent: GPTBot
+Disallow: /
+# ... and ChatGPT plugins
+User-agent: ChatGPT-User
+Disallow: /
+
+# Block Google AI (Bard and Vertex AI generative APIs)
+# https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers
+User-agent: Google-Extended
+Disallow: /
+
+# Block commoncrawl (CCBot)
+# https://commoncrawl.org/ccbot
+User-agent: CCBot
+Disallow: /
