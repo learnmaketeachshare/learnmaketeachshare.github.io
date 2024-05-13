@@ -22,12 +22,14 @@ telescopes in the
 When deployed to a science museum the application displays on a
 large touchscreen integrated into a kiosk.
 
-While the Electron app is a compiled and distributed as native application
+While the Electron app is compiled and distributed as native application
 on both MacOS and Windows the structure of the development environment I put
-together also deploys a web version here that is updated everytime a commit
+together also deploys a web version that is updated everytime a commit
 is pushed to github.
 
 [Observing With NASA](https://stepheneb.github.io/cfa-own-electron-gh-pages/).
+
+https://stepheneb.github.io/cfa-own-electron-gh-pages/
 
 ### Application User Interface Elements
 
