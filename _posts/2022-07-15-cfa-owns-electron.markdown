@@ -27,9 +27,9 @@ on both MacOS and Windows the structure of the development environment I put
 together also deploys a web version that is updated everytime a commit
 is pushed to github.
 
-[Observing With NASA](https://stepheneb.github.io/cfa-own-electron-gh-pages/).
+[Observing With NASA](https://stepheneb.github.io/cfa-own-electron-gh-pages/) NOTE: main repository now private.
 
-https://stepheneb.github.io/cfa-own-electron-gh-pages/
+[Observing With NASA]https://stepheneb.github.io/cfa-own-electron-gh-pages/
 
 ### Application User Interface Elements
 
