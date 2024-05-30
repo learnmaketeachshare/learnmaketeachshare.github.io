@@ -24,3 +24,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ secrets.GITHUB_REPOSITORY }}
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
+      - name: ls
+        run: "ls"
+      - name: ls assets/css
+        run: "ls assets/css"
+      - name: cat assets/css/style.scss
+        run: "cat assets/css/style.scss"
+      - name: Archive npm failure logs
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: npm-logs
+          path: /github/home/.npm/_logs/
