@@ -9,7 +9,8 @@ tags: [ nasa, software, technology, javascript, electron, astronomy ]
 Created an Electron-bassed kiosk application for [RLMG](https://rlmg.com) and
 the [Center for Astrophysics: Harvard & Smithsonian](https://cfa.harvard.edu)
 to allow science museum visitors to investigate and maniupulate astronomical
-images taken by a wide range of NASA telescopes telescopes and observatories.
+images taken by a wide range of NASA telescopes and observatories in the
+[MicroObservatory Robotic Telescope Network](https://mo-www.cfa.harvard.edu/MicroObservatory/).
 
 The visitor also has the capability to have copies of the astronomical images
 they modify sent to them via email. In addiotion visitors can select from a
@@ -27,9 +28,10 @@ on both MacOS and Windows the structure of the development environment I put
 together also deploys a web version that is updated everytime a commit
 is pushed to github.
 
-[Observing With NASA](https://stepheneb.github.io/cfa-own-electron-gh-pages/) NOTE: main repository now private.
+[Observing With NASA](https://stepheneb.github.io/cfa-own-electron-gh-pages/)
 
-[Observing With NASA]https://stepheneb.github.io/cfa-own-electron-gh-pages/
+> NOTE: the main repository is now private. The web version linked above is
+extracted from the gh-pages branch.
 
 ### Application User Interface Elements
 

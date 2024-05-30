@@ -8,6 +8,7 @@ h2 {
 
 h3 {
   font-size: 1.3rem;
+  margin-top: 2rem;
   margin-bottom: 0.25rem;
   a.post-link {
     font-size: 1.2rem;
@@ -34,7 +35,33 @@ header {
   }
 }
 
+.post-content {
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 0.25rem;
+    a.post-link {
+      font-size: 1.2rem;
+    }
+  }
+  a {
+  font-size: 95%;
+  }
+  blockquote {
+    margin-top: 1rem;
+    font-size: 95%;
+  }
+}
+
 .post-list > li {
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    a.post-link {
+      font-size: 1.2rem;
+    }
+  }
   margin-bottom: 1.25rem;
 }
 
@@ -46,9 +73,7 @@ header {
   }
 }
 
-.post-content a {
-  font-size: 95%;
-}
+
 
 #categories {
   // display: flex;
