@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>Simple Molecules</title>
+  <script type="text/javascript" src="https://d3js.org/d3.v2.js"></script>
+  <style type="text/css">
+    body {
+      font: 13px sans-serif;
+    }
+
+    rect {
+      fill: #fff;
+    }
+
+    #moleculecontainer {
+      background-color: #f7f2c5;
+      width: 400px;
+      height: 400px;
+      border: solid 1px #cccccc;
+      position: relative;
+    }
+
+    #moleculecontainer circle {
+      stroke: darkred;
+      stroke-width: 1px;
+      fill: white;
+      fill-opacity: 0.2;
+      cursor: move;
+    }
+
+    #moleculecontainer circle.selected {
+      fill: #ff7f0e;
+      stroke: #ff7f0e;
+    }
+
+    #moleculecontainer rect {
+      border: solid 1px #cccccc;
+    }
+
+    #potentialchart {
+      background-color: #f7f2c5;
+      width: 500px;
+      height: 400px;
+      border: solid 1px #cccccc;
+      position: relative;
+    }
+
+    text.index {
+      font: sans-serif;
+      text-anchor: middle;
+    }
+
+    rect {
+      fill: white;
+    }
+
+    #chart {
+      background-color: #f7f2c5;
+      width: 960px;
+      height: 500px;
+      border: solid 1px #cccccc;
+      position: relative;
+    }
+
+    circle,
+    .line {
+      fill: none;
+      stroke: steelblue;
+      stroke-width: 1.5px;
+    }
+
+    circle {
+      fill: white;
+      fill-opacity: 0.2;
+      cursor: move;
+    }
+
+    circle.selected {
+      fill: #ff7f0e;
+      stroke: #ff7f0e;
+    }
+
+    g.y {
+      font-size: 0.9em;
+    }
+
+    g.x {
+      font-size: 0.9em;
+    }
+
+    ul {
+      margin: 1em 0em 1em 0em;
+      padding: 0em 0em 0em 0em;
+    }
+
+    ul li {
+      margin: 0.3em 0.2em 0.3em 0.2em;
+      padding: 0em 0em 0em 0em;
+    }
+
+    #example-list ul {
+      margin: 2em 2em 2em 2em;
+      padding: 0em 0em 0em 2em;
+    }
+
+    #example-list ul li {
+      margin: 0.3em 0.2em 0.3em 0.2em;
+      padding: 0em 0em 0em 0em;
+    }
+
+    #viz ul {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0.5em 0em 0.5em 0em;
+    }
+
+    #viz ul li {
+      line-height: 1em;
+      display: inline-table;
+      vertical-align: top;
+      list-style-type: none;
+      padding: 0.2em 1em 0.2em 0em;
+    }
+
+    #viz ul li fieldset {
+      height: 2.2em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='viz'>
+    <ul>
+      <li>
+        <div id='moleculecontainer'></div>
+      </li>
+      <li>
+        <div id='potentialchart'></div>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <form id='model-controls'>
+          <fieldset>
+            <legend>Model</legend>
+            <label>
+              <input checked='checked' name='step' type='radio' value='stop'>Stop</input>
+            </label>
+            <label>
+              <input name='step' type='radio' value='step'>Step</input>
+            </label>
+            <label>
+              <input name='step' type='radio' value='go'>Go</input>
+            </label>
+            <label>
+              <input name='step' type='radio' value='reset'>Reset</input>
+            </label>
+          </fieldset>
+        </form>
+      <li>
+        <fieldset>
+          <legend>Molecules</legend>
+          <select id='select-molecule-number'>
+            <option value='10'>10</option>
+            <option selected='selected' value='20'>20</option>
+            <option value='50'>50</option>
+            <option value='100'>100</option>
+            <option value='200'>200</option>
+            <option value='500'>500</option>
+          </select>
+        </fieldset>
+      </li>
+      <li>
+        <fieldset>
+          <legend>Temperature</legend>
+          <select id='select-temperature'>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option selected='selected' value='5'>5</option>
+            <option value='6'>6</option>
+            <option value='7'>7</option>
+            <option value='8'>8</option>
+            <option value='9'>9</option>
+            <option value='10'>10</option>
+          </select>
+        </fieldset>
+      </li>
+      </li>
+    </ul>
+  </div>
+  <script type="text/javascript">
+    // modeler.js
+
+    (function() {
+
+      var modeler = {};
+      modeler.layout = {};
+
+      var root = this;
+
+      modeler.VERSION = '0.1.0';
+
+      modeler.layout.model = function() {
+        var model = {},
+          event = d3.dispatch("tick"),
+          size = [1, 1],
+          drag,
+          stopped = true,
+          friction = .9,
+          charge = -20,
+          gravity = .1,
+          theta = .8,
+          interval,
+          nodes = [],
+          links = [],
+          distances,
+          strengths,
+          forces,
+          ljforce,
+          integration = 10,
+          overlap;
+
+        function tick() {
+          var n = nodes.length,
+            m = links.length,
+            q,
+            i, // current index
+            o, // current object
+            s, // current source
+            t, // current target
+            l, // current distance
+            k, // current force
+            x, // x-distance
+            y, // y-distance
+            iloop,
+            leftwall = nodes[0].radius,
+            bottomwall = nodes[0].radius,
+            rightwall = size[0] - nodes[0].radius,
+            topwall = size[1] - nodes[0].radius,
+            xstep,
+            ystep;
+
+
+          iloop = -1;
+          while (iloop++ < integration) {
+            // compute quadtree center of mass and apply lennard_jones
+            q = d3.geom.quadtree(nodes);
+            i = -1;
+            while (++i < n) {
+              o = nodes[i];
+              q.visit(ljforces(o));
+            }
+
+            // Continue particle movement integrating acceleration with
+            // existing velocity managing collision with boundaries.
+            i = -1;
+            while (++i < n) {
+              o = nodes[i];
+              x = o.x;
+              y = o.y;
+              o.x = 2 * x - o.px + o.ax / integration;
+              o.y = 2 * y - o.py + o.ay / integration;
+              xstep = o.x - x;
+              ystep = o.y - y;
+              o.ax = 0;
+              o.ay = 0;
+              if (o.x < leftwall) {
+                o.px = o.x + xstep;
+                o.py = y;
+              } else if (o.x > rightwall) {
+                o.px = o.x + xstep;
+                o.py = y;
+              } else if (o.y < bottomwall) {
+                o.px = x;
+                o.py = o.y + ystep;
+              } else if (o.y > topwall) {
+                o.px = x;
+                o.py = o.y + ystep;
+              } else {
+                o.px = x;
+                o.py = y;
+              }
+              o.vx = o.x - o.px;
+              o.vx = o.y - o.py;
+            }
+          }
+
+          event.tick({
+            type: "tick"
+          });
+
+          return stopped
+        }
+
+        function ljforces(node) {
+          var r = node.radius * 5,
+            nx1 = node.x - r,
+            nx2 = node.x + r,
+            ny1 = node.y - r,
+            ny2 = node.y + r;
+          return function(quad, x1, y1, x2, y2) {
+            if (quad.point && (quad.point !== node)) {
+              var x = node.x - quad.point.x,
+                y = node.y - quad.point.y,
+                l = Math.sqrt(x * x + y * y),
+                f = ljforce(l),
+                d = f / l,
+                xd = x * d,
+                yd = y * d;
+              node.ax -= xd;
+              node.ay -= yd;
+              quad.point.ax += xd;
+              quad.point.ay += yd;
+            }
+            return x1 > nx2 ||
+              x2 < nx1 ||
+              y1 > ny2 ||
+              y2 < ny1;
+          };
+        }
+
+        function uncollide(node) {
+          var r = node.radius * 5,
+            nx1 = node.x - r,
+            nx2 = node.x + r,
+            ny1 = node.y - r,
+            ny2 = node.y + r;
+          return function(quad, x1, y1, x2, y2) {
+            if (quad.point && (quad.point !== node)) {
+              var x = node.x - quad.point.x,
+                y = node.y - quad.point.y,
+                l = Math.sqrt(x * x + y * y),
+                r = node.radius + quad.point.radius;
+              if (l < r) {
+                var zx = (r - x) / 2,
+                  zy = (r - y) / 2;
+                node.x += zx;
+                node.y += zy;
+                quad.point.x -= zx;
+                quad.point.y -= zy;
+              }
+            }
+            return x1 > nx2 ||
+              x2 < nx1 ||
+              y1 > ny2 ||
+              y2 < ny1;
+          };
+        }
+
+        function repulse(node) {
+          return function(quad, x1, y1, x2, y2) {
+            if (quad.point !== node) {
+              var dx = quad.cx - node.x,
+                dy = quad.cy - node.y,
+                dn = 1 / Math.sqrt(dx * dx + dy * dy);
+
+              /* Barnes-Hut criterion. */
+              if ((x2 - x1) * dn < theta) {
+                var k = quad.charge * dn * dn;
+                node.x += dx * k;
+                node.y += dy * k;
+                return true;
+              }
+
+              if (quad.point && isFinite(dn)) {
+                var k = quad.pointCharge * dn * dn;
+                node.x += dx * k;
+                node.y += dy * k;
+              }
+            }
+            return !quad.charge;
+          };
+        }
+
+        function resolve_collisions(nodes) {
+          var n = nodes.length,
+            q, i, j, o, charges = [];
+
+          var boundary = {
+            left: nodes[0].radius,
+            bottom: nodes[0].radius,
+            right: size[0] - nodes[0].radius,
+            topw: size[1] - nodes[0].radius
+          }
+
+          j = -1;
+          while (j++ < 4) {
+            q = d3.geom.quadtree(nodes);
+            i = -1;
+            while (++i < n) {
+              if (!(o = nodes[i]).fixed) {
+                q.visit(uncollide(o));
+              }
+            }
+          }
+
+          // // compute quadtree center of mass and apply charge forces
+          // for (i = 0; i < n; ++i) {
+          //   charges[i] = charge;
+          // }
+          //
+          // modeler_forceAccumulate(q = d3.geom.quadtree(nodes), charges, boundary);
+          // i = -1; while (++i < n) {
+          //   if (!(o = nodes[i]).fixed) {
+          //     q.visit(repulse(o));
+          //   }
+          // }
+
+          // temperature range from 0.1 .. 10
+          // reset initial velocity and acceleration
+          set_temperature(5);
+        }
+
+        function kinetic_energy() {
+          var i, x, y, l, e = 0,
+            n = nodes.length;
+          i = -1;
+          while (++i < n) {
+            x = nodes[i].vx;
+            y = nodes[i].vy;
+            l = Math.sqrt(x * x + y * y);
+            e += l;
+          }
+          return e / n;
+        }
+
+        function set_temperature(t) {
+          temperature = t;
+          integration = temperature * temperature;
+          var n = nodes.length,
+            i, j, o,
+            tmap = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1000],
+            t1 = tmap[t - 1] / 1000,
+            t2 = t1 / 2;
+          i = -1;
+          while (++i < n) {
+            nodes[i].px = nodes[i].x + Math.random() * t1 - t2;
+            nodes[i].py = nodes[i].y + Math.random() * t1 - t2;
+            nodes[i].vx = nodes[i].x - nodes[i].px;
+            nodes[i].vy = nodes[i].y - nodes[i].py;
+            nodes[i].ax = 0;
+            nodes[i].ay = 0;
+          }
+        }
+
+        function set_temperature2(t) {
+          temperature = t;
+          var n = nodes.length,
+            i, j, o;
+          i = -1;
+          while (++i < n) {
+            nodes[i].px = nodes[i].x + Math.random() * t / 1000 - t / 2000;
+            nodes[i].py = nodes[i].y + Math.random() * t / 1000 - t / 2000
+            nodes[i].vx = nodes[i].x - nodes[i].px;
+            nodes[i].vy = nodes[i].y - nodes[i].py;
+
+            nodes[i].ax = 0;
+            nodes[i].ay = 0;
+          }
+        }
+
+        function change_temperature(t) {
+          temperature = t;
+          var n = nodes.length,
+            i, j, o;
+          i = -1;
+          while (++i < n) {
+            nodes[i].px = nodes[i].x + Math.random() * t / 10 - t / 20;
+            nodes[i].py = nodes[i].y + Math.random() * t / 10 - t / 20
+            nodes[i].vx = nodes[i].x - nodes[i].px;
+            nodes[i].vy = nodes[i].y - nodes[i].py;
+
+            nodes[i].ax = 0;
+            nodes[i].ay = 0;
+          }
+        }
+
+        model.on = function(type, listener) {
+          event.on(type, listener);
+          return model;
+        };
+
+        model.nodes = function(x) {
+          if (!arguments.length) return nodes;
+          nodes = x;
+          return model;
+        };
+
+        model.temperature = function(x) {
+          if (!arguments.length) return temperature;
+          set_temperature(x)
+          return model;
+        };
+
+        model.ke = function() {
+          if (!arguments.length) {
+            return kinetic_energy();
+          }
+          return model;
+        };
+
+        model.ljforce = function(x) {
+          if (!arguments.length) return ljforce;
+          ljforce = x;
+          return model;
+        };
+
+        model.links = function(x) {
+          if (!arguments.length) return links;
+          links = x;
+          return model;
+        };
+
+        model.size = function(x) {
+          if (!arguments.length) return size;
+          size = x;
+          return model;
+        };
+
+        model.linkDistance = function(x) {
+          if (!arguments.length) return linkDistance;
+          linkDistance = d3.functor(x);
+          return model;
+        };
+
+        // For backwards-compatibility.
+        model.distance = model.linkDistance;
+
+        model.linkStrength = function(x) {
+          if (!arguments.length) return linkStrength;
+          linkStrength = d3.functor(x);
+          return model;
+        };
+
+        model.tick = function() {
+          tick();
+          return model;
+        };
+
+        model.resolve_collisions = function(nodes) {
+          resolve_collisions(nodes);
+          return model;
+        };
+
+        model.friction = function(x) {
+          if (!arguments.length) return friction;
+          friction = x;
+          return model;
+        };
+
+        model.charge = function(x) {
+          if (!arguments.length) return charge;
+          charge = typeof x === "function" ? x : +x;
+          return model;
+        };
+
+        model.gravity = function(x) {
+          if (!arguments.length) return gravity;
+          gravity = x;
+          return model;
+        };
+
+        model.theta = function(x) {
+          if (!arguments.length) return theta;
+          theta = x;
+          return model;
+        };
+
+        model.start = function() {
+          var i,
+            j,
+            n = nodes.length,
+            m = links.length,
+            w = size[0],
+            h = size[1],
+            neighbors,
+            o;
+
+          for (i = 0; i < n; ++i) {
+            (o = nodes[i]).index = i;
+            o.weight = 0;
+          }
+
+          distances = [];
+          strengths = [];
+          forces = [];
+          for (i = 0; i < n; ++i) {
+            forces[i] = charge;
+          }
+
+          return model.resume();
+        };
+
+        model.resume = function() {
+          stopped = false;
+          d3.timer(tick);
+          return model;
+        };
+
+        model.stop = function() {
+          stopped = true;
+          return model;
+        };
+
+        // use `node.call(model.drag)` to make nodes draggable
+        model.drag = function() {
+          if (!drag) drag = d3.behavior.drag()
+            .on("dragstart", dragstart)
+            .on("drag", modeler_forceDrag)
+            .on("dragend", modeler_forceDragEnd);
+
+          this.on("mouseover.model", modeler_forceDragOver)
+            .on("mouseout.model", modeler_forceDragOut)
+            .call(drag);
+        };
+
+        function dragstart(d) {
+          modeler_forceDragOver(modeler_forceDragNode = d);
+          modeler_forceDragForce = model;
+        }
+
+        return model;
+      };
+
+      var modeler_forceDragForce,
+        modeler_forceDragNode;
+
+      function modeler_forceDragOver(d) {
+        d.fixed |= 2;
+      }
+
+      function modeler_forceDragOut(d) {
+        if (d !== modeler_forceDragNode) d.fixed &= 1;
+      }
+
+      function modeler_forceDragEnd() {
+        modeler_forceDrag();
+        modeler_forceDragNode.fixed &= 1;
+        modeler_forceDragForce = modeler_forceDragNode = null;
+      }
+
+      function modeler_forceDrag() {
+        modeler_forceDragNode.px += d3.event.dx;
+        modeler_forceDragNode.py += d3.event.dy;
+        modeler_forceDragForce.resume(); // restart annealing
+      }
+
+      function modeler_forceAccumulate(quad, forces, boundary) {
+        var cx = 0,
+          cy = 0;
+
+        quad.charge = 0;
+        if (!quad.leaf) {
+          var nodes = quad.nodes,
+            n = nodes.length,
+            i = -1,
+            c;
+          while (++i < n) {
+            c = nodes[i];
+            if (c == null) continue;
+            modeler_forceAccumulate(c, forces);
+            quad.charge += c.charge;
+            cx += c.charge * c.cx;
+            cy += c.charge * c.cy;
+          }
+        }
+        if (quad.point) {
+          // jitter internal nodes that are coincident
+          if (!quad.leaf) {
+            quad.point.x += Math.random() - .5;
+            quad.point.y += Math.random() - .5;
+          }
+          var k = forces[quad.point.index];
+          quad.charge += quad.pointCharge = k;
+          cx += k * quad.point.x;
+          cy += k * quad.point.y;
+        }
+        quad.cx = cx / quad.charge;
+        quad.cy = cy / quad.charge;
+      }
+
+      function modeler_forceLinkDistance(link) {
+        return 20;
+      }
+
+      function modeler_forceLinkStrength(link) {
+        return 1;
+      }
+
+      // export namespace
+      if (root !== 'undefined') {
+        root.modeler = modeler;
+      }
+    })();
+
+
+    //
+    //
+    // simplemolecules.js
+    //
+    //
+
+
+    var graph = {};
+
+    graph.epsilon = -0.75; // depth of the potential well
+    graph.sigma = 2; // finite distance at which the inter-particle potential is zero
+
+    graph.xmax = graph.sigma * 4;
+    graph.xmin = 0;
+
+    graph.ymax = 1.0;
+    graph.ymin = -1.0;
+
+    graph.title = "Lennard-Jones potential";
+    graph.xlabel = "Radius";
+    graph.ylabel = "Potential Energy";
+
+    graph.lennard_jones_potential = [];
+
+    var mol_number = 20,
+      temperature = 5,
+      mol_rmin_radius_factor = 1.0;
+
+    var model_controls = document.getElementById("model-controls");
+    var model_controls_inputs = model_controls.getElementsByTagName("input");
+
+
+    //
+    // Molecule Number Selector
+    //
+    var select_molecule_number = document.getElementById("select-molecule-number");
+
+    function selectMoleculeNumberChange() {
+      mol_number = select_molecule_number.value;
+      modelReset();
+    }
+
+    select_molecule_number.onchange = selectMoleculeNumberChange;
+
+    //
+    // Temperature Selector
+    //
+    var select_temperature = document.getElementById("select-temperature");
+
+    function selectTemperatureChange() {
+      temperature = select_temperature.value;
+      model.temperature(temperature);
+    }
+
+    select_temperature.onchange = selectTemperatureChange;
+
+    update_coefficients();
+
+    graph.coefficients = [{
+        coefficient: "epsilon",
+        x: graph.r_min,
+        y: graph.epsilon
+      },
+      {
+        coefficient: "sigma",
+        x: graph.sigma,
+        y: 0
+      }
+    ];
+
+    function update_epsilon(e) {
+      graph.epsilon = e;
+      update_coefficients();
+    }
+
+    function update_sigma(s) {
+      graph.sigma = s;
+      update_coefficients();
+    }
+
+    function update_coefficients() {
+      graph.r_min = Math.pow(2, 1 / 6) * graph.sigma; // distance at which the potential well reaches its minimum
+      graph.lennard_jones_potential = []
+      graph.alpha = 4 * graph.epsilon * Math.pow(graph.sigma, 12);
+      graph.beta = 4 * graph.epsilon * Math.pow(graph.sigma, 6);
+      var y;
+      for (var r = graph.sigma * 0.5; r < graph.xmax * 3; r += 0.05) {
+        y = (graph.alpha / Math.pow(r, 12) - graph.beta / Math.pow(r, 6)) * -1;
+        if (y < 100) {
+          graph.lennard_jones_potential.push([r, (graph.alpha / Math.pow(r, 12) - graph.beta / Math.pow(r, 6)) * -1]);
+        }
+      }
+    }
+
+    function ljpotential(distance) {
+      return (graph.alpha / Math.pow(distance, 12) - graph.beta / Math.pow(distance, 6)) * -1
+    }
+
+    var mc_graph = {};
+
+    mc_graph.title = "Simple Molecules";
+    mc_graph.xlabel = "X position";
+    mc_graph.ylabel = "Y position";
+
+    var moleculecontainer = document.getElementById("moleculecontainer"),
+      mc_cx = moleculecontainer.clientWidth,
+      mc_cy = moleculecontainer.clientHeight,
+      mc_padding = {
+        "top": mc_graph.title ? 40 : 20,
+        "right": 30,
+        "bottom": mc_graph.xlabel ? 50 : 10,
+        "left": mc_graph.ylabel ? 70 : 45
+      },
+      mc_size = {
+        "width": mc_cx - mc_padding.left - mc_padding.right,
+        "height": mc_cy - mc_padding.top - mc_padding.bottom
+      },
+      mc_mw = mc_size.width,
+      mc_mh = mc_size.height,
+      mc_tx = function(d) {
+        return "translate(" + mc_x(d) + ",0)";
+      },
+      mc_ty = function(d) {
+        return "translate(0," + mc_y(d) + ")";
+      },
+      mc_stroke = function(d) {
+        return d ? "#ccc" : "#666";
+      };
+
+    mc_graph.xmin = 0,
+      mc_graph.xmax = 100;
+    mc_graph.xdomain = mc_graph.xmax - mc_graph.xmin;
+    mc_graph.ymin = 0;
+    mc_graph.ymax = mc_graph.xmax * mc_size.height / mc_size.width;
+    mc_graph.ydomain = mc_graph.ymax - mc_graph.ymin;
+
+    // mc_x-scale
+    var mc_x = d3.scale.linear()
+      .domain([mc_graph.xmin, mc_graph.xmax])
+      .range([0, mc_mw]),
+
+      // drag x-axis logic
+      mc_downscalex = mc_x.copy(),
+      mc_downx = Math.NaN,
+
+      // mc_y-scale (inverted domain)
+      mc_y = d3.scale.linear()
+      .domain([mc_graph.ymax, mc_graph.ymin])
+      .nice()
+      .range([0, mc_mh])
+      .nice(),
+
+      // drag mc_x-axis logic
+      mc_downscaley = mc_y.copy(),
+      mc_downy = Math.NaN,
+      mc_dragged = null,
+
+      links = [],
+
+      molecules;
+
+    function generate_molecules(num) {
+      var radius = graph.r_min * mol_rmin_radius_factor,
+        px, py, x, y;
+
+      molecules = d3.range(num).map(function(i) {
+        px = Math.random() * mc_graph.xdomain * 0.8 + mc_graph.xdomain * 0.1,
+          py = Math.random() * mc_graph.ydomain * 0.8 + mc_graph.ydomain * 0.1,
+          x = px + Math.random() * temperature / 100 - temperature / 200,
+          y = py + Math.random() * temperature / 100 - temperature / 200;
+
+        return {
+          index: i,
+          radius: radius,
+          px: px,
+          py: py,
+          x: x,
+          y: y,
+          vx: x - px,
+          vy: y - py,
+          ax: 0,
+          ay: 0
+        }
+      });
+    }
+
+    function update_molecule_radius() {
+      var r = graph.r_min * mol_rmin_radius_factor;
+      molecules.forEach(function(m) {
+        m.radius = r
+      });
+      mc_container.selectAll("circle")
+        .data(molecules)
+        .attr("r", function(d) {
+          return mc_x(d.radius)
+        });
+      mc_container.selectAll("text")
+        .attr("font-size", mc_x(r * 1.3));
+    }
+
+    // d3.geom.delaunay(molecules).forEach(function(d) {
+    //     links.push(edge(d[0], d[1]));
+    //     links.push(edge(d[1], d[2]));
+    //     links.push(edge(d[2], d[0]));
+    //   });
+    //
+    // function edge(a, b) {
+    //   var dx = a.x - b.x, dy = a.y - b.y;
+    //   return {
+    //     source: a,
+    //     target: b,
+    //     distance: Math.sqrt(dx * dx + dy * dy)
+    //   };
+    // }
+
+    var mc_vis = d3.select(moleculecontainer).append("svg:svg")
+      .attr("width", mc_cx)
+      .attr("height", mc_cy)
+      .append("svg:g")
+      .attr("transform", "translate(" + mc_padding.left + "," + mc_padding.top + ")");
+
+    var mc_plot = mc_vis.append("svg:rect")
+      .attr("width", mc_size.width)
+      .attr("height", mc_size.height)
+      .style("fill", "#EEEEEE");
+
+    var mc_container = mc_vis.append("svg:svg")
+      .attr("top", 0)
+      .attr("left", 0)
+      .attr("width", mc_size.width)
+      .attr("height", mc_size.height)
+      .attr("viewBox", "0 0 " + mc_size.width + " " + mc_size.height);
+
+    // add Chart Title
+    if (mc_graph.title) {
+      mc_vis.append("svg:text")
+        .text(mc_graph.title)
+        .attr("x", mc_size.width / 2)
+        .attr("dy", "-1em")
+        .style("text-anchor", "middle");
+    }
+
+    // Add the x-axis label
+    if (mc_graph.xlabel) {
+      mc_vis.append("svg:text")
+        .text(mc_graph.xlabel)
+        .attr("x", mc_size.width / 2)
+        .attr("y", mc_size.height)
+        .attr("dy", "2.4em")
+        .style("text-anchor", "middle");
+    }
+
+    // add y-axis label
+    if (mc_graph.ylabel) {
+      mc_vis.append("svg:g")
+        .append("svg:text")
+        .text(mc_graph.ylabel)
+        .style("text-anchor", "middle")
+        .attr("transform", "translate(" + -50 + " " + mc_size.height / 2 + ") rotate(-90)");
+    }
+
+    mc_redraw();
+
+    var model;
+
+    modelReset();
+    // model.stop();
+
+    function model_setup() {
+      generate_molecules(mol_number);
+      model = modeler.layout.model()
+        .size([mc_graph.xdomain, mc_graph.ydomain])
+        .gravity(0.0)
+        .charge(-5)
+        .ljforce(ljpotential)
+        .linkStrength(0.0)
+        .linkDistance(0.0)
+        .theta(0.8)
+        .friction(1.0)
+        .nodes(molecules)
+        .start();
+      model.resolve_collisions(molecules);
+    }
+
+    var particle, label, labelEnter, tail;
+
+    function setup_particle() {
+      mc_container.selectAll("circle").remove();
+      mc_container.selectAll("g").remove();
+      particle = mc_container.selectAll("circle")
+        .data(molecules)
+        .enter().append("svg:circle")
+        .attr("r", function(d) {
+          return mc_x(d.radius);
+        })
+        .attr("cx", function(d) {
+          return mc_x(d.x);
+        })
+        .attr("cy", function(d) {
+          return mc_y(d.y);
+        })
+        .style("fill", function(d, i) {
+          return "#2ca02c";
+        })
+        .call(model.drag);
+
+      var font_size = mc_x(graph.r_min * mol_rmin_radius_factor * 1.3);
+
+      label = mc_container.selectAll("g.label")
+        .data(molecules);
+
+      labelEnter = label.enter().append("svg:g")
+        .attr("class", "label")
+        .attr("transform", function(d) {
+          return "translate(" + mc_x(d.x) + "," + mc_y(d.y) + ")";
+        });
+
+      labelEnter.append("svg:line")
+        .attr("class", "index")
+        .attr("class", "line")
+        .attr("x2", function(d) {
+          return d.vx
+        })
+        .attr("y2", function(d) {
+          return d.vy
+        })
+        .attr("stroke", "#ccc");
+
+      labelEnter.append("svg:text")
+        .attr("class", "index")
+        .attr("font-size", font_size)
+        .attr("x", 0)
+        .attr("y", "0.31em")
+        .text(function(d) {
+          return d.index;
+        });
+    }
+
+
+    model.on("tick", function(e) {
+
+      particle.attr("cx", function(d) {
+          return mc_x(d.x);
+        })
+        .attr("cy", function(d) {
+          return mc_y(d.y);
+        });
+
+      label.attr("transform", function(d) {
+        return "translate(" + mc_x(d.x) + "," + mc_y(d.y) + ")";
+      });
+
+    });
+
+
+    function modelController() {
+      for (i = 0; i < this.elements.length; i++) {
+        if (this.elements[i].checked) {
+          run_mode = this.elements[i].value;
+        }
+      }
+      switch (run_mode) {
+        case "stop":
+          modelStop();
+          break;
+        case "step":
+          modelStep();
+          break;
+        case "go":
+          modelGo();
+          break;
+        case "reset":
+          modelReset();
+          break;
+      }
+    }
+
+    model_controls.onchange = modelController;
+
+    function modelStop() {
+      model.stop();
+      model_controls_inputs[0].checked = true;
+    }
+
+    function modelStep() {
+      model.stop();
+      model.tick();
+      model_controls_inputs[0].checked = true;
+    }
+
+    function modelGo() {
+      model.resume();
+    }
+
+    function modelReset() {
+      model_setup();
+      model.stop();
+      setup_particle();
+      // select_temperature.value = 5;
+      // temperature = 5;
+      model.temperature(temperature);
+      model.tick();
+      model_controls_inputs[0].checked = true;
+    }
+
+    //
+    // draw the molecules
+    //
+
+    // var mc_circle = mc_container.selectAll("circle")
+    //     .data(molecules, function(d) { return d });
+
+
+    // function mc_update() {
+    //
+    //   mc_circle.enter().append("svg:circle")
+    //       .attr("class",   function(d) { return d === selected ? "selected" : null; })
+    //       .attr("cx",      function(d) { return mc_x(d.x); })
+    //       .attr("cy",      function(d) { return mc_y(d.y); })
+    //       .attr("r",       function(d) { return d.radius } )
+    //       .call(force.drag)
+    //       .on("mousedown", function(d) {
+    //         mc_selected = mc_dragged = d;
+    //         mc_update();
+    //       });
+    //
+    //   mc_circle
+    //       .attr("class", function(d) { return d === selected ? "selected" : null; })
+    //       .attr("cx",    function(d) { return mc_x(d.x); })
+    //       .attr("cy",    function(d) { return mc_y(d.y); });
+    //
+    //   mc_circle.exit().remove();
+    //
+    //   if (d3.event && d3.event.keyCode) {
+    //     d3.event.preventDefault();
+    //     d3.event.stopPropagation();
+    //   }
+    // }
+
+
+    function mc_redraw() {
+      if (d3.event && d3.event.transform && isNaN(mc_downx) && isNaN(mc_downy)) {
+        d3.event.transform(x, y);
+      };
+
+      var mc_fx = mc_x.tickFormat(10),
+        mc_fy = mc_y.tickFormat(10);
+
+      // Regenerate x-ticks…
+      var mc_gx = mc_vis.selectAll("g.x")
+        .data(mc_x.ticks(10), String)
+        .attr("transform", mc_tx);
+
+      mc_gx.select("text")
+        .text(mc_fx);
+
+      var mc_gxe = mc_gx.enter().insert("svg:g", "a")
+        .attr("class", "x")
+        .attr("transform", mc_tx);
+
+      mc_gxe.append("svg:line")
+        .attr("stroke", mc_stroke)
+        .attr("y1", 0)
+        .attr("y2", mc_size.height);
+
+      mc_gxe.append("svg:text")
+        .attr("y", mc_size.height)
+        .attr("dy", "1em")
+        .attr("text-anchor", "middle")
+        .text(mc_fx);
+
+      mc_gx.exit().remove();
+
+      // Regenerate y-ticks…
+      var mc_gy = mc_vis.selectAll("g.y")
+        .data(mc_y.ticks(10), String)
+        .attr("transform", mc_ty);
+
+      mc_gy.select("text")
+        .text(mc_fy);
+
+      var mc_gye = mc_gy.enter().insert("svg:g", "a")
+        .attr("class", "y")
+        .attr("transform", mc_ty)
+        .attr("background-fill", "#FFEEB6");
+
+      mc_gye.append("svg:line")
+        .attr("stroke", mc_stroke)
+        .attr("x1", 0)
+        .attr("x2", mc_size.width);
+
+      mc_gye.append("svg:text")
+        .attr("x", -3)
+        .attr("dy", ".35em")
+        .attr("text-anchor", "end")
+        .text(mc_fy);
+
+      mc_gy.exit().remove();
+      // mc_update();
+    }
+
+    var potentialchart = document.getElementById("potentialchart"),
+      cx = potentialchart.clientWidth,
+      cy = potentialchart.clientHeight,
+      padding = {
+        "top": graph.title ? 40 : 20,
+        "right": 30,
+        "bottom": graph.xlabel ? 50 : 10,
+        "left": graph.ylabel ? 70 : 45
+      },
+      size = {
+        "width": cx - padding.left - padding.right,
+        "height": cy - padding.top - padding.bottom
+      },
+      mw = size.width,
+      mh = size.height,
+      tx = function(d) {
+        return "translate(" + x(d) + ",0)";
+      },
+      ty = function(d) {
+        return "translate(0," + y(d) + ")";
+      },
+      stroke = function(d) {
+        return d ? "#ccc" : "#666";
+      };
+
+    // x-scale
+    var x = d3.scale.linear()
+      .domain([graph.xmin, graph.xmax])
+      .range([0, mw]),
+
+      // drag x-axis logic
+      downscalex = x.copy(),
+      downx = Math.NaN,
+
+      // y-scale (inverted domain)
+      y = d3.scale.linear()
+      .domain([graph.ymax, graph.ymin])
+      .nice()
+      .range([0, mh])
+      .nice(),
+      line = d3.svg.line()
+      .x(function(d, i) {
+        return x(graph.lennard_jones_potential[i][0]);
+      })
+      .y(function(d, i) {
+        return y(graph.lennard_jones_potential[i][1]);
+      }),
+
+      // drag x-axis logic
+      downscaley = y.copy(),
+      downy = Math.NaN,
+      dragged = null,
+      selected = graph.coefficients[0];
+
+    var vis = d3.select(potentialchart).append("svg:svg")
+      .attr("width", cx)
+      .attr("height", cy)
+      .append("svg:g")
+      .attr("transform", "translate(" + padding.left + "," + padding.top + ")");
+
+    var plot = vis.append("svg:rect")
+      .attr("width", size.width)
+      .attr("height", size.height)
+      .style("fill", "#EEEEEE")
+      .attr("pointer-events", "all")
+      .call(d3.behavior.zoom().on("zoom", redraw))
+      .on("mousedown", function() {
+        if (d3.event.altKey) {
+          points.push(selected = dragged = d3.svg.mouse(vis.node()));
+          update();
+          d3.event.preventDefault();
+          d3.event.stopPropagation();
+        }
+      });
+
+    vis.append("svg:svg")
+      .attr("top", 0)
+      .attr("left", 0)
+      .attr("width", size.width)
+      .attr("height", size.height)
+      .attr("viewBox", "0 0 " + size.width + " " + size.height)
+      .append("svg:path")
+      .attr("class", "line")
+      .attr("d", line(graph.lennard_jones_potential))
+
+    // add Chart Title
+    if (graph.title) {
+      vis.append("svg:text")
+        .text(graph.title)
+        .attr("x", size.width / 2)
+        .attr("dy", "-1em")
+        .style("text-anchor", "middle");
+    }
+
+    // Add the x-axis label
+    if (graph.xlabel) {
+      vis.append("svg:text")
+        .text(graph.xlabel)
+        .attr("x", size.width / 2)
+        .attr("y", size.height)
+        .attr("dy", "2.4em")
+        .style("text-anchor", "middle");
+    }
+
+    // add y-axis label
+    if (graph.ylabel) {
+      vis.append("svg:g")
+        .append("svg:text")
+        .text(graph.ylabel)
+        .style("text-anchor", "middle")
+        .attr("transform", "translate(" + -50 + " " + size.height / 2 + ") rotate(-90)");
+    }
+
+    d3.select(window)
+      .on("mousemove", mousemove)
+      .on("mouseup", mouseup);
+
+    //
+    // draw the data
+    //
+    function update() {
+
+      var epsilon_circle = vis.selectAll("circle")
+        .data(graph.coefficients, function(d) {
+          return d
+        });
+
+      var lines = vis.select("path").attr("d", line(graph.lennard_jones_potential)),
+        x_extent = x.domain()[1] - x.domain()[0];
+
+      epsilon_circle.enter().append("svg:circle")
+        .attr("class", function(d) {
+          return d === selected ? "selected" : null;
+        })
+        .attr("cx", function(d) {
+          return x(d.x);
+        })
+        .attr("cy", function(d) {
+          return y(d.y);
+        })
+        .attr("r", 8.0)
+        .on("mousedown", function(d) {
+          if (d.coefficient == "epsilon") {
+            d.x = graph.r_min;
+          } else {
+            d.y = 0
+          }
+          selected = dragged = d;
+          update();
+        });
+
+      epsilon_circle
+        .attr("class", function(d) {
+          return d === selected ? "selected" : null;
+        })
+        .attr("cx", function(d) {
+          return x(d.x);
+        })
+        .attr("cy", function(d) {
+          return y(d.y);
+        });
+
+      epsilon_circle.exit().remove();
+
+      if (d3.event && d3.event.keyCode) {
+        d3.event.preventDefault();
+        d3.event.stopPropagation();
+      }
+    }
+
+    function mousemove() {
+      if (!dragged) return;
+      var m = d3.svg.mouse(vis.node()),
+        newx, newy;
+      if (dragged.coefficient == "epsilon") {
+        newx = graph.r_min;
+        newy = y.invert(Math.max(0, Math.min(size.height, m[1])));
+        if (newy > 0) {
+          newy = 0
+        };
+        if (newy < -2) {
+          newy = -2
+        };
+        update_epsilon(newy);
+      } else {
+        newy = 0;
+        newx = x.invert(Math.max(0, Math.min(size.width, m[0])));
+        if (newx < 1.1) {
+          newx = 1.1
+        };
+        if (newx > 5.0) {
+          newx = 5.0
+        };
+        update_sigma(newx);
+        graph.coefficients[0].x = graph.r_min;
+      }
+      update_molecule_radius();
+      model.resolve_collisions(molecules);
+      model.tick();
+      dragged.x = newx;
+      dragged.y = newy;
+      update();
+    }
+
+    function mouseup() {
+      if (!dragged) return;
+      mousemove();
+      dragged = null;
+    }
+
+    redraw();
+
+    function redraw() {
+      if (d3.event && d3.event.transform && isNaN(downx) && isNaN(downy)) {
+        d3.event.transform(x, y);
+      };
+
+      var fx = x.tickFormat(10),
+        fy = y.tickFormat(10);
+
+      // Regenerate x-ticks…
+      var gx = vis.selectAll("g.x")
+        .data(x.ticks(10), String)
+        .attr("transform", tx);
+
+      gx.select("text")
+        .text(fx);
+
+      var gxe = gx.enter().insert("svg:g", "a")
+        .attr("class", "x")
+        .attr("transform", tx);
+
+      gxe.append("svg:line")
+        .attr("stroke", stroke)
+        .attr("y1", 0)
+        .attr("y2", size.height);
+
+      gxe.append("svg:text")
+        .attr("y", size.height)
+        .attr("dy", "1em")
+        .attr("text-anchor", "middle")
+        .text(fx)
+        .on("mouseover", function(d) {
+          d3.select(this).style("font-weight", "bold");
+        })
+        .on("mouseout", function(d) {
+          d3.select(this).style("font-weight", "normal");
+        })
+        .on("mousedown", function(d) {
+          var p = d3.svg.mouse(vis[0][0]);
+          downx = x.invert(p[0]);
+          downscalex = null;
+          downscalex = x.copy();
+          // d3.behavior.zoom().off("zoom", redraw);
+        });
+
+
+      gx.exit().remove();
+
+      // Regenerate y-ticks…
+      var gy = vis.selectAll("g.y")
+        .data(y.ticks(10), String)
+        .attr("transform", ty);
+
+      gy.select("text")
+        .text(fy);
+
+      var gye = gy.enter().insert("svg:g", "a")
+        .attr("class", "y")
+        .attr("transform", ty)
+        .attr("background-fill", "#FFEEB6");
+
+      gye.append("svg:line")
+        .attr("stroke", stroke)
+        .attr("x1", 0)
+        .attr("x2", size.width);
+
+      gye.append("svg:text")
+        .attr("x", -3)
+        .attr("dy", ".35em")
+        .attr("text-anchor", "end")
+        .text(fy)
+        .on("mouseover", function(d) {
+          d3.select(this).style("font-weight", "bold");
+        })
+        .on("mouseout", function(d) {
+          d3.select(this).style("font-weight", "normal");
+        })
+        .on("mousedown", function(d) {
+          var p = d3.svg.mouse(vis[0][0]);
+          downy = y.invert(p[1]);
+          downscaley = y.copy();
+          // d3.behavior.zoom().off("zoom", redraw);
+        });
+
+
+      gy.exit().remove();
+      update();
+
+    }
+
+    //
+    // axis scaling
+    //
+    // attach the mousemove and mouseup to the body
+    // in case one wanders off the axis line
+    d3.select(potentialchart)
+      .on("mousemove", function(d) {
+        var p = d3.svg.mouse(vis[0][0]);
+        if (!isNaN(downx)) {
+          var rupx = downscalex.invert(p[0]),
+            xaxis1 = downscalex.domain()[0],
+            xaxis2 = downscalex.domain()[1],
+            xextent = xaxis2 - xaxis1;
+          if (rupx !== 0) {
+            var changex, dragx_factor, new_domain;
+            dragx_factor = xextent / downx;
+            changex = 1 + (downx / rupx - 1) * (xextent / (downx - xaxis1)) / dragx_factor;
+            new_domain = [xaxis1, xaxis1 + (xextent * changex)];
+            x.domain(new_domain);
+            redraw();
+          }
+          d3.event.preventDefault();
+          d3.event.stopPropagation();
+        }
+        if (!isNaN(downy)) {
+          var rupy = downscaley.invert(p[1]),
+            yaxis1 = downscaley.domain()[1],
+            yaxis2 = downscaley.domain()[0],
+            yextent = yaxis2 - yaxis1;
+          if (rupy !== 0) {
+            var changey, dragy_factor, new_range;
+            dragy_factor = yextent / downy;
+            changey = 1 - (rupy / downy - 1) * (yextent / (downy - yaxis1)) / dragy_factor;
+            new_range = [yaxis1 + (yextent * changey), yaxis1];
+            y.domain(new_range);
+            redraw();
+          }
+          d3.event.preventDefault();
+          d3.event.stopPropagation();
+        }
+      })
+      .on("mouseup", function(d) {
+        if (!isNaN(downx)) {
+          redraw();
+          downx = Math.NaN;
+          d3.event.preventDefault();
+          d3.event.stopPropagation();
+        }
+        if (!isNaN(downy)) {
+          redraw();
+          downy = Math.NaN;
+          d3.event.preventDefault();
+          d3.event.stopPropagation();
+        }
+      });
+  </script>
+
+</body>
+
+</html>
