@@ -1,0 +1,2159 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://learnmaketeachshare.org/feed.xml" rel="self" type="application/atom+xml" /><link href="https://learnmaketeachshare.org/" rel="alternate" type="text/html" /><updated>2026-01-11T22:44:20+00:00</updated><id>https://learnmaketeachshare.org/feed.xml</id><title type="html">Learn Make Teach Share</title><subtitle>Learn something new. Make something that entertains you or does something useful ... or both! Share this with people you meet! Help other folks learn how to do it.
+</subtitle><author><name>Stephen Bannasch</name><email>stephen.bannasch@gmail.com</email></author><entry><title type="html">Observing With NASA.</title><link href="https://learnmaketeachshare.org/creating%20with%20software/2022/07/15/cfa-owns-electron.html" rel="alternate" type="text/html" title="Observing With NASA." /><published>2022-07-15T00:00:00+00:00</published><updated>2022-07-15T00:00:00+00:00</updated><id>https://learnmaketeachshare.org/creating%20with%20software/2022/07/15/cfa-owns-electron</id><content type="html" xml:base="https://learnmaketeachshare.org/creating%20with%20software/2022/07/15/cfa-owns-electron.html"><![CDATA[<p>Created an Electron-bassed kiosk application for <a href="https://rlmg.com">RLMG</a> and
+the <a href="https://cfa.harvard.edu">Center for Astrophysics: Harvard &amp; Smithsonian</a>
+to allow science museum visitors to investigate and maniupulate astronomical
+images taken by a wide range of NASA telescopes and observatories in the
+<a href="https://mo-www.cfa.harvard.edu/MicroObservatory/">MicroObservatory Robotic Telescope Network</a>.</p>
+
+<p>The visitor also has the capability to have copies of the astronomical images
+they modify sent to them via email. In addiotion visitors can select from a
+number of astronomical objects and schedule an observation from one of the
+telescopes in the
+<a href="https://mo-www.cfa.harvard.edu/MicroObservatory/">MicroObservatory Robotic Telescope Network</a>.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/cfa/micro-observatory.jpg" alt="MicroObservatory" /></p>
+
+<p>When deployed to a science museum the application displays on a
+large touchscreen integrated into a kiosk.</p>
+
+<p>While the Electron app is compiled and distributed as native application
+on both MacOS and Windows the structure of the development environment I put
+together also deploys a web version that is updated everytime a commit
+is pushed to github.</p>
+
+<p><a href="https://stepheneb.github.io/cfa-own-electron-gh-pages/">Observing With NASA</a></p>
+
+<blockquote>
+  <p>NOTE: the main repository is now private. The web version linked above is
+extracted from the gh-pages branch.</p>
+</blockquote>
+
+<h3 id="application-user-interface-elements">Application User Interface Elements</h3>
+
+<ul>
+  <li>
+    <p><strong>Splash Page</strong> the application layout is optimized for display at 1920x1080.
+For development purposes a fading information box is temporarily displayed
+on startup and whenever the window is resized.
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-opening-screen.jpg" alt="Name" /></p>
+  </li>
+  <li>
+    <p><strong>Main menu</strong>
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-main-menu.jpg" alt="Name" /></p>
+  </li>
+  <li>
+    <p><strong>Find the Apollo Site</strong>
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-find-apollo-menu.jpg" alt="Name" /></p>
+  </li>
+  <li>
+    <p>Zoom in on where the Apollo 17 mission lander touched down on the moon.
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-find-apollo-17.jpg" alt="Name" /></p>
+  </li>
+  <li>
+    <p><strong>Create Your Own Masterpiece</strong>
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-make-masterpiece-menu.jpg" alt="Name" /></p>
+  </li>
+  <li>
+    <p>Choose from a variety of filters and effects to transform the Whirlpool
+galaxy image.
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-make-masterpiece-whirlpool.jpg" alt="Name" /></p>
+  </li>
+  <li>
+    <p><strong>Animate Images Over Time</strong>.
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-animate-images-menu.jpg" alt="Name" /></p>
+  </li>
+  <li>
+    <p>Animate through 10 separate images of UV light from the Sun..
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-animate-images-solar-uv.jpg" alt="Name" /></p>
+  </li>
+  <li>
+    <p><strong>What’s Red + Green + Blue</strong>
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-rgb-menu.jpg" alt="Name" /></p>
+  </li>
+  <li>
+    <p>Cosmic Reef Nebula
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-rgb-cosmic-reef.jpg" alt="Name" /></p>
+  </li>
+  <li>
+    <p><strong>Invisible Light</strong>
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-invisible-light-menu.jpg" alt="Name" /></p>
+  </li>
+  <li>
+    <p>Combine separate infrared, visible and UV images of the whirlpool Galaxy into
+a visible image mapped to red, green, and blue.
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-invisible-light-whirlpool.jpg" alt="Name" /></p>
+  </li>
+  <li>
+    <p><strong>Take Your Own Telescope Image</strong>
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-make-observation-menu.jpg" alt="Name" /></p>
+  </li>
+  <li>
+    <p>Request an observation of the Whirlpool Galaxy from a MicroObservatory
+telescope.
+<img src="https://learnmaketeachshare.org/assets/images/cfa/cfa-make-observation-cigar.jpg" alt="Name" /></p>
+  </li>
+</ul>]]></content><author><name>Stephen Bannasch</name><email>stephen.bannasch@gmail.com</email></author><category term="Creating with Software" /><category term="nasa" /><category term="software" /><category term="technology" /><category term="javascript" /><category term="electron" /><category term="astronomy" /><summary type="html"><![CDATA[Created an Electron-bassed kiosk application for RLMG and the Center for Astrophysics: Harvard &amp; Smithsonian to allow science museum visitors to investigate and maniupulate astronomical images taken by a wide range of NASA telescopes and observatories in the MicroObservatory Robotic Telescope Network.]]></summary></entry><entry><title type="html">Thoreau’s World.</title><link href="https://learnmaketeachshare.org/creating%20with%20software/2022/07/15/thoreaus-world.html" rel="alternate" type="text/html" title="Thoreau’s World." /><published>2022-07-15T00:00:00+00:00</published><updated>2022-07-15T00:00:00+00:00</updated><id>https://learnmaketeachshare.org/creating%20with%20software/2022/07/15/thoreaus-world</id><content type="html" xml:base="https://learnmaketeachshare.org/creating%20with%20software/2022/07/15/thoreaus-world.html"><![CDATA[<p>Created <a href="https://thoreausworld.com">Thoreau’s World</a> a web site for
+displaying Thoreau artifacts held by the <a href="https://concordmuseum.org">Concord Museum</a>
+with interactive elements inspired by NYT articles with embedded visualzations.</p>
+
+<p>Project: 2021-2022</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/thoreaus-world/thoreausworld.jpg" alt="Thoreaus Spyglass: Main Menu" /></p>]]></content><author><name>Stephen Bannasch</name><email>stephen.bannasch@gmail.com</email></author><category term="Creating with Software" /><category term="thoreau" /><category term="software" /><category term="technology" /><category term="javascript" /><summary type="html"><![CDATA[Created Thoreau’s World a web site for displaying Thoreau artifacts held by the Concord Museum with interactive elements inspired by NYT articles with embedded visualzations.]]></summary></entry><entry><title type="html">Making Nose Strips for People Sewing Masks.</title><link href="https://learnmaketeachshare.org/better%20masks/2020/04/21/making-nose-strips.for-people-sewing-masks.html" rel="alternate" type="text/html" title="Making Nose Strips for People Sewing Masks." /><published>2020-04-21T00:00:00+00:00</published><updated>2020-04-21T00:00:00+00:00</updated><id>https://learnmaketeachshare.org/better%20masks/2020/04/21/making-nose-strips.for-people-sewing-masks</id><content type="html" xml:base="https://learnmaketeachshare.org/better%20masks/2020/04/21/making-nose-strips.for-people-sewing-masks.html"><![CDATA[<p>The pandemic arrived in March 2020 and I wanted to do something to help. I saw lots of folks were sewing masks locally for hospitals and first responders and they were being made either without nose strips to help shape and seal the mask where it fits over a persons nose or adapting household items that might not be stiff enough to keep the shape like twist ties or pipe cleaners.</p>
+
+<p>I decided I could help and started making and giving away strips like these:</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/nose-strips-00.jpg" alt="Nose Strips" /></p>
+
+<p>Between March and September 2020 I made and gave away over 29,000 nose strips.</p>
+
+<p>The strips are modeled on the strip I saw on an N95 mask. It was made out of a soft easily bendable aluminum allow. About 3.5” long and 3/16” wide.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/n95-mask-01.jpg" alt="N95 Mask Nose Strip" /></p>
+
+<p>I meadsured it at about 0.045” thick.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/n95-mask-02.jpg" alt="N95 Mask Nose Strip Thickness" /></p>
+
+<p>The corners on the ends were chamfered and smoothed a bit.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/n95-mask-03.jpg" alt="N95 Mask Nose Strip: Chamfered End" /></p>
+
+<p>I first tried making the same size with some 6061 alloy aluminum I had but that was way too stiff and hard to bend.</p>
+
+<p>I did have a sheet of 26 gauge galvanized steel sheet that I have used to patch rust holes in my cars so they would pass inspection and even though this metal ismuch thinner tna the aluminum (about 0.,017” thick) it seems to be roughly equivalent in stiffness to the aluminum strip used on the N95 mask.</p>
+
+<p>I decided to:</p>
+
+<ol>
+  <li>Use the same basic dimensions: 3.5” long and 3/16” wide.</li>
+  <li>Round over the four corners.</li>
+  <li>Smooth over all the sharp/rough edges created when making the strips.</li>
+</ol>
+
+<p>They look like this now:</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/nose-strips-02.jpg" alt="Nose Strips Rounded and Deburred" /></p>
+
+<p>A mask fits and seals much better with a shaped nose strip.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/mask-00.jpg" alt="Mask with Nose Strip" /></p>
+
+<p>A closeup of the mask shape maintained by the nose strip.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/mask-01.jpg" alt="Mask with Nose Strip: Closeup" /></p>
+
+<p>The mask shape is maintained by the nose strip when it isn’t being worn.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/mask-02.jpg" alt="Removed Mask Shape with Nose Strip" /></p>
+
+<p>Here’s what 1000 look like!</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/nose-strips-1000-03.jpg" alt="1000 Nose Strips Rounded and Deburred" /></p>
+
+<h3 id="making-strips">Making Strips</h3>
+
+<h4 id="1-cut-the-large-sheet-of-galvanized-sheet-steel-into-35-inch-wide-strips">1. Cut the large sheet of galvanized sheet steel into 3.5 inch wide strips.</h4>
+
+<p>Using a larger shear at a friends workshop.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/shearing-sheet-steel-into-3.5-inch-strips.jpg" alt="Using the 60 inch foot-operated shear" /></p>
+
+<p>Later The Steel Shed in Bernardston MA used their big shear to cut 26 gauge galvanized steel into 3.5” wide strips.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8opS3cGqAhM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h4 id="2-cut-35-wide-strips-into-lots-of-316-wide-strips">2. Cut 3.5” wide strips into lots of 3/16” wide strips.</h4>
+
+<p>I used a small notching shear with a wood stop block glued to the underside of the moving shear surface to quickly cut the 3.5” wide strip into lots of 3/16” wide strips 3.5” long.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/small-notching-shear-00.jpg" alt="Small Notching Shear" /></p>
+
+<p>Time lapse video of shearing 1800 strips.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4gte1mihB-8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h4 id="3-round-over-all-four-corners">3. Round over all four corners.</h4>
+
+<p>After shearing the strips they all have a slight curve.</p>
+
+<p>I line up strips in blocks of about 25 and use a belt sander to round all four corners. This part of the process takes the longest.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/round-four-corners-00.jpg" alt="Rounding all four corners on a stationary belt sander." /></p>
+
+<h4 id="4-deburr-and-smooth-all-roughsharp-edges">4. Deburr and smooth all rough/sharp edges</h4>
+
+<p>Putting strips into a  vibratory tumbler filled with a ceramic deburring media and running it for 4-8 hourse will smooth over all rough/sharp edges.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/vibratory-tumbler-00.jpg" alt="Two Vibratory tumblers." /></p>
+
+<p>I first used the smaller tumbler on the right which was my dads. I could only process about 150 strips at a time.</p>
+
+<p>A friend lent me the larger tumbler on the left and now I can process 5-600 at a time.</p>
+
+<p>Am using five pounds of the following ceramic deburring material from McMaster-Carr in the larger tumbler.</p>
+
+<p><a href="https://www.mcmaster.com/4918A171">Media for Steel, Stainless Steel, and Hard Metals, Aggressive-Deburring, Triangular, 1/4” Long, 5 lbs</a></p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/masks/ceramic-deburring-media.jpg" alt="Ceramic deburring media." /></p>
+
+<p>The vibrating motion of the tumbler causes the strips and ceramic media to continually move around each other. The multitude of tiny bumps end up smoothing all the rough and sharp edges.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tRhPNuiJlsA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>]]></content><author><name>Stephen Bannasch</name><email>stephen.bannasch@gmail.com</email></author><category term="Better Masks" /><category term="mask nose strip metal" /><summary type="html"><![CDATA[The pandemic arrived in March 2020 and I wanted to do something to help. I saw lots of folks were sewing masks locally for hospitals and first responders and they were being made either without nose strips to help shape and seal the mask where it fits over a persons nose or adapting household items that might not be stiff enough to keep the shape like twist ties or pipe cleaners.]]></summary></entry><entry><title type="html">Splitting a large red oak log to make cutting boards.</title><link href="https://learnmaketeachshare.org/playing%20with%20wood/2018/12/07/red-oak-cutting-boards.html" rel="alternate" type="text/html" title="Splitting a large red oak log to make cutting boards." /><published>2018-12-07T00:00:00+00:00</published><updated>2018-12-07T00:00:00+00:00</updated><id>https://learnmaketeachshare.org/playing%20with%20wood/2018/12/07/red-oak-cutting-boards</id><content type="html" xml:base="https://learnmaketeachshare.org/playing%20with%20wood/2018/12/07/red-oak-cutting-boards.html"><![CDATA[<p>I made a bunch of beautiful cutting and cheese boards from a very large short section of red oak from Schoolhouse Road in Shutesbury.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/11-finished-red-oak-cutting-boards.jpg" alt="11 Finished Red Oak Cutting Boards" width="90%" /></p>
+
+<p>The section I split and then milled was about 26” in diameter” so I was able to use a single piece of wood for each cutting board instead of gluing a number of pieces together.</p>
+
+<p>I split and milled the boards as close to radially sawn as I could get. This means the yearly grain lines are close to perpendicular to the board surfaces. This makes the boards stringer and more stable and it also makes the patterns on the surfaces much more beautiful.</p>
+
+<p>It’s very hard to show how wild the patterns and curl in the wood shows up in a still image so heres a 9 second video of the surface of one of the cutting boards in the sun.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ln0aKBCghfU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h2 id="some-very-large-red-oak-logs-i-turned-into-boards">Some very large red oak logs I turned into boards</h2>
+
+<p>In July 2018 I reached out to Jeff Sward a homeowner on Schoolhouse Road in Shutesbury who had been trying to find someone who could use a very large red oak log from a tree he had to have cut down. The largest piece was about 25” in diameter and 15’ long. It was too big for most folks to process for firewood. ANd because there was only one long section not enough to bother with for a real logging truck to take to a sawmill.!</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/01-large-red-oak-on-schoolhouse-road.jpg" alt="01 Large Red Oak On Schoolhouse Road" width="90%" /></p>
+
+<p>I thought if I cut it into two pieces I might just barely be able to fit one section at a time into my older 4x8’ utility trailer. It was a complex process but Rebecca and Jeff helped.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/02.1-rebecca-and-jeff-helped-with-the-red-oak-logs.jpg" alt="02.1 Rebecca And Jeff Helped With The Red Oak Logs" width="90%" /></p>
+
+<p>Here’s one of the shorter sections milled into boards.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/02.2-half-of-the-red-oak-milled-into-boards.jpg" alt="02.2 Half Of The Red Oak Milled Into Boards" width="90%" /></p>
+
+<p>The red oak boards are stickered and air-drying now.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/02.3-stickered-red-oak-boards.jpg" alt="02.3 Stickered Red Oak Boards" width="90%" /></p>
+
+<h2 id="a-short-section-left--maybe-cutting-boards">A short section left … maybe cutting boards?</h2>
+
+<p>I went back and was looking at a short section cut closer to the base of the tree and was wondering if I could do something interesting with it. I was pretty tired at that point in the day but decided to split it into about 12 pie-shaped sections with steel splitting wedges and my short-handled 8 lbs sledge hammer and bring them home. Maybe I could make cutting boards??</p>
+
+<p>By splitting the short section into pieces I was then able to use my large bandsaw to mill very short boards with the grain running very close to perpendicular to the face of the boards. Cutting boards this way is often called quarter sawn though I usually call it radial sawing because my goal is to have each board cut on a radial line from the outside edge of the tree directly towards the center.</p>
+
+<p>Boards are both stronger and more stable when the grain lines are perpendicular to the face and the faces can also be more beautiful. I wouldn’t know how beautiful until they dried for a couple more months.</p>
+
+<h2 id="how-fast-would-the-boards-dry">How fast would the boards dry?</h2>
+
+<p>I stickered the boards in my basement with a dehumidifier set at 45% RH and a fan set at low speed blowing on them. I picked a couple of boards from the top of the pile and weighed them every couple weeks so I could tell when they had dried close to equilibrium with the relatively dry air in the conditioned basement.</p>
+
+<p>By October the boards the weight was hardly changing when I took new measurements so I decided to process a couple of the largest boards to see what they looked like.</p>
+
+<p>Here’s one of the first ones I planed and then sanded smooth. It has a finish of just food-grade mineral oil.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/04-red-oak-board.jpg" alt="04 Red Oak Board" width="90%" /></p>
+
+<p>Wow!</p>
+
+<p>I gave this one to Tommy Boynton who built the house on Schoolhouse Road and lived with that red oak tree for many years.</p>
+
+<h2 id="processed-all-the-flat-boards-into-cutting-boards">Processed all the flat boards into cutting boards.</h2>
+
+<p>About half of the boards I had stickered in the basement ended up warping and curving small amounts when they dried. I decided to make cutting boards out of all the ones that stayed completely falt as they dried.</p>
+
+<p>I used a planner and drum sander to process the surfaces of the boards and a jointer and router with a round-over bit to process the sides and edges.</p>
+
+<h2 id="wet-the-surface-of-each-board-and-sanded-smooth-again">Wet the surface of each board and sanded smooth again</h2>
+
+<p>Before finishing I took a wet rag and moistened the surface of each cutting board and let it dry. This in effect “raised the grain”, it made the surface rougher. I sanded each board smooth again.</p>
+
+<h2 id="finishing-with-food-grade-mineral-oil-and-beeswax">Finishing with food-grade mineral oil and beeswax</h2>
+
+<p>I like using food-grade mineral oil for cutting boards because it makes the wood look beautiful and is completely non-toxic – but it doesn’t actually dry very well.</p>
+
+<p>This time I decided to try mixing beeswax into the mineral oil so the finish would dry just a bit harder. Rebecca had some beeswax pastilles she gave me and I combined a small amount of these with food-grade mineral oil I got at the drug store.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/07-beeswax-and-mineral-oil.jpg" alt="07 Beeswax And Mineral Oil" width="90%" /></p>
+
+<p>In order to get it to flow well I had to heat it up in a small pan.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/09-finishing-red-oak-with-heated-mineral-oil-and-beeswax.jpg" alt="09 Finishing Red Oak With Heated Mineral Oil And Beeswax" width="90%" /></p>
+
+<p>I also heated each unfinished board up for 30 s in the microwave so the heated oil and beeswax would flow deeper into the pores of the wood.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/06-finishing-red-oak-with-heated-mineral-oil-and-beeswax.jpg" alt="06 Finishing Red Oak With Heated Mineral Oil And Beeswax" width="90%" /></p>
+
+<p>Here’s what the boards looked like before finishing.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/08-finishing-red-oak-with-heated-mineral-oil-and-beeswax.jpg" alt="08 Finishing Red Oak With Heated Mineral Oil And Beeswax" width="90%" /></p>
+
+<p>And here’s what they looked like just after applying the oils and beeswax.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/10-red-oak-freshly-covered-with-mineral-oil-and-beeswax.jpg" alt="10 Red Oak Freshly Covered With Mineral Oil And Beeswax" width="90%" /></p>
+
+<p>I set them aside to dry and then polished the surfaces by hand.</p>
+
+<h2 id="all-done">All done</h2>
+
+<p>I had many different sizes of boards and I decided that I’d call the thinner ones <em>cheese boards</em> because I wasn’t sure they would stand up to the kind of abuse my family puts cutting boards through.</p>
+
+<p>All the different sizes of boards.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/11-finished-red-oak-cutting-boards.jpg" alt="11 Finished Red Oak Cutting Boards" width="90%" /></p>
+
+<h2 id="taking-care-of-the-boards">Taking care of the boards</h2>
+
+<p>After using a new cutting board for a while the surface will get a bit rougher. You can use fine sandpaper to smooth the surface again if you like. This normally needs to be done only once or twice.</p>
+
+<p>After a longer period of hard use you might also want to smooth the surface with fine grit sandpaper and re-coat the board with food-grade mineral oil and beeswax.</p>
+
+<h3 id="smoothing-the-surface-with-sand-paper">Smoothing the surface with sand paper</h3>
+
+<p>Initially a new cutting board becomes rougher because some of the structures in the surface of the wood expand more than others. Wrap some 220 grit sandpaper around something like a foam block and sand the surfaces down for a few minutes until they are smooth again.</p>
+
+<h3 id="restoring-by-sanding-and-refinishing-with-food-grade-mineral-oil-and-beeswax-after-hard-use">Restoring by sanding and refinishing with food-grade mineral oil and beeswax after hard use</h3>
+
+<p>After a longer period of hard use you can restore your cutting board.</p>
+
+<ol>
+  <li>Clean the board well and let it completely dry.</li>
+  <li>Smooth the surface with 220 grit fine sandpaper.</li>
+  <li>Try and remove as much dust from the board as possible.</li>
+  <li>Mix together some food-grade mineral oil and a small amount of beeswax. Heat this mixture in a small pan until the beeswax melts. Let the mixture cool enough so it is still hot but not so hot to hurt you.</li>
+  <li>Optional: heat the board for 30 seconds in a microwave.</li>
+  <li>Coat all surfaces of the board with the mineral oil and beeswax and rub it in well with a rag or paper towel.</li>
+  <li>Let the mineral oil and beeswax finish dry for a day and polish with another clean rag or paper towel.</li>
+</ol>
+
+<p>You can store the save any extra mineral oil and beeswax mixture to use again in another 3-6 months.</p>
+
+<h2 id="custom-initials">Custom initials</h2>
+
+<p>Some neighbors wanted their initials carved into the edges of two boards for each other so I had them draw out how they wanted them to look. Their initial sketches were larger than would fit on the edges so I scanned their sketch and reduced the size so it would fit on the edges of the boards.</p>
+
+<p>I taped the printed sketch onto a board and used a rotary tool with several different bits to carve out the shapes of the initials.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/13-carving-burning-initials-into-side-1.jpg" alt="13 Carving Burning Initials Into Side 1" width="90%" /></p>
+
+<p>Here’s one with a bit more spacing between the letters.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/13-carving-burning-initials-into-side-2.jpg" alt="13 Carving Burning Initials Into Side 2" width="90%" /></p>
+
+<p>After processing with smoother files and sandpaper I used a hot soldering iron to burn the initials</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/crafts/cutting-boards/13-carving-burning-initials-into-side-3.jpg" alt="13 Carving Burning Initials Into Side 3" width="90%" /></p>
+
+<p>I realized that it helps to space the letters a bit further apart. Next time if they are a bit too close I’ll space the initials a bit further apart.</p>]]></content><author><name>Stephen Bannasch</name><email>stephen.bannasch@gmail.com</email></author><category term="Playing with Wood" /><category term="red oak" /><category term="beeswax" /><category term="shutesbury" /><summary type="html"><![CDATA[I made a bunch of beautiful cutting and cheese boards from a very large short section of red oak from Schoolhouse Road in Shutesbury.]]></summary></entry><entry><title type="html">Intonation for small high-performance guitars.</title><link href="https://learnmaketeachshare.org/making%20instruments/2018/11/20/intonation-for-small-high-performance-guitars.html" rel="alternate" type="text/html" title="Intonation for small high-performance guitars." /><published>2018-11-20T00:00:00+00:00</published><updated>2018-11-20T00:00:00+00:00</updated><id>https://learnmaketeachshare.org/making%20instruments/2018/11/20/intonation-for-small-high-performance-guitars</id><content type="html" xml:base="https://learnmaketeachshare.org/making%20instruments/2018/11/20/intonation-for-small-high-performance-guitars.html"><![CDATA[<p>I’ve recently finished two small high-performance steel-string guitars inspired by the <a href="https://www.lmii.com/plans/3540-plan-1918-martin-1-18-12-fret-to-the-body.html">1918 Martin 1-18 plans</a> Ted Nelson created for GAL. There are some interesting intonation issues I am investigating that I suspect are inherently more difficult to ameliorate because the tops have been designed to work very efficiently with lightweight steel strings.</p>
+
+<h2 id="two-guitars-finished-november-2018">Two guitars finished November 2018</h2>
+
+<p>By “finished” I mean in the last couple of weeks I’ve finally got the bridges glued on and have done some initial work on action and intonation. The guitars of course are still changing slowly and settling in.</p>
+
+<p><em>I’m very happy with the guitar with the White Pine top.</em></p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/guitars/stephen-holding-white-pine-guitar.jpg" alt="I'm very happy with the White Pine guitar." /></p>
+
+<p><em>John Fabel, my guitar-building mentor playing my one day old guitar with the Sitka Spruce top. I built this one for my daughter. She hasn’t played much so I set it up with extra-light Silk and Steel strings.</em></p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LIJvUOfqzfI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<p>I had just glued the bridge on this guitar one day before taking this video so the guitar is still changing all the time and needs more work on action and intonation.</p>
+
+<p>I created these two guitars over a four year period meeting once a week with small group of folks all building similar guitars inspired by the 1918 Martin 1-18 plans. We were mentored by John Fabel who has experience building and repairing guitars and violins. I was also inspired by Trevor Gore’s work and book: <a href="http://www.goreguitars.com.au/main/page_the_book_buy_the_book.html">Contemporary Acoustic Guitar Design and Build</a>.</p>
+
+<h2 id="intonation-issues-with-small-lightweight-highly-responsive-tops">Intonation issues with small, lightweight, highly responsive tops</h2>
+
+<p>Both guitars have extremely responsive tops that can be easily driven with light strings, are impressively loud and have long sustains.</p>
+
+<p>I setup the neck, saddle, and nut on both guitars for a reasonably low action and on the White Pine guitar added some initial offsets to the saddle and nut for intonation.</p>
+
+<p>I then tap-testing and collected frequency response data for the front and back with the sound hole plugged and again for the top with the sound hole open. This gave me values for the following resonances:</p>
+
+<ol>
+  <li>Helmholtz: about 115 Hz. The resonance associated with the interior volume and the size of the sound hole.</li>
+  <li>Main top monopole, T(1,1)<sub>2</sub>: about 200 Hz with the sound hole plugged and 212 with the sound hole open. This is the large resonance associated with the top panel in the lower bout.</li>
+  <li>Main back resonance: about 290 Hz with the sound hole plugged.</li>
+</ol>
+
+<p>I also recorded the pitch of all the scale tones up to the 12th fret to better understand what lind of intonation issues I was dealing with.</p>
+
+<p>On the White Pine guitar I also included the ability to add masses of different weights to the interior sides of the lower bout. I collected the data described above without any additional side mass weights and then with the maximum of an additional 300 grams attached on each side. I created sets of weights from 50 to 300 grams in increments of 50 grams and plan to collect data using all the intermediate side mass weights in the future.</p>
+
+<p>With an additional 600 grams of mass attached to the sides the T(1,1)<sub>2</sub> resonance dropped about 7 Hz with the sound hole plugged and about 11 Hz with the sound hole open. The Helmholtz resonance dropped about 1 Hz and the back dropped about 12 Hz.</p>
+
+<p>I was surprised at how much the Helmholtz and T(1,1)<sub>2</sub> resonances affected the intonation in the scale tones. Multiple scale tones below a resonance were flattened while those above were sharpened.</p>
+
+<p>While I can certainly still improve the intonation the large effect of the scale tones coupling with the existing resonances will make it difficult to get the intonation I hoped for.</p>
+
+<p>Reflecting on this intonation issue I suspect the coupling of scale tones with resonances is probably inherently more pronounced when a top is very light and responsive and designed to work well with the smaller amounts of energy available in light and very light strings.</p>
+
+<p>A couple of steps I plan to try first to lessen the intonation errors before working on correcting them by making further changes in nut and saddle offsets.</p>
+
+<ol>
+  <li>Lower the fret height. I used EVO gold FW43080 fret wire and with the light and extra-light strings I designed these for I don’t need all 0.043” of the fret height. While examining the intonation errors in the first few frets on E2 I noticed I didn’t need to press as hard as I normally do to get a solid stop on the fret and that pressing harder increased the sharpness of the intonation error.</li>
+  <li>Double check the neck relief using the appropriate strings for each guitar and use the truss rod to set it to 0.1 mm.</li>
+  <li>Lower the action.</li>
+</ol>
+
+<p>After I’m satisfied with these steps finish making changes to saddle and nut offsets to correct intonation over the scale tones I care most about as much as is practical.</p>
+
+<h2 id="tap-testing-and-initial-intonation-measurements-white-pine-top">Tap testing and initial intonation measurements: White Pine top</h2>
+
+<p>I collected frequency response data from the top and back with the strings tuned and then muted and the sound hole plugged with a small section of a rigid foam cone. I also collected data from the top with the sound hole open.</p>
+
+<p><em>Collecting spectral response data with Audacity.</em>
+<img src="https://learnmaketeachshare.org/assets/images/guitars/tap-testing-and-intonation/tap-testing-with-audacity.jpg" alt="Collecting spectral response data with Audacity" /></p>
+
+<h3 id="main-resonances-with-no-additional-side-masses">Main resonances with no additional side masses</h3>
+
+<p>Initially without adding side mass weights the main monopole T(1,1)<sub>2</sub> resonance in the lower bout is about 200.2 Hz. The tapping was located in the center of the lower bout just tail side of bridge.</p>
+
+<p>These data are collected with the sound hole plugged (and strings muted) so the Helmholtz resonance both doesn’t show up and the coupling effect which increases the T(1,1)<sub>2</sub> resonance by almost 13 Hz isn’t present either.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="712px" height="440px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=703555483&amp;format=interactive"></iframe>
+</div>
+
+<p>The same test with the sound hole open shows the Helmholtz resonance at 115 Hz coupling with the T(1,1)<sub>2</sub> resonance increasing it to almost 213 Hz.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="712px" height="440px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=605440541&amp;format=interactive"></iframe>
+</div>
+
+<p>The back has a resonance of about 293 Hz with the sound hole plugged. This can be easily reduced if needed by taking small amounts off the tops of the lower radial braces and from the center scooped section of the cross brace.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="712px" height="440px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1716094117&amp;format=interactive"></iframe>
+</div>
+
+<h3 id="intonation-errors-with-no-additional-side-masses">Intonation errors with no additional side masses</h3>
+
+<p>With the top so lightweight and efficient the main resonances in the top and back and the air resonance associated with the enclosed volume have enough power to shift the pitch measured when individual scale notes are fretted and played.</p>
+
+<p>I don’t actually know whether the frequency of the string itself is being shifted or perhaps just active panel sections of the guitar. Might be interesting to also measure the string frequencies with magnetic pickups.</p>
+
+<p>Here’s a graph showing the intonation errors (in cents) for the scale tones for all the strings up through fret 12 for the White Pine guitar without any additional side masses. Each string is a different color.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1305952613&amp;format=interactive"></iframe>
+</div>
+
+<p>Here’s the table of the intonation errors (in cents) for the scale tones for all the strings up through fret 12 for the White Pine guitar without any additional side masses.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="712px" height="440px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQeQ0Ej6xr4kkQlpLHOSSiKcqdKgf2oMOzj6YbW8W6i1fxnrAjL3ZJXsN_7NMJ4WHDFxwVsXhnjatPW/pubhtml?widget=true&amp;headers=false&amp;gid=155976817"></iframe>
+</div>
+
+<h3 id="main-resonances-with-two-added-300-gram-side-mass-weights">Main resonances with two added 300 gram side mass weights</h3>
+
+<p>Adding two 300 gram side mass weights lowered the main monopole T(1,1)<sub>2</sub> resonance in the lower bout about 7 Hz to 193.4 Hz.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="712px" height="440px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=836542340&amp;format=interactive"></iframe>
+</div>
+
+<p>Same test with sound hole open shows the Helmholtz has dropped about 1 Hz to 114 Hz and the coupled T(1,1)<sub>2</sub> resonance has dropped about 12 Hz to 201 Hz.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="712px" height="440px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=521836965&amp;format=interactive"></iframe>
+</div>
+
+<p>The back resonance has dropped about 11 Hz to 282 Hz with the addition of the two 300 gram side mass weights.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="712px" height="440px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1914012767&amp;format=interactive"></iframe>
+</div>
+
+<h3 id="intonation-errors-with-two-300-gram-side-masses-added">Intonation errors with two 300 gram side masses added</h3>
+
+<p>Here’s a table showing the intonation errors (in cents) for the scale tones for all the strings up through fret 12 for the White Pine guitar with the two added 300 gram side mass weights attached. Overall many of the intonation errors have been reduced somewhat compared to the measurements with no side weight masses attached.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="712px" height="440px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQeQ0Ej6xr4kkQlpLHOSSiKcqdKgf2oMOzj6YbW8W6i1fxnrAjL3ZJXsN_7NMJ4WHDFxwVsXhnjatPW/pubhtml?widget=true&amp;headers=false&amp;gid=474419620"></iframe>
+</div>
+
+<p>Here’s a graph of the same data.  Each string is a different color.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1642036906&amp;format=interactive"></iframe>
+</div>
+
+<p>I regenerated the same intonation data this time using the lightest fretting pressure possible to get a clear note. This chart shows that while many of the intonation errors are less there are still similar patterns of errors.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1142994428&amp;format=interactive"></iframe>
+</div>
+
+<p>I did one more collection of intonation data however this time I worked to mute the resonances in the top lower bout by covering it with a rubbery friction fabric and piling 2300 grams of unused side mass weights on top.</p>
+
+<p>The T(1,1)<sub>2</sub> resonance and presumably many more were reduced but not eliminated.</p>
+
+<p>I was especially interested in seeing what strings 6, 5, and 4 looked like around the T(1,1)2 resonance.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1129091287&amp;format=interactive"></iframe>
+</div>
+
+<p>The T(1,1)2 resonance and presumably many more were reduced but not eliminated. The large flattening below 210 Hz and sharpening above have been reduced.</p>
+
+<p>I am quite surprised that the intonation errors in string 6 around 110 Hz seem to have almost disappeared.</p>
+
+<p>Here’s a picture of what I did to partially mute the top. John Fabel suggested also trying to mute the bridge where the pins are located. Another variation I will try.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/guitars/tap-testing-and-intonation/wp-muted-top-with-fabric-and-weights.jpg" alt="White Pine top muted top with fabric and weights" /></p>
+
+<h3 id="maybe-an-octave-harmonic-of-the-t112-is-causing-the-problem">Maybe an octave harmonic of the T(1,1)<sub>2</sub> is causing the problem.</h3>
+
+<p>Trevor Gore suggested part of the problem could be an artifact of the tuner responding to a resonance of 430 Hz – a low-order harmonic of 215 Hz.</p>
+
+<p>With the two 300 gram weights attached to the sides and the sound hole open I measured the T(1,1)<sub>2</sub> resonance at 201.2 Hz … so perhaps I should be looking for resonances closer to 400 Hz also??</p>
+
+<p>I re-collected all the scale tone intonation errors by collecting audio samples of each scale tone in Audacity. I actually had to do this twice, once at 8000 Hz to get high-resolution spectral data and again at 22050 Hz to get better resolution data for the pitch detect plugin to process.</p>
+
+<p>I then selected each sample and used my extended version of the Pitch Detect plugin which allows me to additionally specify an offset time to start sampling. My settings were a 0.25 s offset followed by an 0.5 s sampling period.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=88774376&amp;format=interactive"></iframe>
+</div>
+
+<p>E2:4 is measured almost 12 cents sharp using the Audacity pitch detect plugin – and looking at the frequency data I can see there is a harmonic right around 415 Hz (418 Hz).</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="502px" height="310px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=2109803073&amp;format=interactive"></iframe>
+</div>
+
+<p>A2:12 is another scale tone that is almost 9 cents sharp. The frequency data does not show a harmonic around 415 Hz, instead it is 439 Hz.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="502px" height="310px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1357818626&amp;format=interactive"></iframe>
+</div>
+
+<p>A2:11 which appears to be only about 1 cent sharp does have a harmonic at 416 Hz.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="502px" height="310px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1375724333&amp;format=interactive"></iframe>
+</div>
+
+<p>D3:12 which should be scale tone D4 at 293.7 Hz is 12 cents flat at 292.6 Hz. The first obvious harmonic is at 587 Hz which doesn’t seem like it would contribute to T(1,1)<sub>2</sub> but the next harmonic at 880 might if it had enough energy.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="502px" height="310px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=365888587&amp;format=interactive"></iframe>
+</div>
+
+<p>And of course B3:9, which is G#4 at 415.3 Hz is being pushed about 9 cents flat.</p>
+
+<p><strong>Note:</strong> I collected these data <strong>without</strong> muting the other strings</p>
+
+<h3 id="updatel-2018-11-24-200-gram-mass-weights-chladni-patterns">UpdateL 2018 11 24: 200 gram mass weights, Chladni patterns</h3>
+
+<p>I made a few changes and collected more intonation data and tried to force some visible Chladni patterns on the top.</p>
+
+<ol>
+  <li>Reduced the side mass weights from 300 to 200 grams.</li>
+  <li>Took 0.1 mm off of frets (about 1.15 to 1.05 mm) and re-crowned.</li>
+  <li>Lowered nut 0.1 mm.</li>
+  <li>Lowered saddle 0.2 mm.</li>
+</ol>
+
+<p>Changes in measurement procedure:</p>
+
+<ol>
+  <li>Collecting 12 scale tones and the 12th fret harmonic with Audacity and later generating pitches using Pitch Detect plugin,</li>
+  <li>Now muting other strings during collection.</li>
+</ol>
+
+<p>Now the maximum flat intonation error is visible on the 5 and 4 stings and is deepest around 185 Hz.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1976929423&amp;format=interactive"></iframe>
+</div>
+
+<p>I put a loudspeaker over the sound hole (strings under tension and tuned), sprinkled black tea leaves and swept through a range of frequencies looking for resonance patterns. Didn’t get very many but there was a strong resonant responses at 353, 366, and 369 Hz which is just about exactly twice the deepest intonation flattening at 185 Hz … hmmm.</p>
+
+<p><em>Chladni patterns from White Pine top with strings tensioned and tuned (20181124).</em></p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/guitars/wp/top/chladni-20181124-catalog.jpg" alt="Chladni patterns from White Pine top with strings tensioned and tuned, 20181124" /></p>
+
+<p><em>Frequency response of White Pine top, 200 grams side mass weights.</em></p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="600px" height="371px" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTKLuizF9FWWvQ1yi8_IWs_wuGbEHpYLZg4B95ng98D6e0Kvi65-KN-k85rzBGkGQt4bt8HjDfpZBA5/pubchart?oid=1455834922&amp;format=interactive"></iframe>
+</div>
+
+<p>There are peaks at 115.2, 152.3, 190.4, 205.1, 208.0, 240.2, 254.9, 306.6, 376.0, 441.4, and 528.3 Hz.</p>
+
+<p>An interesting aspect of collecting the intonation data in Audacity is that it’s very easy to correlate the much sharper initial drop in the shape of the amplitude decay curve with notes that seem “dull” and more “thunky” when I play them compared to nearby notes.</p>
+
+<p>I already knew the most likely reason is coupling with a resonance that matches the scale tone – but I find I understand the connection at a deeper level when I can combine multiple senses and representations.</p>
+
+<p>The notes pitched around G3, G#3, A3, and A#3 all have sharper decays than nearby notes.</p>
+
+<p><em>Intonation waveform data from A2, D3, and G3. Tracks are lined up so similar scale tones are vertically aligned.</em>
+<img src="https://learnmaketeachshare.org/assets/images/guitars/wp/top/wp-A2-D3-G3-amplitude-envelopes-20181124.jpg" alt="Intonation waveform data from A2, D3, and G3. Tracks are lined up so similar scale tones are vertically aligned." /></p>
+
+<p><strong>Note:</strong> The last sample in A2 is the harmonic at the 12th fret and is a duplicate of the sample just before it which is A2 fretted at the 12th fret.</p>
+
+<h2 id="more-details-on-the-two-guitars">More details on the two guitars.</h2>
+
+<p>Both guitars have tops, bracing, and necks built for steel strings and have a 635 mm (25”) scale length. This is 5 mm longer than the 1918 Martin 1-18. The tops and backs were built with a 25 foot cylindrical radius.</p>
+
+<p>I started by building one for my daughter. It has a Sitka Spruce top, spalted Norway Maple back and sides, and heat bent Hop Hornbeam bindings and rosette.</p>
+
+<p>I decided very quickly I should also build one for myself and stay just a bit ahead in the process so I would make more mistakes on mine. While the form of both guitars are the same there are aspects of mine that are more unusual and experimental. The top is White Pine and the sides and back are spalted Beech. I included the ability to add masses of different weights to the interior sides of the lower bout</p>
+
+<h3 id="12th-fret-body-join">12th fret body join</h3>
+
+<p>The neck joins the body at the 12th fret which means the bridge is right in the middle of the lower bout which is only 330 mm (13”) across.</p>
+
+<h3 id="white-pine-tonewood">White Pine tonewood</h3>
+
+<p>The White Pine came from a tree about 100 years old cut down in front of the local club/bar in my tiny town. It was about 28” in diameter.</p>
+
+<p>Initially I processed the split sections into panels about 600 x 200 x 6 mm, stickered them in a conditioned space at 45% relative humidity with a mild airflow. These panels reached an equilibrium weight in about three weeks. I reduced the thickness to 4 mm and squared off the ends.</p>
+
+<p>I then baked one set of panels for 90 minutes and another for 270 minutes at 200 degrees in a large convection oven. The goal was to harden the resin in the pine by volatilizing the lighter components. I was not trying to dry the boards further so I included a large flat tray of water in the oven during this process.</p>
+
+<p>I then created a spreadsheet implementing the methods Trevor Gore describes for characterizing panels for tops and coming up with a target thickness and predicting what the mass of the top plate will be. See: Contemporary Acoustic Guitar Design and Build: Gore &amp; Gilet v1:p4-63.</p>
+
+<ol>
+  <li>Measured length, width, depth, and mass for each tested panel and calculated density.</li>
+  <li>Determined main resonant frequency for long grain, cross grain and cross-diagonal for each panel. Used a good microphone with a wide frequency response to collect data with Audacity and determined the fundamental pitch for each mode using the Spectrum Analysis feature.</li>
+  <li>Used Gore’s formulas to calculate stiffness in GPa for the long axis, the cross-grain axis, and the twisting stiffness associated with the cross-diagonal mode.</li>
+</ol>
+
+<p><em>Comparing the White Pine panels baked for 90 and 270 minutes.</em></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Average</td>
+      <td>90 minutes</td>
+      <td>270 minutes</td>
+      <td>change %</td>
+    </tr>
+    <tr>
+      <td>density (kg/m<sup>3</sup>)</td>
+      <td>455</td>
+      <td>496</td>
+      <td>9%</td>
+    </tr>
+    <tr>
+      <td>Long-grain stiffness (GPa)</td>
+      <td>7.19</td>
+      <td>10.13</td>
+      <td>41%</td>
+    </tr>
+    <tr>
+      <td>Cross-grain stiffness (GPa)</td>
+      <td>1.02</td>
+      <td>1.30</td>
+      <td>27%</td>
+    </tr>
+    <tr>
+      <td>Diagonal stiffness (GPa)</td>
+      <td>0.89</td>
+      <td>1.61</td>
+      <td>80%</td>
+    </tr>
+    <tr>
+      <td>Sound Radiation Coefficient</td>
+      <td>8.74</td>
+      <td>9.10</td>
+      <td>4%</td>
+    </tr>
+    <tr>
+      <td>Target Thickness (mm)</td>
+      <td>3.0</td>
+      <td>2.6</td>
+      <td>-13%</td>
+    </tr>
+    <tr>
+      <td>Panel mass (grams)</td>
+      <td>164</td>
+      <td>157</td>
+      <td>-5%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Elements of these data are a bit surprising.</p>
+
+<p>All the panels came from the same section of the tree. I have no idea why the panels baked for 270 minutes got 9% denser than the panels baked for 90 minutes. Am pretty sure I also measured density before baking but can’t find that data. I do have more split pieces of the White Pine that haven’t been baked and I may try and replicate the experiment.</p>
+
+<p>The Wood Database web site lists an average density for <a href="https://www.wood-database.com/eastern-white-pine/">Eastern White Pine</a> of 400 kg/m<sup>3</sup>. This is about 12% less than the panels baked for 90 minutes and 25% less for the panels baked for 270 minutes.</p>
+
+<p>In any case I used a bookmatched pair of panels baked for 270 minutes for the White Pine top guitar.</p>
+
+<h3 id="modified-x-bracing">Modified X bracing</h3>
+
+<p>A modified X-bracing developed by John Fabel is used for the tops of the guitars. Butternut is used as a bridge plate.</p>
+
+<p><em>Carving Braces for White Pine top.</em>
+<img src="https://learnmaketeachshare.org/assets/images/guitars/wp/top/carving-braces.jpg" alt="Carving Braces for White Pine top." /></p>
+
+<h3 id="using-chladni-patterns-to-complete-brace-shaping">Using Chladni patterns to complete brace shaping.</h3>
+
+<p>The top is placed on four foam pillars, black tea is sprinkled on the top and a sine wave is played from a speaker below the top and swept from 50 to 1000 Hz. At points when the resonances build up in the plate
+the dark tea leaves are bounced away from the anti-nodal sections of the plate that have larger oscillations and move towards nodal points where the oscillations are less. When enough black tea leaves migrate to the node lines the lines become easy to see. At this point the sweep is paused and the Chladni patterns for that frequency are recorded.</p>
+
+<p>Shaping the braces continues until the the T(1,1)<sub>2</sub> resonance is a smooth continuous curve and as close to the edge of the lower bout as possible. See the sixth picture below at 237 Hz.</p>
+
+<p><em>Chladni patterns for finished White Pine top.</em>
+<img src="https://learnmaketeachshare.org/assets/images/guitars/wp/top/chladni-catalog.jpg" alt="Chladni patterns for White Pine top." /></p>
+
+<p>The other Chladni patterns recorded might be helpful later when I have a historical record  of these data that can be correlated with other characteristics of completed guitars.</p>
+
+<p><em>Finished braces and Butternut bridge plate for White Pine top.</em>
+<img src="https://learnmaketeachshare.org/assets/images/guitars/wp/top/final-braces.jpg" alt="Finished braces for finished White Pine top." /></p>
+
+<h3 id="laminated-bridges">Laminated bridges</h3>
+
+<p>The bridges are laminated with Butternut on the lower layer and either Beech or Black Birch on top. The grain of both pieces is running parallel to the top of the guitar to maximize the strength opposing the rotational torque from the strings tension transferred through the saddle. The bridges weigh only about 15 grams.</p>
+
+<p><em>Shaping lower Butternut lamination to match radius of top.</em>
+__<img src="https://learnmaketeachshare.org/assets/images//guitars/bridge-for-sitka-spruce-guitar/01-shaping-butternut-to-top-radius.jpg" alt="Shaping Butternut to match radius of top." /></p>
+
+<p><em>Gluing laminated bridge to Sitka Spruce top using cam clamps and shaped foam cauls above and below. The foam cauls are laminated with thin plywood.</em>
+<img src="https://learnmaketeachshare.org/assets/images/guitars/bridge-for-sitka-spruce-guitar/24-using-cam-clamps-and-plywood-foam-cauls-closeup.jpg" alt="Gluing laminated bridge to Sitka Spruce top using cam clamps and plywood/foam cauls" /></p>
+
+<h3 id="live-backs">Live backs</h3>
+
+<p>The lower bout section of the backs of both guitars are designed as live backs with the main cross-brace scooped out in the center along with radial bracing to contribute to harmonic richness both directly and also via coupling with resonances in the top.</p>
+
+<p><em>Radial bracing on Beech live back for White Pine guitar.</em>
+<img src="https://learnmaketeachshare.org/assets/images/guitars/live-backs/radial-bracing-on-live-back.jpg" alt="Radial Bracing On Live Back" /></p>
+
+<h3 id="side-mass-weights">Side mass weights</h3>
+
+<p>On the White Pine guitar there are two sturdy small platforms attached to the sides in the interior of the lower bout just before the waist. These have 1/4-20 threaded inserts so I can experiment with attaching different steel mass weights to the sides. Attaching a mass rigidly to the sides make both the top and back plates more efficient by reflecting more of the vibrational energy back into the top and back. Another effect is a correlation between an increase in side mass and a larger oscillating area on the top and bottom plates. The larger oscillating area also means that the main resonant frequencies are lower in pitch. By changing the side mass weights the guitar can in-effect be tuned so the main resonant frequencies avoid standard scale tones.</p>
+
+<p><em>Mounting platform for side mass weight.</em>
+<img src="https://learnmaketeachshare.org/assets/images/guitars/side-mass-weights/01-mounting-platform.jpg" alt="Mounting platform for side mass weight." /></p>
+
+<p><em>Side mass weight attached.</em>
+<img src="https://learnmaketeachshare.org/assets/images/guitars/side-mass-weights/05-side-mass-weight-attached.jpg" alt="Side mass weight attached." /></p>
+
+<h3 id="heat-bent-multiple-strip-kerfling">Heat-bent multiple-strip kerfling</h3>
+
+<p>I enjoyed bending the sides so much that for  the White Pine top guitar I decided to build the kerfling out of multiple heat-bent strips of cypress instead of the standard saw-cut kerfling. I think it ended up with sort of an art-deco look. Of course it’s incredibly strong.</p>
+
+<p><em>Multiple strips of heat-bent kerfling glued to sides.</em>
+<img src="https://learnmaketeachshare.org/assets/images/guitars/gluing-bent-kerfing-to-sides/03-bent-kerfing-complete.jpg" alt="Bent kerfing glued to sides" /></p>]]></content><author><name>Stephen Bannasch</name><email>stephen.bannasch@gmail.com</email></author><category term="Making Instruments" /><category term="guitar" /><category term="building" /><category term="intonation" /><summary type="html"><![CDATA[I’ve recently finished two small high-performance steel-string guitars inspired by the 1918 Martin 1-18 plans Ted Nelson created for GAL. There are some interesting intonation issues I am investigating that I suspect are inherently more difficult to ameliorate because the tops have been designed to work very efficiently with lightweight steel strings.]]></summary></entry><entry><title type="html">Learning something new can make all the difference.</title><link href="https://learnmaketeachshare.org/education/2018/11/09/learning-something-new.html" rel="alternate" type="text/html" title="Learning something new can make all the difference." /><published>2018-11-09T00:00:00+00:00</published><updated>2018-11-09T00:00:00+00:00</updated><id>https://learnmaketeachshare.org/education/2018/11/09/learning-something-new</id><content type="html" xml:base="https://learnmaketeachshare.org/education/2018/11/09/learning-something-new.html"><![CDATA[<p>In 1982 I was working at TERC for Bob Tinker. TERC is a 501-C3 educational non-profit focused on math and science education and research and Ronald Reagan drastically cut back the Department of Education. For an organization that relied on soft money this was a big problem. Our grant funding was drying up.</p>
+
+<p>There were about 15 of us who worked at TERC and to keep the organization afloat we decided to travel around the country with lots of Apple II computers and put on teacher workshops about using innovative curriculum and technology for science and math education. We used a bunch of the software and curriculum we had been developing in our grants. It was a great deal of work and we just barely broke even – but it did help keep us afloat until more grants came in.</p>
+
+<p>One of the new technologies Bob Tinker and I had created together was the whole idea of probeware – connecting sensors that measure environmental properties like light and temperature to a microcomputer and displaying the changes in real-time graphs on the computer. At the time we called the concept Microcomputer Based Laboratories.</p>
+
+<p>The first and simplest of these programs was the Apple II Temperature Grapher we created in 1980 for HRM Media which used a thermistor connected to the built-in gameport.</p>
+
+<p>At our workshops I ran a session for teachers where I gave each of them a thermistor, some wire, a 16-pin DIP header and some solder and a soldering iron. Almost none of them had ever soldered before and most of them had never opened the computer case either.</p>
+
+<p>Well I helped them learn to solder. We had lots of extra parts if they broke something. When they connected their new temperature probe to the computer I helped them write a 10 line BASIC program that read data from the gameport, converted it to temperature and drew a realtime graph on the screen.</p>
+
+<p>I want to be very clear. The purpose of the workshop wasn’t to enable teachers to make probes for their classroom. The probes they made were quite delicate and would break with robust handling. I also wasn’t teaching them to be programmers. There are loads more features needed to make a program like this work well in a classroom.</p>
+
+<p>The purpose was for them to have fun and get interested in Probeware in their classrooms. In that respect the session was a complete success.</p>
+
+<p>But something much deeper was also happening that I didn’t realize the importance of until later. I noticed during the session that the teachers were having a great deal of fun and were quite energized. That didn’t surprise me because I liked electronics and programming and building things and measuring stuff in the world too.</p>
+
+<p>Many years later at NSTA conferences I can remember many of these same teachers, who were now educational leaders in their districts, would come up to me and mention that the workshops we ran were very important to them and they all remembered the probeware workshop.</p>
+
+<p>I realized that something very special happens when people are in a new situation where they have agency over domains that they never expected to have any mastery over.</p>
+
+<p>The emotional energy released/generated in the probeware workshop when the teachers soldered bits together and wrote a simple program to graph temperature changed their view of what was possible for them and the people around them.</p>
+
+<p>To this day the full-body smile someone gets when they understand how something works in a way that helps them accomplish something they care about is something I greatly enjoy.</p>
+
+<p>An interesting postscript: At both TERC and later at Concord Consortium we ran many very interesting research and curriculum development projects funded by grants. Some of these have had large impacts. I still think the workshop series over 30 years ago when our grant funding was drying up had some of the most significant impacts of all of our projects.</p>]]></content><author><name>Stephen Bannasch</name><email>stephen.bannasch@gmail.com</email></author><category term="Education" /><category term="temperature" /><category term="probe" /><category term="thermistor" /><category term="workshop" /><summary type="html"><![CDATA[In 1982 I was working at TERC for Bob Tinker. TERC is a 501-C3 educational non-profit focused on math and science education and research and Ronald Reagan drastically cut back the Department of Education. For an organization that relied on soft money this was a big problem. Our grant funding was drying up.]]></summary></entry><entry><title type="html">Using LEDs to measure narrow spectral bands of light.</title><link href="https://learnmaketeachshare.org/sensors%20and%20circuits/2018/10/30/using-leds-to-measure-narrow-spectral-bands.html" rel="alternate" type="text/html" title="Using LEDs to measure narrow spectral bands of light." /><published>2018-10-30T00:00:00+00:00</published><updated>2018-10-30T00:00:00+00:00</updated><id>https://learnmaketeachshare.org/sensors%20and%20circuits/2018/10/30/using-leds-to%20measure-narrow-spectral-bands</id><content type="html" xml:base="https://learnmaketeachshare.org/sensors%20and%20circuits/2018/10/30/using-leds-to-measure-narrow-spectral-bands.html"><![CDATA[<p>LEDs can be used to measure spectrally narrow bands of light by connecting them to a high-impedance current-to-voltage amplifier and treating them like inefficient photodiodes.</p>
+
+<h3 id="using-leds-to-measure-spectrally-narrow-bands-of-light">Using LEDs to measure spectrally narrow bands of light</h3>
+
+<p>There’s a great deal you can learn about the world around you if you can measure the intensity of light in narrow spectral bands.</p>
+
+<p>Aerosols and ozone in the atmosphere, vegetation and water-stress in terrestrial plants when measured from planes or satelites.</p>
+
+<p>Often narrow spectral bands of light are measured with interference filters. These are optical filters that consist of multiple layers of dielectric materials with different refractive indices and different thicknesses. Interference filters can have bandwidths as low as 10 nm however the construction is complex and a narrow bandwidth filter might need up to 100 layers which means they are expensive.</p>
+
+<p>For example a 25 mm diameter interference filter with a 550 nm bandpass wavelength and a 15 nm bandwidth (FWHM) is about $325:
+<a href="https://www.chroma.com/products/parts/et550-15x">Chroma, ET550/15m</a></p>
+
+<p>Forrest Mimms pioneered the use of light-emitting-diodes as spectrally selective light detectors for sun photometry in 1992. It turns out that LEDs which normally are used to emit light can also be used to measure light. A very basic green LED from Radio Shack (part# 276-022A) might generate as much as 10 nA of current.</p>
+
+<p>A number of years ago <a href="https://www.dynasil.com/company/optometrics/">Optometrics</a> let me use some of the equipment they make to test LEDs for their spectral response.</p>
+
+<p>I used their <a href="https://www.dynasil.com/catalog/mini-chrom-monochromators/scanning-digital-monochromator-300-800-nm/">SDMC1-3</a> 300-800 nm scanning digital monochrometer and a 20W tungsten lamp model 7-1110 similar to this current product <a href="https://www.dynasil.com/catalog/mini-chrom-monochromators/tungsten-source-with-regulated-power-supply-for-105-125v-ac/">20W Tungsten Halogen LKight Source</a>/</p>
+
+<p>Optometrics supplied a calibration for the output of their tungsten light source and a spectral sensitivity the monochrometer which I combined topgether into a variable I called Monochrometer Output Power (uW).</p>
+
+<p>We developed a circuit board with a dual opamp to first convert the tiny currents produced by the LEDs to a voltage and then to amplify the voltage.</p>
+
+<p>At the time I only had a chance to measure two LEDs.</p>
+
+<ol>
+  <li>Green LED, Radio Shack part# 276-022A, 6.3 mcd</li>
+  <li>High brightness red LED, Radio Shack part# 276-066B, 470 mcd</li>
+</ol>
+
+<p>The results are impressive – especially for the low-brightness green LED which has a peak response at 550 nm and a bandwidth of 60 nm. While the bandwidth is about four times as wide as the Chroma, ET550/15m interference filter the cost is lower by about a factor of 1000.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/LEDs/LED-data2.gif" alt="LED spectral sensitivity graph" width="600px" /></p>
+
+<p>The red LED is a high-brightness model and about 75 times brighter than the green LED when used to emit light. However when used as a light sensor the green LED has a narrower bandwidth.</p>
+
+<p>It is easy to see the longer response tail in the shorter wavelengths for the red LED when the same spectral response data is plotted using a log scale on the Y axis. LEDs used as sensors like the green LED with very strong rejection of out of band signals are often more useful in spectroscopy.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/LEDs/LED-data2-log.gif" alt="LED spectral sensitivity semilog graph" width="600px" /></p>
+
+<h3 id="circuit-board-setup-for-testing-the-green-led">Circuit board setup for testing the green LED.</h3>
+
+<p>I worked with Walter Lenk to create a simple current-to-votage circuit board to measure the output of the LEDs.</p>
+
+<p>The power has been turned on with switch-4 and the gain has been set to 22x (220 mV/nA) by setting switch-1 on and switch-2 off. The green LED has been inserted with the flat (cathode) side facing the label FLAT (connected to ground). The output is measured on the opposite side at the GND and OUT terminals.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/LEDs/circuitboard-top.jpg" alt="LED current-to-voltage circuit board" width="600px" /></p>
+
+<p>When measured with a digital multimeter I noticed no noise in the circuit at measurements down to 0.001 V however when the signal is viewed on an oscilloscope 60 cycle hum is present. If the signal is measured with a sampling (rather than integrating) convertor either additional shielding must be used or the 60 cycle signal removed after conversion with digital signal filtering. The whole board could be mounted in and grounded to an aluminum box with the led poking out a hole in the side placed to line up with the exit apeture of the monochrometer.</p>
+
+<h3 id="schematic">Schematic</h3>
+
+<p>The circuit used a Texas Instruments TCL27L2BCP dual op-amp with the first stage set in a current-to-voltage configuration with a 10 M Ohm feedback resistance and the second stage had gains of 2.5, 5, 11, and 22x.</p>
+
+<p>During the tests the gain for the green LED was set to 22x and the gain for the high-brightness red LED was set to 11x. The effective feedback resistance for the green LED was 2.2 G Ohm and the red 1.1 G Ohm.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/LEDs/schematic.gif" alt="LED current to voltage schematic" width="500px" /></p>
+
+<h3 id="table-of-experimental-data">Table of experimental data</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>wavelength</td>
+      <td>green led</td>
+      <td>hi-bright<br />red led</td>
+      <td>Monochrometer<br />Output<br />Power (uW)</td>
+      <td>green led<br />corrected<br />normalized</td>
+      <td>red led<br />corrected<br />normalized</td>
+    </tr>
+    <tr>
+      <td>350</td>
+      <td> </td>
+      <td> </td>
+      <td>0.476</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>355</td>
+      <td> </td>
+      <td> </td>
+      <td>0.623</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>360</td>
+      <td> </td>
+      <td> </td>
+      <td>0.740</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>365</td>
+      <td> </td>
+      <td> </td>
+      <td>0.801</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>370</td>
+      <td> </td>
+      <td> </td>
+      <td>0.830</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>375</td>
+      <td> </td>
+      <td> </td>
+      <td>0.938</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>380</td>
+      <td> </td>
+      <td> </td>
+      <td>1.081</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>385</td>
+      <td> </td>
+      <td> </td>
+      <td>1.217</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>390</td>
+      <td> </td>
+      <td> </td>
+      <td>1.348</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>395</td>
+      <td> </td>
+      <td> </td>
+      <td>1.475</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>0.000</td>
+      <td>1.596</td>
+      <td>0.002</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>405</td>
+      <td>0.001</td>
+      <td>1.735</td>
+      <td>0.016</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>410</td>
+      <td>0.001</td>
+      <td>1.917</td>
+      <td>0.014</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>415</td>
+      <td>0.001</td>
+      <td>2.165</td>
+      <td>0.013</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>420</td>
+      <td>0.002</td>
+      <td>2.472</td>
+      <td>0.022</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>425</td>
+      <td>0.003</td>
+      <td>2.752</td>
+      <td>0.030</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>430</td>
+      <td>0.004</td>
+      <td>2.990</td>
+      <td>0.036</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>435</td>
+      <td>0.004</td>
+      <td>3.189</td>
+      <td>0.034</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>440</td>
+      <td>0.005</td>
+      <td>3.347</td>
+      <td>0.040</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>445</td>
+      <td>0.000</td>
+      <td>0.006</td>
+      <td>3.448</td>
+      <td>0.000</td>
+      <td>0.047</td>
+    </tr>
+    <tr>
+      <td>450</td>
+      <td>0.005</td>
+      <td>0.006</td>
+      <td>3.350</td>
+      <td>0.020</td>
+      <td>0.049</td>
+    </tr>
+    <tr>
+      <td>455</td>
+      <td>0.019</td>
+      <td>0.006</td>
+      <td>3.182</td>
+      <td>0.081</td>
+      <td>0.051</td>
+    </tr>
+    <tr>
+      <td>460</td>
+      <td>0.049</td>
+      <td>0.007</td>
+      <td>3.053</td>
+      <td>0.217</td>
+      <td>0.062</td>
+    </tr>
+    <tr>
+      <td>465</td>
+      <td>0.099</td>
+      <td>0.011</td>
+      <td>3.277</td>
+      <td>0.409</td>
+      <td>0.091</td>
+    </tr>
+    <tr>
+      <td>470</td>
+      <td>0.175</td>
+      <td>0.014</td>
+      <td>3.645</td>
+      <td>0.650</td>
+      <td>0.104</td>
+    </tr>
+    <tr>
+      <td>475</td>
+      <td>0.286</td>
+      <td>0.019</td>
+      <td>4.046</td>
+      <td>0.958</td>
+      <td>0.127</td>
+    </tr>
+    <tr>
+      <td>480</td>
+      <td>0.397</td>
+      <td>0.023</td>
+      <td>4.530</td>
+      <td>1.187</td>
+      <td>0.138</td>
+    </tr>
+    <tr>
+      <td>485</td>
+      <td>0.519</td>
+      <td>0.027</td>
+      <td>5.109</td>
+      <td>1.376</td>
+      <td>0.143</td>
+    </tr>
+    <tr>
+      <td>490</td>
+      <td>0.631</td>
+      <td>0.031</td>
+      <td>5.672</td>
+      <td>1.507</td>
+      <td>0.148</td>
+    </tr>
+    <tr>
+      <td>495</td>
+      <td>0.758</td>
+      <td>0.036</td>
+      <td>6.171</td>
+      <td>1.664</td>
+      <td>0.158</td>
+    </tr>
+    <tr>
+      <td>500</td>
+      <td>0.892</td>
+      <td>0.041</td>
+      <td>6.632</td>
+      <td>1.822</td>
+      <td>0.168</td>
+    </tr>
+    <tr>
+      <td>505</td>
+      <td>1.028</td>
+      <td>0.050</td>
+      <td>7.052</td>
+      <td>1.975</td>
+      <td>0.192</td>
+    </tr>
+    <tr>
+      <td>510</td>
+      <td>1.158</td>
+      <td>0.065</td>
+      <td>7.466</td>
+      <td>2.101</td>
+      <td>0.236</td>
+    </tr>
+    <tr>
+      <td>515</td>
+      <td>1.290</td>
+      <td>0.085</td>
+      <td>7.881</td>
+      <td>2.218</td>
+      <td>0.292</td>
+    </tr>
+    <tr>
+      <td>520</td>
+      <td>1.403</td>
+      <td>0.106</td>
+      <td>8.294</td>
+      <td>2.292</td>
+      <td>0.346</td>
+    </tr>
+    <tr>
+      <td>525</td>
+      <td>1.518</td>
+      <td>0.126</td>
+      <td>8.691</td>
+      <td>2.366</td>
+      <td>0.393</td>
+    </tr>
+    <tr>
+      <td>530</td>
+      <td>1.641</td>
+      <td>0.145</td>
+      <td>9.062</td>
+      <td>2.453</td>
+      <td>0.434</td>
+    </tr>
+    <tr>
+      <td>535</td>
+      <td>1.745</td>
+      <td>0.166</td>
+      <td>9.373</td>
+      <td>2.522</td>
+      <td>0.480</td>
+    </tr>
+    <tr>
+      <td>540</td>
+      <td>1.925</td>
+      <td>0.190</td>
+      <td>9.624</td>
+      <td>2.710</td>
+      <td>0.535</td>
+    </tr>
+    <tr>
+      <td>545</td>
+      <td>2.187</td>
+      <td>0.222</td>
+      <td>9.896</td>
+      <td>2.994</td>
+      <td>0.608</td>
+    </tr>
+    <tr>
+      <td>550</td>
+      <td>2.387</td>
+      <td>0.262</td>
+      <td>10.232</td>
+      <td>3.161</td>
+      <td>0.694</td>
+    </tr>
+    <tr>
+      <td>555</td>
+      <td>1.864</td>
+      <td>0.313</td>
+      <td>10.568</td>
+      <td>2.389</td>
+      <td>0.802</td>
+    </tr>
+    <tr>
+      <td>560</td>
+      <td>1.078</td>
+      <td>0.370</td>
+      <td>10.861</td>
+      <td>1.345</td>
+      <td>0.923</td>
+    </tr>
+    <tr>
+      <td>565</td>
+      <td>0.539</td>
+      <td>0.450</td>
+      <td>11.124</td>
+      <td>0.656</td>
+      <td>1.096</td>
+    </tr>
+    <tr>
+      <td>570</td>
+      <td>0.222</td>
+      <td>0.534</td>
+      <td>11.356</td>
+      <td>0.265</td>
+      <td>1.274</td>
+    </tr>
+    <tr>
+      <td>575</td>
+      <td>0.079</td>
+      <td>0.627</td>
+      <td>11.557</td>
+      <td>0.093</td>
+      <td>1.470</td>
+    </tr>
+    <tr>
+      <td>580</td>
+      <td>0.030</td>
+      <td>0.756</td>
+      <td>11.745</td>
+      <td>0.035</td>
+      <td>1.744</td>
+    </tr>
+    <tr>
+      <td>585</td>
+      <td>0.009</td>
+      <td>0.887</td>
+      <td>11.930</td>
+      <td>0.010</td>
+      <td>2.014</td>
+    </tr>
+    <tr>
+      <td>590</td>
+      <td>0.001</td>
+      <td>1.006</td>
+      <td>12.111</td>
+      <td>0.001</td>
+      <td>2.251</td>
+    </tr>
+    <tr>
+      <td>595</td>
+      <td> </td>
+      <td>1.116</td>
+      <td>12.287</td>
+      <td> </td>
+      <td>2.461</td>
+    </tr>
+    <tr>
+      <td>600</td>
+      <td> </td>
+      <td>1.180</td>
+      <td>12.457</td>
+      <td> </td>
+      <td>2.567</td>
+    </tr>
+    <tr>
+      <td>605</td>
+      <td> </td>
+      <td>1.255</td>
+      <td>12.622</td>
+      <td> </td>
+      <td>2.694</td>
+    </tr>
+    <tr>
+      <td>610</td>
+      <td> </td>
+      <td>1.280</td>
+      <td>12.784</td>
+      <td> </td>
+      <td>2.713</td>
+    </tr>
+    <tr>
+      <td>615</td>
+      <td> </td>
+      <td>1.323</td>
+      <td>12.940</td>
+      <td> </td>
+      <td>2.770</td>
+    </tr>
+    <tr>
+      <td>620</td>
+      <td> </td>
+      <td>1.343</td>
+      <td>13.071</td>
+      <td> </td>
+      <td>2.784</td>
+    </tr>
+    <tr>
+      <td>625</td>
+      <td> </td>
+      <td>1.357</td>
+      <td>13.160</td>
+      <td> </td>
+      <td>2.794</td>
+    </tr>
+    <tr>
+      <td>630</td>
+      <td> </td>
+      <td>1.367</td>
+      <td>13.225</td>
+      <td> </td>
+      <td>2.801</td>
+    </tr>
+    <tr>
+      <td>635</td>
+      <td> </td>
+      <td>1.387</td>
+      <td>13.283</td>
+      <td> </td>
+      <td>2.829</td>
+    </tr>
+    <tr>
+      <td>640</td>
+      <td> </td>
+      <td>1.394</td>
+      <td>13.338</td>
+      <td> </td>
+      <td>2.832</td>
+    </tr>
+    <tr>
+      <td>645</td>
+      <td> </td>
+      <td>1.406</td>
+      <td>13.385</td>
+      <td> </td>
+      <td>2.846</td>
+    </tr>
+    <tr>
+      <td>650</td>
+      <td> </td>
+      <td>1.306</td>
+      <td>13.426</td>
+      <td> </td>
+      <td>2.636</td>
+    </tr>
+    <tr>
+      <td>655</td>
+      <td> </td>
+      <td>0.812</td>
+      <td>13.460</td>
+      <td> </td>
+      <td>1.635</td>
+    </tr>
+    <tr>
+      <td>660</td>
+      <td> </td>
+      <td>0.403</td>
+      <td>13.488</td>
+      <td> </td>
+      <td>0.810</td>
+    </tr>
+    <tr>
+      <td>665</td>
+      <td> </td>
+      <td>0.155</td>
+      <td>13.508</td>
+      <td> </td>
+      <td>0.311</td>
+    </tr>
+    <tr>
+      <td>670</td>
+      <td> </td>
+      <td>0.057</td>
+      <td>13.523</td>
+      <td> </td>
+      <td>0.114</td>
+    </tr>
+    <tr>
+      <td>675</td>
+      <td> </td>
+      <td>0.016</td>
+      <td>13.534</td>
+      <td> </td>
+      <td>0.032</td>
+    </tr>
+    <tr>
+      <td>680</td>
+      <td> </td>
+      <td>0.004</td>
+      <td>13.541</td>
+      <td> </td>
+      <td>0.008</td>
+    </tr>
+    <tr>
+      <td>685</td>
+      <td> </td>
+      <td>0.001</td>
+      <td>13.546</td>
+      <td> </td>
+      <td>0.002</td>
+    </tr>
+    <tr>
+      <td>690</td>
+      <td> </td>
+      <td>0.000</td>
+      <td>13.548</td>
+      <td> </td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>695</td>
+      <td> </td>
+      <td> </td>
+      <td>13.544</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>700</td>
+      <td> </td>
+      <td> </td>
+      <td>13.526</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>705</td>
+      <td> </td>
+      <td> </td>
+      <td>13.489</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>710</td>
+      <td> </td>
+      <td> </td>
+      <td>13.439</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>715</td>
+      <td> </td>
+      <td> </td>
+      <td>13.382</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>720</td>
+      <td> </td>
+      <td> </td>
+      <td>13.321</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>725</td>
+      <td> </td>
+      <td> </td>
+      <td>13.258</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>730</td>
+      <td> </td>
+      <td> </td>
+      <td>13.191</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>735</td>
+      <td> </td>
+      <td> </td>
+      <td>13.113</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>740</td>
+      <td> </td>
+      <td> </td>
+      <td>12.978</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>745</td>
+      <td> </td>
+      <td> </td>
+      <td>12.784</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>750</td>
+      <td> </td>
+      <td> </td>
+      <td>12.590</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>755</td>
+      <td> </td>
+      <td> </td>
+      <td>12.417</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>760</td>
+      <td> </td>
+      <td> </td>
+      <td>12.270</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>765</td>
+      <td> </td>
+      <td> </td>
+      <td>12.134</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>770</td>
+      <td> </td>
+      <td> </td>
+      <td>11.955</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>775</td>
+      <td> </td>
+      <td> </td>
+      <td>11.722</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>780</td>
+      <td> </td>
+      <td> </td>
+      <td>11.481</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>785</td>
+      <td> </td>
+      <td> </td>
+      <td>11.239</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>790</td>
+      <td> </td>
+      <td> </td>
+      <td>10.998</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>795</td>
+      <td> </td>
+      <td> </td>
+      <td>10.755</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>800</td>
+      <td> </td>
+      <td> </td>
+      <td>10.513</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="references">References</h3>
+
+<ol>
+  <li>Forrest M. Mims III, 1992, <a href="https://pdfs.semanticscholar.org/68d0/254593e8a993571cee32564a3fc295d5daf3.pdf">Sun photometer with light-emitting diodes as spectrally selective detectors</a></li>
+  <li>HAZE-SPAN, 1998, <a href="http://haze.concord.org/">Haze Sun Photometer Atmospheric Network</a></li>
+  <li>David R. Brooks, 2001, <a href="https://userpages.umbc.edu/~martins/PHYS650/LED_Photometer_BrooksJGR2001.pdf">Developoment of an inexpensive hendheld LED-based Sun photometer for the Globe program</a></li>
+  <li>Gregory Garza, 2013, <a href="https://pdfs.semanticscholar.org/df58/6feea8d50844e68c3d9831b5aa589415166d.pdf">Atmosphere Observation by the Method of LED Sun Photometry</a></li>
+  <li>Forrest M. Mims III, March 2015, Make, <a href="https://makezine.com/projects/twilight-photometer/">Build a Twilight Photometer to Detect Stratospheric Particles</a></li>
+</ol>]]></content><author><name>Stephen Bannasch</name><email>stephen.bannasch@gmail.com</email></author><category term="Sensors and Circuits" /><category term="LED" /><category term="light" /><category term="spectrum" /><summary type="html"><![CDATA[LEDs can be used to measure spectrally narrow bands of light by connecting them to a high-impedance current-to-voltage amplifier and treating them like inefficient photodiodes.]]></summary></entry><entry><title type="html">Shiitake and Oyster Inoculation Party Fall 2018.</title><link href="https://learnmaketeachshare.org/growing%20mushrooms/2018/10/22/fall-2018-inoculation-party.html" rel="alternate" type="text/html" title="Shiitake and Oyster Inoculation Party Fall 2018." /><published>2018-10-22T20:11:43+00:00</published><updated>2018-10-22T20:11:43+00:00</updated><id>https://learnmaketeachshare.org/growing%20mushrooms/2018/10/22/fall-2018-inoculation-party</id><content type="html" xml:base="https://learnmaketeachshare.org/growing%20mushrooms/2018/10/22/fall-2018-inoculation-party.html"><![CDATA[<p>Forest Voges and I are holding a another Shiitake and Oyster mushroom inoculation party on Saturday November 10th behind Forest’s house at 206 Cooleyville Rd, Shutesbury, MA 01072.</p>
+
+<p>Folks are welcome to come by, learn how to inoculate logs, meet friendly neighbors, and take some logs home.</p>
+
+<p><em>Spring 2018 inoculation party in light rain.</em>
+<img src="https://learnmaketeachshare.org/assets/images/mushrooms/20180512/assembly line in rain.jpg" alt="assembly line in rain" /></p>
+
+<p>If you want to bring logs to inoculate and share cut live trees sometime this week. The inoculation works better if the logs rest for several weeks before inoculation to let some of the trees natural anti-fungal properties disappate. That means cutting by this weekend (Oct 27-28) would be great.</p>
+
+<p>If you are bringing logs let me soon so we can order enough supplies.</p>
+
+<p>It usually takes about a year before the first mushrooms fruit from an inoculated log. After this a log might fruit for the next 3-5 years. Some types of species and strains fruit every couple of months from spring to fall. Other types might only fruit in the fall.</p>
+
+<p>We’ll setup around 10, potluck lunch around 12:30 and depending on how many logs, people, and weather will end between 2:30 and 4.</p>
+
+<p>The cash outlay for materials and supplies usually runs between $90-120 we’ve done between 90 and 160 logs in a session. We encourage people to contribute what they can and what feels fair.</p>
+
+<p><a href="/growing%20mushrooms/2018/08/27/shiitake-inocoluation-parties.html">Lots more information about inoculation and care of mushroom logs.</a></p>
+
+<p><a href="/growing%20mushrooms/2018/05/12/shiitake-inocoluation-party.html">More pictures and video from our spring 2018 inoculation party.</a></p>]]></content><author><name>Stephen Bannasch</name><email>stephen.bannasch@gmail.com</email></author><category term="Growing Mushrooms" /><category term="mushroom" /><category term="shiitake" /><category term="oyster" /><category term="inoculation" /><summary type="html"><![CDATA[Forest Voges and I are holding a another Shiitake and Oyster mushroom inoculation party on Saturday November 10th behind Forest’s house at 206 Cooleyville Rd, Shutesbury, MA 01072.]]></summary></entry><entry><title type="html">A hybrid guitar-dulcimer-mandolin.</title><link href="https://learnmaketeachshare.org/making%20instruments/2018/09/30/dinalin.html" rel="alternate" type="text/html" title="A hybrid guitar-dulcimer-mandolin." /><published>2018-09-30T00:00:00+00:00</published><updated>2018-09-30T00:00:00+00:00</updated><id>https://learnmaketeachshare.org/making%20instruments/2018/09/30/dinalin</id><content type="html" xml:base="https://learnmaketeachshare.org/making%20instruments/2018/09/30/dinalin.html"><![CDATA[<p>Imagine designing and build an instrument from scratch in two weeks! In Early March 2015 I was in the middle of a long-term project learning to build guitars from scratch. I was doing this with a small group mentored by a good friend John Fabel. Since I already had experience making all kinds of things I also ended up making many tools and making tools to make tools.</p>
+
+<p>Considering we only met once a week, some of the other folks had almost no wood-working experience and we were starting with logs it became obvious to me the process would continue for quite a while at a deliciously deliberate pace.</p>
+
+<p>One Saturday two weeks before my wife’s birthday I decided I wanted to design and build an instrument as fast as possible – and inspired by a friends Merlin I drew up rough plans for a very simple guitar-dulcimer-mandolin hybrid. Two weeks later I was able to strum it.</p>
+
+<h2 id="dinalin-a-hybrid-guitar-dulcimer-mandolin">Dinalin: a hybrid guitar-dulcimer-mandolin.</h2>
+
+<p>Basics:</p>
+
+<ul>
+  <li>Scale length: 600 mm (23 5/8”)</li>
+  <li>Frets: 15, standard chromatic spacing</li>
+  <li>Tuning: open D; D3, A3, D4, F#4</li>
+  <li>Bridge: unglued (held down by string tension), butternut with manzanita strip</li>
+</ul>
+
+<p>Originally the top was made from Adirondack spruce which sounded great. After developing a crack when I grasped the body too hard picking it up I replaced it with a new top of the same wood that was slightly thicker and slightly stronger bracing.</p>
+
+<p>When I built it I terminated the strings by hooking them over little nails. Later I brazed short pieces of drill rod at an angle into a metal plate, drilled and countersunk two holes into the plate and screwed this plate into the tail of the instrument.</p>
+
+<p>Here’s what it looks like now:</p>
+
+<p><em>Four strings, 600 mm scale length, tuned to an open D: D3, A3, D4, F#4</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/dinalin-whole.jpg" alt="Dinalin whole" /></p>
+
+<p>While finishing the second top with Delft spray lacquer I added a dried flower collected by my Dad in the desert outside of Tucson by gently laying it in a wet coat of lacquer before adding a couple more coats.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/dinalin-flower.jpg" alt="Dinalin flower" height="400px" /></p>
+
+<p>I was making this for my wife Dina so decided to call it a Dinalin.</p>
+
+<p>I enjoy taking it with me if I am going to have to wait somewhere. Lots of people are intrigued and stop and ask me what it is. I tell them that I made it up and it’s sort of a hybrid between a guitar, mandolin, and dulcimer. Some accept that description but a large minority respond, “Yes, but what is it?”. I then tell them it’s a Dinalin. A number of these folks seem mildly disturbed because it’s not an instrument they have heard of. I remind them that it makes sense that they have never heard of a Dinalin since the one in front of them is the only one that exists and I made it up. Only some of them seem satisfied with this explanation.</p>
+
+<p>If people look interested I ask them if they want to play it. I’m able to convince about half the people who start off saying, “Oh no, I don’t know how to play that.” to try it. I explain that since it has an open tuning they can just strum it without fretting. The next simple thing to try is to strum it while fretting the high F#4 string in different positions. If they play a note that sounds bad just go up or down one fret and it will all be OK again.</p>
+
+<h3 id="heres-what-it-sounds-like-now-when-im-not-completely-awake">Here’s what it sounds like now when I’m not completely awake.</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HJcOnS9AVag" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h3 id="my-guitar-building-mentor-john-fabel-playing-it-with-the-original-adirondack-spruce-top">My guitar-building mentor John Fabel playing it with the original Adirondack spruce top.</h3>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kmwK0yo08N8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<h2 id="original-design-and-build-march-2015">Original design and build: March 2015.</h2>
+
+<p>I created the original design and built it over a period of two weeks in March 2015. I wanted to finish it as a present for my wife’s birthday. I started sketching the design on Saturday night and two weeks later it was complete except for frets.</p>
+
+<p>I can enjoy going way down geeky cul-de-sacs as much as any nerd however I also find being in a situation where I have to keep making the best reasonable decision as quickly as possible exhilarating.</p>
+
+<h3 id="neck-and-neck-body-assembly">Neck and neck-body assembly.</h3>
+
+<p>I used a piece of clear straight beech to make the neck. I cut the end off at a 15 degree angle, glued ears to it, flattened both sides of the angle cut, flipped the headstock over and glued the angle cut on the headstock to the flat bottom side of the neck.</p>
+
+<p>I designed a simple three layer section where the neck connects to the body. The neck itself is glued between two other sections of beech in the top layer. Below that is a section of white spruce with the grain oriented across the instrument. The bottom layer was another two pieces of beech. These three layers were then surfaced and glued together.</p>
+
+<p><em>Hard to see the details with all the clamps and the picture out of focus.</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-gluing-layer-neck-assembly.jpg" alt="original neck assembly" height="400px" /></p>
+
+<p>After the glue set up I created curves on the outer edges of this assembly to glue the sides to.</p>
+
+<p>This assembly ended up being a very strong, stable, and simple way to join the neck to the body. When I make another I’ll probably adapt this assembly to support a truss rod.</p>
+
+<h3 id="bending-the-one-piece-side-by-hand--no-time-to-build-a-mold">Bending the one piece side by hand – no time to build a mold.</h3>
+
+<p>I had a beautiful 40” long piece of spalted beech to use for the sides.</p>
+
+<p>In a guitar normally there are two curved side panels that gently clamped in a shaped mold and are joined by gluing to blocks at the head and tail.</p>
+
+<p>I didn’t have time to make a mold so I bend the single long side panel by hand by gently moving it back and forth and applying force over a heated section of heavy aluminum pipe.</p>
+
+<p>When the wood is just starting to warm up it resists an applied bending force a spings back to its original shape when the force is removed. When the wood gets hot enough the lignin, which is sort of a thermoplastic between the cells, starts to soften and the longitudinal cells on the outer edge of the curve start to slide past each other just a bit.</p>
+
+<p>In order to get the lignin soft enough to bend the panel the aluminum tube is usually hot enough to burn the wood if left in one place too long so it’s important to always keep the panel moving back and forth.</p>
+
+<p>I tried to get close to the curves I had drawn. The side weren’t perfectly symmetrical but they were close.</p>
+
+<p><em>Clamping bent sides to neck assembly: top view.</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-clamping-sides-to-neck-assembly-top.jpg" alt="clamping sides to neck assembly: top" height="400px" /></p>
+
+<h3 id="making-the-back-and-top-panels-out-of-beech-and-adirondack-spruce">Making the back and top panels out of beech and Adirondack spruce.</h3>
+
+<h4 id="preparing-the-panel-edges-for-gluing">Preparing the panel edges for gluing.</h4>
+
+<p>Both the back and top were made out of two pieces glued together. Before gluing the two edges had to be perfectly flat and straight.</p>
+
+<p><em>Straightening back panel beech edges before gluing.</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-straightening-back-panels-for-gluing.jpg" alt="straightening back panel edges before gluing" height="400px" /></p>
+
+<h4 id="rough-trimming-the-back-panel">Rough trimming the back panel.</h4>
+
+<p>Getting ready to trim the glued beech back panel a bit larger than the shape of the body.</p>
+
+<p>Also note the beech end block glued onto the interior of the sides at the end. This will serve as a stable strong element for securely terminating the strings.</p>
+
+<p><em>Tracing shape of sides onto back panel.</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-tracing-back-shape.jpg" alt="tracing shape of sides onto back panel" height="400px" /></p>
+
+<h4 id="sanding-an-eight-foot-radius-curve-into-the-braces-for-the-top-and-bottom-panels">Sanding an eight foot radius curve into the braces for the top and bottom panels.</h4>
+
+<p>The braces for both the top and back were shaped and then glued to their respective panels using an eight foot radius cylindrical dish surfaced with sandpaper.</p>
+
+<p><em>Sanding radius curves on back braces.</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-creating-back-brace-radius.jpg" alt="sanding radius curves on back braces: top" height="400px" /></p>
+
+<h4 id="extending-the-gluing-surface-on-the-edge-of-the-side">Extending the gluing surface on the edge of the side.</h4>
+
+<p>The gluing surface on the edges where the top and bottom are glued to the sides needs to be extended to create a stronger joint. Normally this is done with kerfing strips ( a strip with many saw cuts so it can be bent easily). Instead I bent a series of small beech strips into the same shape as the sides and glued them onto the sides to build up this gluing surface.</p>
+
+<p><em>Gluing curved strips to reinforce where top and bottom are glued to sides.</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-gluing-binding.jpg" alt="gluing curved strips to reinforce where top and bottom are glued to sides" height="400px" /></p>
+
+<h4 id="gluing-the-slightly-curved-braces-onto-the-back">Gluing the slightly curved braces onto the back.</h4>
+
+<p><em>Preparing to glue curved braces to back in eight foot cylindrical radius dish.</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-preparing-back-braces.jpg" alt="preparing to glue curved back braces" height="400px" /></p>
+
+<p>This is all happening in the go-bar deck shown below. There is a solid top (not visible in this picture) and any number long of springy flexible pieces of wood can be placed in a curve to provide compression to hold the braces against the top or bottom.</p>
+
+<p><em>Gluing curved braces to the top in go-bar deck.</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-gluing-curved-braces-to-top.jpg" alt="gluing curved braces to top in go-bar deck" height="400px" /></p>
+
+<h4 id="gluing-the-slightly-curved-back-onto-the-sides">Gluing the slightly curved back onto the sides.</h4>
+
+<p>I shaped and sanded the braces on the back and got it ready to glue to the side. Look closely and you can see the curved reinforcing strips glued on the edge of the side.</p>
+
+<p><em>Getting ready to glue back to side.</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-gluing-beech-back-1.jpg" alt="getting ready to glue back to sides" height="400px" /></p>
+
+<p>Using lots and lots of clamps to glue the back to the side.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-gluing-beech-back-2.jpg" alt="gluing the back to side" height="400px" /></p>
+
+<p>Notes:</p>
+<ul>
+  <li>I don’t have any pictures of how the back of the neck assembly was curved with a bandsaw, rasps, and sanding before this step.</li>
+  <li>Look close and you can clearly see the three glued layers of the neck assembly at the top of the photo. The middle whiter wood is the white spruce.</li>
+  <li>The braces have been glued to the top sitting to the right and still need to be shaped and sanded.</li>
+</ul>
+
+<h4 id="cutting-out-and-reinforcing-the-soundhole-in-the-top">Cutting out and reinforcing the soundhole in the top.</h4>
+
+<p>After shaping and sanding the braces on the top I found a plastic lid that seemed to be about the right size for the sound hole, used it to trace a circle, drilled a starting hole and then used a coping saw blade to cut out the sound hole.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-cutting-soundhole-by-hand.jpg" alt="cutting sound hole by hand" height="400px" /></p>
+
+<p>I added a second layer with six pieces cut from top panel scrap in a rough hexagon to reinforce the edge of the sound hole.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-gluing-sound-hole-reinforcement.jpg" alt="gluing sound hole reinforcement" height="400px" /></p>
+
+<h4 id="setting-the-proper-angle-for-the-neck-to-body-join">Setting the proper angle for the neck to body join.</h4>
+
+<p>At this point I’m almost ready to glue the top on but the whole instrument would not have worked correctly if I had. To be playable the strings have to be close to the frets on the fretboard.</p>
+
+<p>I was planning to use a bridge held in place just by string tension. To do this the strings need to cross over the bridge and then angle down somewhat to termination points at the tail of the body.</p>
+
+<p>At this point the top of the sides defined a glue-able surface that just extended parallel to the plane of the fretboard.</p>
+
+<p>One way of thinking about what I had to do was to angle the neck and fretboard down down just a bit away from the plane of the top. When building a guitar the joint where the neck attaches to the body is very carefully and precisely done to get this angle just right. However I had already secured the neck with a three-layer glued neck-body assembly lamination so it was not going to move at all.</p>
+
+<p>Without any real data or analysis to guide me I decided a one inch height of the bridge above the top would be high enough to provide the right down pressure from the strings to the bridge to:</p>
+
+<ol>
+  <li>Hold the bridge in place.</li>
+  <li>Effectively transmit energy in the vibrating strings through the bridge to the top.</li>
+  <li>Don’t create so much downward pressure to cause flattening or crack the top.</li>
+</ol>
+
+<p>To get the right angle I turned the body over and sanded the sides and reinforcing strips in the eight foot cylindrical sanding dish putting most of my downward pressure on the tail end of the top.</p>
+
+<p>I had already calculated where the bridge wold go on the top and I’d regularly pause and use a long straight edge to see how much lower the top (to be glued on after this step) was below the extension of the fretboard plane.</p>
+
+<p>Surprisingly this was actually very easy and quick to do precisely.</p>
+
+<p>One issue when either sanding with a block or against a block is ending up with a curved surface as the block or object rocks a bit moving back and forth. In this particular case having a small curve added in the sanding process just made the top look a bit better. I had curved the top with just a cylindrical sanding dish instead of spherical dish because it was much easier to make. The top itself also had the flexibility to be bent into a slight compound curve.</p>
+
+<p>The other function of sanding the gluing surfaces with the cylindrical sanding dish was to make the right angle on that gluing surface so the slight curve already established in the top when (with the glued curved braces) extends in a continuous form right to the edge of the body.</p>
+
+<p>Unfortunately I don’t have any pictures so I’m going to include one here from a bit further on in the process. You can see the strings are extending away close to parallel with the fretboard and continue to the top of the bridge where they angle down to the string termination points.</p>
+
+<p>Later after adding frets I reduced the height of the bridge a bit to lower the strings so they were closer to the fretboard. This made it easier to play.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-assembled-without-frets.jpg" alt="strings going over bridge" height="400px" /></p>
+
+<h4 id="gluing-the-top-on">Gluing the top on.</h4>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-gluing-top-1.jpg" alt="getting ready to glue top on" height="400px" /></p>
+
+<p>You can see a thin piece of mahogany already glued to the top of the neck. This piece is the same thickness as the top so that later I can glue the fretboard across both the neck and the top.</p>
+
+<p>Note: all the glue used was LMI Yellow Instrument glue.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-gluing-top-2.jpg" alt="gluing top on" height="400px" /></p>
+
+<h3 id="attaching-the-fretboard">Attaching the fretboard.</h3>
+
+<p>I used another piece of clear beech for the fretboard. The gluing surface starts along the mahogany shim strip on the neck and extends to just past the 15th fret position on the top, however in order to get this ready in time for Dina’s birthday I just used double-stick tape to hold the fretboard in position!</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-in-jig-with-fretboard.jpg" alt="getting ready to attach the fretboard" height="400px" /></p>
+
+<h3 id="using-brad-nails-to-terminate-and-hold-the-strings">Using brad nails to terminate and hold the strings.</h3>
+
+<p>I didn’t think this would really last all that long but using tiny nails hammered through the top and into the solid beech end block was a very quick way to hold the end of the strings.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-string-termination-nails.jpg" alt="string termination with nails" height="400px" /></p>
+
+<h3 id="shaping-the-headstock-and-installing-mandolin-tuners">Shaping the headstock and installing mandolin tuners.</h3>
+
+<p>I had fun figuring out a shape I liked for the headstock and the position for the mandolin tuners that would result in straight string pulls.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-headstock-straight-pulls.jpg" alt="headstock with straight string pulls" height="400px" /></p>
+
+<h3 id="making-a-lightweight-pushdown-bridge-with-butternut">Making a lightweight pushdown bridge with butternut.</h3>
+
+<p>The original bridge was made from butternut, a relatively soft and light hardwood. This bridge is not glued down and is held in place by the downward force of the strings. When I change the strings I place the bridge in roughly the correct location and tune the strings. Then I reposition the distance and angle of the bridge until the pitche of each strings octave note played on the 12th fret matches the octave harmonic produced when just lightly fingering the string directly above the 12th fret during the initial part of a pluck.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-butternut-bridge.jpg" alt="butternut bridge" height="400px" /></p>
+
+<p>Later I made another bridge from butternut with a small strip of manzanita glued to the top to provide a harder, tougher surface for the grooves where the strings run through.</p>
+
+<h3 id="ready-by-dinas-birthday">Ready by Dina’s birthday!</h3>
+
+<p>The fretboard (without frets) is just held down with double-stick tape but it’s relatively complete and sounds nice!</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-before-installing-frets.jpg" alt="complete without frets" height="400px" /></p>
+
+<p>And it was strumable on the morning of Dina’s birthday!</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/original/original-present.jpg" alt="strummable" height="400px" /></p>
+
+<h3 id="frets">Frets.</h3>
+
+<p>I used a long ruler with markings at 0.01” intervals, a good magnifying glass and bright lights to mark out the positions for the frets. I made a sort of a sliding miter box with an inspection hole cut in the miter box slot over the middle of the fret board. The sliding miter box had side rails to keep it aligned with the fret board. I used the magnifying glass to align it with a mark, clamped the side rails to fretboard, and used a Japanese pull saw to cut the fret slots.</p>
+
+<h3 id="pultruded-carbon-fiber-rods-laminated-on-the-back-of-the-neck">Pultruded carbon fiber rods laminated on the back of the neck.</h3>
+
+<p>After fretting, restringing, and playing I thought the neck had just a bit more curve than ideal. I hadn’t designed it with a truss rod so I laminated two pultruded carbon fiber rectangular rods on the back of the neck and covered them with Hard Maple so the neck wouldn’t bend any more. It hasn’t – but the next one should have some kind of truss rod.</p>
+
+<h3 id="empirical-compensation-of-saddle-and-nut">Empirical compensation of saddle and nut.</h3>
+
+<p>I made a nut with manzanita and a new butternut bridge with a small strip of manzanita glued along the top.</p>
+
+<p>I then started an iterative empirical process to develop reasonable compensation offsets for the saddle and nut. Putting a tiny radius with a very fine file on the sharp leading edges of the tuner peg holes and a good string winder turned out to be very useful in this process.</p>
+
+<h2 id="a-new-top-and-other-improvements-jan-2016">A new top and other improvements: Jan 2016.</h2>
+
+<p>The Adirondack spruce top sounded great. I enjoyed the clarity and sustain when playing softly and if I was hanging out near a fire with a number of inebriated people playing and singing loudly with more commitment than precision I could hammer the strings with a large stiff pick and the initial very loud attack would more than represent my commitment!</p>
+
+<p>The top was definitely strong enough to withstand the downward force from the strings … but it was a bit too fragile with the way I sometimes handled and/or abused the instrument. One day when I picked it grasping the body with one hand I cracked the top near the edge.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/crack-in-original-top.jpg" alt="crack in original top" height="400px" /></p>
+
+<p>I made a new top that was stronger in the following ways:</p>
+
+<ol>
+  <li>A tiny bit thicker.</li>
+  <li>The braces were just a bit bigger and made of a denser stronger white spruce.</li>
+  <li>Continued the main top cross brace all the way to the edge instead of feathering it out just before the reinforcing strips glued to the side.</li>
+</ol>
+
+<p>I also replaced the brad nails used to hold the strings with a brazed and machined part that is much stronger and more durable.</p>
+
+<h3 id="first-step-removing-existing-fretboard-and-top">First step removing existing fretboard and top.</h3>
+
+<p>I used a silicone heating pad to soften the glue used when the fretboard and top were installed. At high temperatures the LMI Yellow instrument glue starts to soften and it becomes possible to separate glue joints with little or no damage using very thin prying/scraping knives.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/removing-original-top.jpg" alt="removing original top" height="400px" /></p>
+
+<p>Since I was replacing the original top I didn’t worry about causing damage to the original top.</p>
+
+<p><em>The body and neck cleaned up after removing original top and fretboard.</em></p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/original-top-removed.jpg" alt="original top removed" height="400px" /></p>
+
+<p>The two flat panels next to the cleaned up body are the new slightly thicker panels of Adirondack spruce for the new top.</p>
+
+<h3 id="gluing-two-panels-together-to-create-new-top">Gluing two panels together to create new top.</h3>
+
+<p>At this point I was further along in the process of building guitars and I used this tool I had made for reliably gluing thin panels together.</p>
+
+<p>The edges of the two panel sections to be glued have already been made perfectly flat and straight and covered with glue. They are brought together on the four lower members which are flat, straight, and parallel. The triangular wedges are placed on top of the two panels. Then the rope is wound over each triangular wedge, around the edge of a panel section, under a lower section, back around the edge of the opposite panel section and then back around the triangular wedge.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/gluing-2-pieces-of-new-top-together.jpg" alt="gluing 2 pieces of new top together" height="400px" /></p>
+
+<p>Once this is all set up the wedges are driven gently inward which tightens the rope. This does two very useful things:</p>
+
+<ol>
+  <li>It causes the ropes to tighten and drive the bottom of the wedges into the panels pinning them against the lower flat, straight, and parallel rails.</li>
+  <li>It also causes the ropes to tighten on the outside edges of both panels driving the two panels together and clamping the glue joint.</li>
+</ol>
+
+<h3 id="gluing-main-cross-brace-on-new-top">Gluing main cross brace on new top.</h3>
+
+<p>The bottom of the brace is curved to an eight foot radius and is being glued to the top using the compression sticks in the go-bar deck to clamp the assembly onto the eight foot radius cylindrical sanding dish.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/gluing-cross-brace.jpg" alt="gluing cross brace" height="400px" /></p>
+
+<h3 id="a-more-elegant-way-to-cut-and-reinforce-the-sound-hole">A more elegant way to cut and reinforce the sound hole.</h3>
+
+<p>By this time I had also created a precision circle-cutting jig for my old router which I was using to cut sound holes for the guitars I was making.</p>
+
+<p>To create the reinforcement for the edge of the sound hole I first used the circle cutting system to  create a disk that was about 20 mm greater in diameter than the sound hole I wanted and then glued it to the top. The grain in the reinforcing disk is shifted 90 degrees from the grain orientation in the top to increase the overall strength of the lamination.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/gluing-soundhole-reinforcement-2.jpg" alt="gluing soundhole reinforcement disk" height="400px" /></p>
+
+<p>I used a one half inch steel pin to center the disk with the center of the sound hole in the top and then glued the two together.</p>
+
+<p>In the next photo the router with the circle cutting jig is upside down and the top is resting on a polycarbonate base and rotating on the steel pin attached to the polycarbonate base. The router has a 3/32” diameter bit which cuts out a circle as the top is rotated on the steel pin.</p>
+
+<p><em>Cutting sound hole through top and reinforcing disk.</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/cutting-soundhole.jpg" alt="cutting soundhole" height="400px" /></p>
+
+<p>It’s important to be precise and gentle at the very end of the rotation that cuts the circle because once the cut is complete the top is no longer securely registered to the rotational axis of the steel pin.</p>
+
+<p><em>Completed sound hole with cross-grain reinforcement</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/sound-hole-reinforcement-closeup.jpg" alt="sound hole reinforcement closeup" height="400px" /></p>
+
+<h3 id="more-about-the-router-based-circle-cutting-jig">More about the router-based circle cutting jig.</h3>
+
+<p>The center disk is what’s left after completing the circle cut.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/circle-cutting-router-jig.jpg" alt="circle cutting router jig" height="400px" /></p>
+
+<p>The polycarbonate base is screwed to six tapped holes in a block of Micarta, a dense thermoplastic resin and linen laminate.</p>
+
+<p>The router can be moved closer or further from the steel guide pin and then clamped on the two hardened steel rails.</p>
+
+<p>The threaded shaft in the upper right with the red faucet handle has a 1 mm pitch and goes through a threaded insert in the Micarta block. When the router is snug against the end of this shaft one clockwise rotation of the red handle will move the router 1 mm away from the steel guide pin and increase the diameter of the circle by 2 mm.</p>
+
+<h3 id="gluing-the-top-diagonal-braces-using-the-go-bar-deck-and-radius-dish">Gluing the top diagonal braces using the go-bar deck and radius dish.</h3>
+
+<p>The bottom glue surface of these braces have also been curved to an eight foot radius.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/using-gobar-deck-to-glue-cross-braces.jpg" alt="using gobar deck to glue cross braces" height="400px" /></p>
+
+<h3 id="shaping-and-sanding-the-top-and-bottom-braces">Shaping and sanding the top and bottom braces.</h3>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/top-and-bottom-with-braces.jpg" alt="top and bottom with braces" height="400px" /></p>
+
+<h3 id="almost-final-shape-of-top-braces">Almost final shape of top braces.</h3>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/top-braces-carved.jpg" alt="top braces carved" height="600px" /></p>
+
+<p>I feathered the outer ends of the diagonal braces so they ended just at the inner edge of the side reinforcing strips.</p>
+
+<p>The cross brace was feathered down to a thickness of about 0.8 mm at the outer edge of the side. This meant I needed to cut precise mortices in the sides and associated reinforcing strips to receive the braces before completing the gluing of the new top.</p>
+
+<h3 id="a-new-stronger-machined-steel-string-termination-system">A new stronger machined steel string termination system.</h3>
+
+<p>The small brad nails which held the strings at the tail end of the instrument had been slowly bending so I designed a much stronger system to replace them.</p>
+
+<p>The drill rods are just slightly smaller than the diameter of the cylindrical eyes on the end of the guitar strings and the are brazed into the steel plate at an angle that is perpendicular to the angle of the string. This plate is screwed into the beech end block glued into the sides at the tail of the instrument.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/dinalin/stronger-string-end-termination.jpg" alt="stronger string end termination" height="400px" /></p>
+
+<p><em>A jig for drilling angled holes in the steel plate</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/drilling-angled-holes-in-string-terminations.jpg" alt="drilling angled holes in string terminations" height="400px" /></p>
+
+<p><em>Drilling countersinks for attachment screws.</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/machining-strip-of-string-termination-elements.jpg" alt="machining strip of string termination elements" height="400px" /></p>
+
+<p><em>Brazing drill rod into steel plate.</em>
+<img src="https://learnmaketeachshare.org/assets/images/dinalin/brazing-string-termination-element.jpg" alt="brazing  drill rod into steel plate" width="600px" /></p>
+
+<h2 id="chord-fingerings-for-open-d">Chord fingerings for open D.</h2>
+
+<p>Still to be written …</p>]]></content><author><name>Stephen Bannasch</name><email>stephen.bannasch@gmail.com</email></author><category term="Making Instruments" /><category term="dinalin" /><category term="guitar" /><category term="dulcimer" /><category term="mandolin" /><summary type="html"><![CDATA[Imagine designing and build an instrument from scratch in two weeks! In Early March 2015 I was in the middle of a long-term project learning to build guitars from scratch. I was doing this with a small group mentored by a good friend John Fabel. Since I already had experience making all kinds of things I also ended up making many tools and making tools to make tools.]]></summary></entry><entry><title type="html">Imagining what could be.</title><link href="https://learnmaketeachshare.org/creating%20with%20software/2018/09/15/imagining-what-could-be.html" rel="alternate" type="text/html" title="Imagining what could be." /><published>2018-09-15T00:00:00+00:00</published><updated>2018-09-15T00:00:00+00:00</updated><id>https://learnmaketeachshare.org/creating%20with%20software/2018/09/15/imagining-what-could-be</id><content type="html" xml:base="https://learnmaketeachshare.org/creating%20with%20software/2018/09/15/imagining-what-could-be.html"><![CDATA[<p>Sometimes the critical constraining resource is what you can and can’t imagine. In 2011 Google Foundation gave us a large un-solicited grant to recreate an HTML5 version of our Java program Molecular Workbench. I desperately wanted to shift what people imagined was possible.</p>
+
+<h2 id="the-story-starts-here">The story starts here</h2>
+
+<p>For many years I worked with <a href="https://en.wikipedia.org/wiki/Robert_F._Tinker" target="_blank">Bob Tinker</a>. I first worked for Bob at <a href="https://www.terc.edu/">TERC</a> where we created and implemented the idea of probeware – connecting sensors and interfaces to microcomputers to support real-time collection and display of sensor data for science education. In 1995 we started <a href="https://concord.org/" target="_blank">Concord Consortium</a> together. We could easily imagine things that didn’t exist and then iteratively improve and evolve our ideas and designs all in our imagination before we started implemented them.</p>
+
+<p>I worked closely with Bob for a long time and it was only later that I realized that collaboratively designing things in our imaginations was unusual and this wasn’t something that everybody did.</p>
+
+<h2 id="an-unusual-opportunity">An unusual opportunity.</h2>
+
+<p>In November 2011 I was working as the Director of Technology at the Concord Consortium, a non-profit tax-exempt research and development organization focused on develping and adapting technology for science and math learning and the Google Foundation gave us a grant to develop an HTML5 version of Molecular Workbench. <a href="https://mw.concord.org/modeler/" target="_blank">Molecular Workbench</a> is an open-source, award-winning Java-based 2-D physics simulation system created and developed at Concord Consortium by Charles Xie.</p>
+
+<p>We looked at several different approaches to acomplishing this and everybody was quite skeptical that JavaScript in browsers would be fast enough to implement a real-time interactive 2-D molecular simulation. One of the approaches being considered was some kind of Java to JavaScript re-compilation approach.</p>
+
+<p>I suspected that if we rewrote it from scratch with performance in mind that JavaScript would be fast enough. The problem would be getting buy-in from the team.</p>
+
+<h3 id="earlier-examples-of-fast-javascript-computational-models">Earlier examples of fast JavaScript computational models.</h3>
+
+<p>Earlier in 2011 I converted two existing computational models with dynamic visualizations written in Java and NetLogo into JavaScript and knew that when implemented appropriately performance in browsers was much faster than people realized.</p>
+
+<h4 id="energy2d-in-javascript">Energy2D in JavaScript</h4>
+
+<p>At Concord Consortium Charles Xie had also created a Java-based modeling system for 2D thermodynamics modeling called <a href="https://energy.concord.org/energy2d/" target="_blank">Energy2D</a>. Energy2D models three modes of heat transmission: conduction, convection and a simple model of radiation.</p>
+
+<p>In June 2011 I spent a week converting the Java version of Energy2D into JavaScript. I was curious how painfully slow the JavaScript version would be.</p>
+
+<p><a href="https://stepheneb.github.io/energy2d-js/model2d-demo.html" target="_blank">energy2d-js/model2d-demo.html</a></p>
+
+<h4 id="avalanche2d-in-javascript">Avalanche2D in JavaScript</h4>
+
+<p>Later in 2011 just a month before we got the grant from the Google Foundation I had written a relatively simple computational model in JavaScript called <a href="https://github.com/stepheneb/avalanche2d-js" target="_blank">Avalanche2D-JS</a> that simulated <a href="https://en.wikipedia.org/wiki/Self-organized_criticality" target="_blank">self-organized criticality</a>, an area of physics that can model when an avalanche is most likely to occur in systems like a pile of sand getting steeper as sand is slowly added.</p>
+
+<p>The model had originally been written in NetLogo by Bob Tinker and the original NetLogo version ran about 22 model steps per second. Seth Tisue the lead developer of NetLogo rewrote Bob’s model and Seth’s faster version ran about 520 model steps per second.</p>
+
+<p>My initial JavaScript implementation started reasonably fast at about 50 model steps per second however over the next 11 days I improved the performance by a factor of 50 to almost 10,000 steps per second.</p>
+
+<p>You can run annotated versions of Avalanche2D-JS at eight different points in its development here: <a href="https://stepheneb.github.io/a2d-versions/" target="_blank">JavaScript computational model and visualization: 50x performance improvement</a></p>
+
+<p>Data I collected on performance improvement during the initial development sprint in 2011. I’ve never had the chance to use a log scale on the Y axis in a performance graph like this before!</p>
+
+<p><img src="https://stepheneb.github.io/avalanche2d-js/images/avalanche2d-js-performance.png" alt="avalanche2d-js performanceimprovement" /></p>
+
+<h3 id="should-we-rewrite-molecular-workbench-from-scratch-in-javascript">Should we rewrite Molecular Workbench from scratch in JavaScript?</h3>
+
+<p>At this point I knew that JavaScript had the computational performance for all kinds of modeling but was surprised when I had trouble getting folks to buy in to this approach.</p>
+
+<p>I think there were three aspects to their concerns:</p>
+
+<ol>
+  <li>Developers on the team and other management still thought of JavaScript in the browser as relatively slow.</li>
+  <li>The Java version of Molecular Workbench has a very extensive set of features, authorability, and extensibility and in the beginning of the grant it wasn’t clear how many of these features we would need to implement in the browser to be successful.</li>
+  <li>Most of our resources came from NSF grants. This was only the second large grant from a foundation and our first from the Google Foundation. I think the perceived risk of not using the resources in the grant from the Google Foundation effectively made people more conservative in what they could imagine.</li>
+</ol>
+
+<p>I perceived the risk quite differently.</p>
+
+<p>I wanted to create a more general framework for computational and visual modeling in order to inspire innovation and collaboration between projects and groups.</p>
+
+<p>At that time almost all of funding for Concord Consortium came as science education research grants from the National Science Foundation. We never got grants directly for the development of technology instead technology developed in a project supported the research goals. As much as I could I encouraged development of technology in one project to build on development in earlier  projects and contribute to new projects. This wasn’t as easy as it might have been if our funding wasn’t based on research grants. In order to get a research grant you need to propose something profoundly new that has a reasonable chance of being successful and providing great value. Often that also meant developing prototypes of new technology as quickly as possible without the funding for generalization.</p>
+
+<p>The Google Foundation grant was the first we ever received which was specifically for development of technology and I wanted to use these resources to develop a shared technology that encouraged more synergy between our projects and between us and similar groups.</p>
+
+<p>I suspected this opportunity would not come again and was most worried about ending up with a modeling system that could only be used for a small set of 2D molecular models and on just a few projects.</p>
+
+<p>In order to convince the team about the performance aspect I decided to build the simplest real-time interactive molecular model in JavaScript and do this as quickly as I could.</p>
+
+<h3 id="a-fast-and-simple-molecular-simulation-in-javascript">A fast and simple molecular simulation in JavaScript</h3>
+
+<p>In early November 2011 I posted this gist: <a href="https://gist.github.com/stepheneb/1342480" target="_blank">Simple Molecules</a> which implemented a 2-D molecular model using a simple model of neutral molecules interacting with each other via Lennard-Jones potential forces.</p>
+
+<h4 id="simple-molecules">Simple Molecules</h4>
+
+<p>While the model is running you can interactively change:</p>
+
+<ul>
+  <li>Number of molecules.</li>
+  <li>Temperature of the system.</li>
+  <li>Lennard-Jones potential force coefficients.</li>
+</ul>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="960px" height="500px" src="/assets/simplemolecules/index.html"></iframe>
+</div>
+
+<div class="caption">
+  <p>Click the <strong>Go</strong> button to start the model.</p>
+</div>
+
+<p>The Lennard-Jones potential force model implements an an attractive force between molecules that is at a maximum when two molecules are close to each other. When two molecules get even closer to each other the force becomes repulsive and increases very quickly as the distance shrinks.</p>
+
+<ul>
+  <li>The coefficient for the attractive force is called epsilon. Epsilon specifies the depth of the potential well between each pair of molecules. Epsilon can be changed by dragging the circular handle at the bottom of the valley in the graph up or down.</li>
+  <li>The coefficient for the distance at which the force changes from attractive to repulsive is called sigma. Sigma specifies a finite distance at which the inter-particle potential is zero. Sigma can be changed by dragging the circular handle pinned to the X-axis on the graph left or right</li>
+</ul>
+
+<p>At each step of the model a new acceleration is calculated for every molecule by summing the Lennard-Jones potential forces between each pair of molecules in the system. The new values for accelerations are then used to update the velocities of each molecule. A much simpler collision physics is used when molecules bounce off the container walls.</p>
+
+<p>As far as I know this is the very first JavaScript 2-D molecular simulation which implemented both a computational engine calculating inter-molecular forces and kinematics along with a dynamic visualization of the molecular kinematics.</p>
+
+<h2 id="the-lab-framework">The Lab framework</h2>
+
+<p>Two years later we had created an entire framework for modeling and visualization we called <a href="https://lab.concord.org/" target="_blank">The Lab Framework</a>.</p>
+
+<h3 id="charged-and-neutral-atoms-conceptual-version">Charged and Neutral Atoms (conceptual version).</h3>
+
+<p>Here’s one of the simpler models. In this model you can increase or decrease temperature and the van der Waals attractive force which is another name for the attractive element of the Lennard-Jones potential forces. You can also add an  electrical charge to the atoms which adds a second force calculation to the model.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="500px" height="405px" src="https://lab.concord.org/embeddable.html#interactives/samples/4-100-atoms-conceptual.json"></iframe>
+</div>
+
+<div class="caption">
+  <p>Click the <strong>Play</strong> button in the controller at the bottom to start the model. Make the temperature low enough and the van der Waals attractive forces will cause the atoms to start freezing into a hexagonal lattice. Try turning on <strong>Charge</strong> and note the change in the lattice form.</p>
+</div>
+
+<h3 id="comparing-deformation-caused-by-forces-applied-to-rubber-metal-and-ceramic">Comparing deformation caused by forces applied to rubber, metal, and ceramic</h3>
+
+<p>We created a utility to import existing XML-based Molecular Workbench interactives and convert them into the JSON form used by the Lab framework. Here are three examples showing different ways forces deform rubber, metal, and ceramic-like materials.</p>
+
+<h4 id="rubber-deformation">Rubber deformation</h4>
+
+<p>Rubber will bend with an applied force and spring back when the force is removed.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="540px" height="400px" src="https://lab.concord.org/embeddable.html#interactives/visual/recycling/4-tireforces.json"></iframe>
+</div>
+
+<div class="caption">
+  <p>Start the model and try adding and then removing different forces.</p>
+</div>
+
+<h4 id="metal-deformation">Metal deformation</h4>
+
+<p>Metal will deform under a force and spring back unless the force exceeds the elastic limit of the material. Force beyond this limit cause a ductile deformation.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="540px" height="400px" src="https://lab.concord.org/embeddable.html#interactives/visual/recycling/2-metalforces.json"></iframe>
+</div>
+
+<div class="caption">
+  <p>Start the model and try adding and then removing different forces.</p>
+</div>
+
+<h4 id="ceramic-deformation">Ceramic deformation</h4>
+
+<p>Ceramic will deform under a force and spring back until the force exceeds the elastic limit at which point a fracture will occur without ductile deformation.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="540px" height="400px" src="https://lab.concord.org/embeddable.html#interactives/visual/recycling/1-ceramicforces.json"></iframe>
+</div>
+
+<div class="caption">
+  <p>Start the model and try adding and then removing different forces. If you add a large force pay attention to how the ceramic material fractures.</p>
+</div>
+
+<h3 id="pendulum-experiment">Pendulum Experiment</h3>
+
+<p>The same molecular modeling engine can also be used to simulate a simpler system of forces and kinematics such as those in a pendulum.</p>
+
+<p>In this example the interactive has been extended to support collecting multiple trials investigating how the initial conditions, rod length, mass of the ball, and starting angle affect the period of the pendulum. The results of each test are saved and displayed in the experiment table and and X-Y parameter graph.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="no" allowfullscreen="true" width="700px" height="500px" src="https://lab.concord.org/embeddable.html#interactives/inquiry-examples/pendulum/3-pendulum-simple-180.json"></iframe>
+</div>
+
+<div class="caption">
+  <p>Choose your initial conditions and click the <strong>Start</strong> button. <strong>Save</strong> the results and then click <strong>Next Run</strong>. Click the <strong>?</strong> control in the upper left to see the embedded help for this interactive.</p>
+</div>
+
+<h3 id="interactive-definition-and-authoring">Interactive definition and authoring.</h3>
+
+<p>Lab framework Interactives are defined with a JSON structure for the Interactive and a second JSON structure defining the initial condition for the model.</p>
+
+<p>JSON structure for the Interactive: <a href="https://lab.concord.org/embeddable.html#interactives/samples/4-100-atoms-conceptual.json">Charged and Neutral Atoms (conceptual version)</a>.</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="true" allowfullscreen="true" width="780px" height="400px" src="https://lab.concord.org/interactives/samples/4-100-atoms-conceptual.json"></iframe>
+</div>
+
+<div class="caption">
+  <p><a href="https://lab.concord.org/interactives/samples/4-100-atoms-conceptual.json" target="_blank">lab.concord.org/interactives/samples/4-100-atoms-conceptual.json</a></p>
+</div>
+
+<p>The Interactive JSON includes a <code class="language-plaintext highlighter-rouge">models</code> array where one or more models can be referenced. In this simple interactive just one <code class="language-plaintext highlighter-rouge">md2d</code> model is defined which has a <code class="language-plaintext highlighter-rouge">url</code> property that refers to the JSON structure defining the initial condition of the molecular model.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"models"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"md2d"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100-atoms-charged"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"models-converted/lab-version/1/md2d/conversion-and-physics-examples/100-atoms$0.json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"viewOptions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"controlButtons"</span><span class="p">:</span><span class="w"> </span><span class="s2">"play_reset"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>JSON structure defining the initial condition of the molecular model:</p>
+
+<div class="iframe-container">
+  <iframe seamless="" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" frameborder="no" scrolling="true" allowfullscreen="true" width="780px" height="400px" src="https://lab.concord.org/models-converted/lab-version/1/md2d/conversion-and-physics-examples/100-atoms$0.json"></iframe>
+</div>
+
+<div class="caption">
+  <p><a href="https://lab.concord.org/models-converted/lab-version/1/md2d/conversion-and-physics-examples/100-atoms$0.json" target="_blank">lab.concord.org/models-converted/lab-version/1/md2d/conversion-and-physics-examples/100-atoms$0.json</a></p>
+</div>]]></content><author><name>Stephen Bannasch</name><email>stephen.bannasch@gmail.com</email></author><category term="Creating with Software" /><category term="creativity" /><category term="software" /><category term="technology" /><category term="visualization" /><category term="modeling" /><summary type="html"><![CDATA[Sometimes the critical constraining resource is what you can and can’t imagine. In 2011 Google Foundation gave us a large un-solicited grant to recreate an HTML5 version of our Java program Molecular Workbench. I desperately wanted to shift what people imagined was possible.]]></summary></entry></feed>

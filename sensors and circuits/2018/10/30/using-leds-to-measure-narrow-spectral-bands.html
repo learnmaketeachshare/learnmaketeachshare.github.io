@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Using LEDs to measure narrow spectral bands of light. | Learn Make Teach Share</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Using LEDs to measure narrow spectral bands of light." />
+<meta name="author" content="Stephen Bannasch" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="LEDs can be used to measure spectrally narrow bands of light by connecting them to a high-impedance current-to-voltage amplifier and treating them like inefficient photodiodes." />
+<meta property="og:description" content="LEDs can be used to measure spectrally narrow bands of light by connecting them to a high-impedance current-to-voltage amplifier and treating them like inefficient photodiodes." />
+<link rel="canonical" href="https://learnmaketeachshare.org/sensors%20and%20circuits/2018/10/30/using-leds-to-measure-narrow-spectral-bands.html" />
+<meta property="og:url" content="https://learnmaketeachshare.org/sensors%20and%20circuits/2018/10/30/using-leds-to-measure-narrow-spectral-bands.html" />
+<meta property="og:site_name" content="Learn Make Teach Share" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-10-30T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Using LEDs to measure narrow spectral bands of light." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Stephen Bannasch"},"dateModified":"2018-10-30T00:00:00+00:00","datePublished":"2018-10-30T00:00:00+00:00","description":"LEDs can be used to measure spectrally narrow bands of light by connecting them to a high-impedance current-to-voltage amplifier and treating them like inefficient photodiodes.","headline":"Using LEDs to measure narrow spectral bands of light.","mainEntityOfPage":{"@type":"WebPage","@id":"https://learnmaketeachshare.org/sensors%20and%20circuits/2018/10/30/using-leds-to-measure-narrow-spectral-bands.html"},"url":"https://learnmaketeachshare.org/sensors%20and%20circuits/2018/10/30/using-leds-to-measure-narrow-spectral-bands.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://learnmaketeachshare.org/feed.xml" title="Learn Make Teach Share" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Learn Make Teach Share</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/categories/">Categories</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Using LEDs to measure narrow spectral bands of light.</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2018-10-30T00:00:00+00:00" itemprop="datePublished">
+        Oct 30, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>LEDs can be used to measure spectrally narrow bands of light by connecting them to a high-impedance current-to-voltage amplifier and treating them like inefficient photodiodes.</p>
+
+<h3 id="using-leds-to-measure-spectrally-narrow-bands-of-light">Using LEDs to measure spectrally narrow bands of light</h3>
+
+<p>There’s a great deal you can learn about the world around you if you can measure the intensity of light in narrow spectral bands.</p>
+
+<p>Aerosols and ozone in the atmosphere, vegetation and water-stress in terrestrial plants when measured from planes or satelites.</p>
+
+<p>Often narrow spectral bands of light are measured with interference filters. These are optical filters that consist of multiple layers of dielectric materials with different refractive indices and different thicknesses. Interference filters can have bandwidths as low as 10 nm however the construction is complex and a narrow bandwidth filter might need up to 100 layers which means they are expensive.</p>
+
+<p>For example a 25 mm diameter interference filter with a 550 nm bandpass wavelength and a 15 nm bandwidth (FWHM) is about $325:
+<a href="https://www.chroma.com/products/parts/et550-15x">Chroma, ET550/15m</a></p>
+
+<p>Forrest Mimms pioneered the use of light-emitting-diodes as spectrally selective light detectors for sun photometry in 1992. It turns out that LEDs which normally are used to emit light can also be used to measure light. A very basic green LED from Radio Shack (part# 276-022A) might generate as much as 10 nA of current.</p>
+
+<p>A number of years ago <a href="https://www.dynasil.com/company/optometrics/">Optometrics</a> let me use some of the equipment they make to test LEDs for their spectral response.</p>
+
+<p>I used their <a href="https://www.dynasil.com/catalog/mini-chrom-monochromators/scanning-digital-monochromator-300-800-nm/">SDMC1-3</a> 300-800 nm scanning digital monochrometer and a 20W tungsten lamp model 7-1110 similar to this current product <a href="https://www.dynasil.com/catalog/mini-chrom-monochromators/tungsten-source-with-regulated-power-supply-for-105-125v-ac/">20W Tungsten Halogen LKight Source</a>/</p>
+
+<p>Optometrics supplied a calibration for the output of their tungsten light source and a spectral sensitivity the monochrometer which I combined topgether into a variable I called Monochrometer Output Power (uW).</p>
+
+<p>We developed a circuit board with a dual opamp to first convert the tiny currents produced by the LEDs to a voltage and then to amplify the voltage.</p>
+
+<p>At the time I only had a chance to measure two LEDs.</p>
+
+<ol>
+  <li>Green LED, Radio Shack part# 276-022A, 6.3 mcd</li>
+  <li>High brightness red LED, Radio Shack part# 276-066B, 470 mcd</li>
+</ol>
+
+<p>The results are impressive – especially for the low-brightness green LED which has a peak response at 550 nm and a bandwidth of 60 nm. While the bandwidth is about four times as wide as the Chroma, ET550/15m interference filter the cost is lower by about a factor of 1000.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/LEDs/LED-data2.gif" alt="LED spectral sensitivity graph" width="600px" /></p>
+
+<p>The red LED is a high-brightness model and about 75 times brighter than the green LED when used to emit light. However when used as a light sensor the green LED has a narrower bandwidth.</p>
+
+<p>It is easy to see the longer response tail in the shorter wavelengths for the red LED when the same spectral response data is plotted using a log scale on the Y axis. LEDs used as sensors like the green LED with very strong rejection of out of band signals are often more useful in spectroscopy.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/LEDs/LED-data2-log.gif" alt="LED spectral sensitivity semilog graph" width="600px" /></p>
+
+<h3 id="circuit-board-setup-for-testing-the-green-led">Circuit board setup for testing the green LED.</h3>
+
+<p>I worked with Walter Lenk to create a simple current-to-votage circuit board to measure the output of the LEDs.</p>
+
+<p>The power has been turned on with switch-4 and the gain has been set to 22x (220 mV/nA) by setting switch-1 on and switch-2 off. The green LED has been inserted with the flat (cathode) side facing the label FLAT (connected to ground). The output is measured on the opposite side at the GND and OUT terminals.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/LEDs/circuitboard-top.jpg" alt="LED current-to-voltage circuit board" width="600px" /></p>
+
+<p>When measured with a digital multimeter I noticed no noise in the circuit at measurements down to 0.001 V however when the signal is viewed on an oscilloscope 60 cycle hum is present. If the signal is measured with a sampling (rather than integrating) convertor either additional shielding must be used or the 60 cycle signal removed after conversion with digital signal filtering. The whole board could be mounted in and grounded to an aluminum box with the led poking out a hole in the side placed to line up with the exit apeture of the monochrometer.</p>
+
+<h3 id="schematic">Schematic</h3>
+
+<p>The circuit used a Texas Instruments TCL27L2BCP dual op-amp with the first stage set in a current-to-voltage configuration with a 10 M Ohm feedback resistance and the second stage had gains of 2.5, 5, 11, and 22x.</p>
+
+<p>During the tests the gain for the green LED was set to 22x and the gain for the high-brightness red LED was set to 11x. The effective feedback resistance for the green LED was 2.2 G Ohm and the red 1.1 G Ohm.</p>
+
+<p><img src="https://learnmaketeachshare.org/assets/images/LEDs/schematic.gif" alt="LED current to voltage schematic" width="500px" /></p>
+
+<h3 id="table-of-experimental-data">Table of experimental data</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>wavelength</td>
+      <td>green led</td>
+      <td>hi-bright<br />red led</td>
+      <td>Monochrometer<br />Output<br />Power (uW)</td>
+      <td>green led<br />corrected<br />normalized</td>
+      <td>red led<br />corrected<br />normalized</td>
+    </tr>
+    <tr>
+      <td>350</td>
+      <td> </td>
+      <td> </td>
+      <td>0.476</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>355</td>
+      <td> </td>
+      <td> </td>
+      <td>0.623</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>360</td>
+      <td> </td>
+      <td> </td>
+      <td>0.740</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>365</td>
+      <td> </td>
+      <td> </td>
+      <td>0.801</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>370</td>
+      <td> </td>
+      <td> </td>
+      <td>0.830</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>375</td>
+      <td> </td>
+      <td> </td>
+      <td>0.938</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>380</td>
+      <td> </td>
+      <td> </td>
+      <td>1.081</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>385</td>
+      <td> </td>
+      <td> </td>
+      <td>1.217</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>390</td>
+      <td> </td>
+      <td> </td>
+      <td>1.348</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>395</td>
+      <td> </td>
+      <td> </td>
+      <td>1.475</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>0.000</td>
+      <td>1.596</td>
+      <td>0.002</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>405</td>
+      <td>0.001</td>
+      <td>1.735</td>
+      <td>0.016</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>410</td>
+      <td>0.001</td>
+      <td>1.917</td>
+      <td>0.014</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>415</td>
+      <td>0.001</td>
+      <td>2.165</td>
+      <td>0.013</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>420</td>
+      <td>0.002</td>
+      <td>2.472</td>
+      <td>0.022</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>425</td>
+      <td>0.003</td>
+      <td>2.752</td>
+      <td>0.030</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>430</td>
+      <td>0.004</td>
+      <td>2.990</td>
+      <td>0.036</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>435</td>
+      <td>0.004</td>
+      <td>3.189</td>
+      <td>0.034</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>440</td>
+      <td>0.005</td>
+      <td>3.347</td>
+      <td>0.040</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>445</td>
+      <td>0.000</td>
+      <td>0.006</td>
+      <td>3.448</td>
+      <td>0.000</td>
+      <td>0.047</td>
+    </tr>
+    <tr>
+      <td>450</td>
+      <td>0.005</td>
+      <td>0.006</td>
+      <td>3.350</td>
+      <td>0.020</td>
+      <td>0.049</td>
+    </tr>
+    <tr>
+      <td>455</td>
+      <td>0.019</td>
+      <td>0.006</td>
+      <td>3.182</td>
+      <td>0.081</td>
+      <td>0.051</td>
+    </tr>
+    <tr>
+      <td>460</td>
+      <td>0.049</td>
+      <td>0.007</td>
+      <td>3.053</td>
+      <td>0.217</td>
+      <td>0.062</td>
+    </tr>
+    <tr>
+      <td>465</td>
+      <td>0.099</td>
+      <td>0.011</td>
+      <td>3.277</td>
+      <td>0.409</td>
+      <td>0.091</td>
+    </tr>
+    <tr>
+      <td>470</td>
+      <td>0.175</td>
+      <td>0.014</td>
+      <td>3.645</td>
+      <td>0.650</td>
+      <td>0.104</td>
+    </tr>
+    <tr>
+      <td>475</td>
+      <td>0.286</td>
+      <td>0.019</td>
+      <td>4.046</td>
+      <td>0.958</td>
+      <td>0.127</td>
+    </tr>
+    <tr>
+      <td>480</td>
+      <td>0.397</td>
+      <td>0.023</td>
+      <td>4.530</td>
+      <td>1.187</td>
+      <td>0.138</td>
+    </tr>
+    <tr>
+      <td>485</td>
+      <td>0.519</td>
+      <td>0.027</td>
+      <td>5.109</td>
+      <td>1.376</td>
+      <td>0.143</td>
+    </tr>
+    <tr>
+      <td>490</td>
+      <td>0.631</td>
+      <td>0.031</td>
+      <td>5.672</td>
+      <td>1.507</td>
+      <td>0.148</td>
+    </tr>
+    <tr>
+      <td>495</td>
+      <td>0.758</td>
+      <td>0.036</td>
+      <td>6.171</td>
+      <td>1.664</td>
+      <td>0.158</td>
+    </tr>
+    <tr>
+      <td>500</td>
+      <td>0.892</td>
+      <td>0.041</td>
+      <td>6.632</td>
+      <td>1.822</td>
+      <td>0.168</td>
+    </tr>
+    <tr>
+      <td>505</td>
+      <td>1.028</td>
+      <td>0.050</td>
+      <td>7.052</td>
+      <td>1.975</td>
+      <td>0.192</td>
+    </tr>
+    <tr>
+      <td>510</td>
+      <td>1.158</td>
+      <td>0.065</td>
+      <td>7.466</td>
+      <td>2.101</td>
+      <td>0.236</td>
+    </tr>
+    <tr>
+      <td>515</td>
+      <td>1.290</td>
+      <td>0.085</td>
+      <td>7.881</td>
+      <td>2.218</td>
+      <td>0.292</td>
+    </tr>
+    <tr>
+      <td>520</td>
+      <td>1.403</td>
+      <td>0.106</td>
+      <td>8.294</td>
+      <td>2.292</td>
+      <td>0.346</td>
+    </tr>
+    <tr>
+      <td>525</td>
+      <td>1.518</td>
+      <td>0.126</td>
+      <td>8.691</td>
+      <td>2.366</td>
+      <td>0.393</td>
+    </tr>
+    <tr>
+      <td>530</td>
+      <td>1.641</td>
+      <td>0.145</td>
+      <td>9.062</td>
+      <td>2.453</td>
+      <td>0.434</td>
+    </tr>
+    <tr>
+      <td>535</td>
+      <td>1.745</td>
+      <td>0.166</td>
+      <td>9.373</td>
+      <td>2.522</td>
+      <td>0.480</td>
+    </tr>
+    <tr>
+      <td>540</td>
+      <td>1.925</td>
+      <td>0.190</td>
+      <td>9.624</td>
+      <td>2.710</td>
+      <td>0.535</td>
+    </tr>
+    <tr>
+      <td>545</td>
+      <td>2.187</td>
+      <td>0.222</td>
+      <td>9.896</td>
+      <td>2.994</td>
+      <td>0.608</td>
+    </tr>
+    <tr>
+      <td>550</td>
+      <td>2.387</td>
+      <td>0.262</td>
+      <td>10.232</td>
+      <td>3.161</td>
+      <td>0.694</td>
+    </tr>
+    <tr>
+      <td>555</td>
+      <td>1.864</td>
+      <td>0.313</td>
+      <td>10.568</td>
+      <td>2.389</td>
+      <td>0.802</td>
+    </tr>
+    <tr>
+      <td>560</td>
+      <td>1.078</td>
+      <td>0.370</td>
+      <td>10.861</td>
+      <td>1.345</td>
+      <td>0.923</td>
+    </tr>
+    <tr>
+      <td>565</td>
+      <td>0.539</td>
+      <td>0.450</td>
+      <td>11.124</td>
+      <td>0.656</td>
+      <td>1.096</td>
+    </tr>
+    <tr>
+      <td>570</td>
+      <td>0.222</td>
+      <td>0.534</td>
+      <td>11.356</td>
+      <td>0.265</td>
+      <td>1.274</td>
+    </tr>
+    <tr>
+      <td>575</td>
+      <td>0.079</td>
+      <td>0.627</td>
+      <td>11.557</td>
+      <td>0.093</td>
+      <td>1.470</td>
+    </tr>
+    <tr>
+      <td>580</td>
+      <td>0.030</td>
+      <td>0.756</td>
+      <td>11.745</td>
+      <td>0.035</td>
+      <td>1.744</td>
+    </tr>
+    <tr>
+      <td>585</td>
+      <td>0.009</td>
+      <td>0.887</td>
+      <td>11.930</td>
+      <td>0.010</td>
+      <td>2.014</td>
+    </tr>
+    <tr>
+      <td>590</td>
+      <td>0.001</td>
+      <td>1.006</td>
+      <td>12.111</td>
+      <td>0.001</td>
+      <td>2.251</td>
+    </tr>
+    <tr>
+      <td>595</td>
+      <td> </td>
+      <td>1.116</td>
+      <td>12.287</td>
+      <td> </td>
+      <td>2.461</td>
+    </tr>
+    <tr>
+      <td>600</td>
+      <td> </td>
+      <td>1.180</td>
+      <td>12.457</td>
+      <td> </td>
+      <td>2.567</td>
+    </tr>
+    <tr>
+      <td>605</td>
+      <td> </td>
+      <td>1.255</td>
+      <td>12.622</td>
+      <td> </td>
+      <td>2.694</td>
+    </tr>
+    <tr>
+      <td>610</td>
+      <td> </td>
+      <td>1.280</td>
+      <td>12.784</td>
+      <td> </td>
+      <td>2.713</td>
+    </tr>
+    <tr>
+      <td>615</td>
+      <td> </td>
+      <td>1.323</td>
+      <td>12.940</td>
+      <td> </td>
+      <td>2.770</td>
+    </tr>
+    <tr>
+      <td>620</td>
+      <td> </td>
+      <td>1.343</td>
+      <td>13.071</td>
+      <td> </td>
+      <td>2.784</td>
+    </tr>
+    <tr>
+      <td>625</td>
+      <td> </td>
+      <td>1.357</td>
+      <td>13.160</td>
+      <td> </td>
+      <td>2.794</td>
+    </tr>
+    <tr>
+      <td>630</td>
+      <td> </td>
+      <td>1.367</td>
+      <td>13.225</td>
+      <td> </td>
+      <td>2.801</td>
+    </tr>
+    <tr>
+      <td>635</td>
+      <td> </td>
+      <td>1.387</td>
+      <td>13.283</td>
+      <td> </td>
+      <td>2.829</td>
+    </tr>
+    <tr>
+      <td>640</td>
+      <td> </td>
+      <td>1.394</td>
+      <td>13.338</td>
+      <td> </td>
+      <td>2.832</td>
+    </tr>
+    <tr>
+      <td>645</td>
+      <td> </td>
+      <td>1.406</td>
+      <td>13.385</td>
+      <td> </td>
+      <td>2.846</td>
+    </tr>
+    <tr>
+      <td>650</td>
+      <td> </td>
+      <td>1.306</td>
+      <td>13.426</td>
+      <td> </td>
+      <td>2.636</td>
+    </tr>
+    <tr>
+      <td>655</td>
+      <td> </td>
+      <td>0.812</td>
+      <td>13.460</td>
+      <td> </td>
+      <td>1.635</td>
+    </tr>
+    <tr>
+      <td>660</td>
+      <td> </td>
+      <td>0.403</td>
+      <td>13.488</td>
+      <td> </td>
+      <td>0.810</td>
+    </tr>
+    <tr>
+      <td>665</td>
+      <td> </td>
+      <td>0.155</td>
+      <td>13.508</td>
+      <td> </td>
+      <td>0.311</td>
+    </tr>
+    <tr>
+      <td>670</td>
+      <td> </td>
+      <td>0.057</td>
+      <td>13.523</td>
+      <td> </td>
+      <td>0.114</td>
+    </tr>
+    <tr>
+      <td>675</td>
+      <td> </td>
+      <td>0.016</td>
+      <td>13.534</td>
+      <td> </td>
+      <td>0.032</td>
+    </tr>
+    <tr>
+      <td>680</td>
+      <td> </td>
+      <td>0.004</td>
+      <td>13.541</td>
+      <td> </td>
+      <td>0.008</td>
+    </tr>
+    <tr>
+      <td>685</td>
+      <td> </td>
+      <td>0.001</td>
+      <td>13.546</td>
+      <td> </td>
+      <td>0.002</td>
+    </tr>
+    <tr>
+      <td>690</td>
+      <td> </td>
+      <td>0.000</td>
+      <td>13.548</td>
+      <td> </td>
+      <td>0.000</td>
+    </tr>
+    <tr>
+      <td>695</td>
+      <td> </td>
+      <td> </td>
+      <td>13.544</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>700</td>
+      <td> </td>
+      <td> </td>
+      <td>13.526</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>705</td>
+      <td> </td>
+      <td> </td>
+      <td>13.489</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>710</td>
+      <td> </td>
+      <td> </td>
+      <td>13.439</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>715</td>
+      <td> </td>
+      <td> </td>
+      <td>13.382</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>720</td>
+      <td> </td>
+      <td> </td>
+      <td>13.321</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>725</td>
+      <td> </td>
+      <td> </td>
+      <td>13.258</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>730</td>
+      <td> </td>
+      <td> </td>
+      <td>13.191</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>735</td>
+      <td> </td>
+      <td> </td>
+      <td>13.113</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>740</td>
+      <td> </td>
+      <td> </td>
+      <td>12.978</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>745</td>
+      <td> </td>
+      <td> </td>
+      <td>12.784</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>750</td>
+      <td> </td>
+      <td> </td>
+      <td>12.590</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>755</td>
+      <td> </td>
+      <td> </td>
+      <td>12.417</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>760</td>
+      <td> </td>
+      <td> </td>
+      <td>12.270</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>765</td>
+      <td> </td>
+      <td> </td>
+      <td>12.134</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>770</td>
+      <td> </td>
+      <td> </td>
+      <td>11.955</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>775</td>
+      <td> </td>
+      <td> </td>
+      <td>11.722</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>780</td>
+      <td> </td>
+      <td> </td>
+      <td>11.481</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>785</td>
+      <td> </td>
+      <td> </td>
+      <td>11.239</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>790</td>
+      <td> </td>
+      <td> </td>
+      <td>10.998</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>795</td>
+      <td> </td>
+      <td> </td>
+      <td>10.755</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>800</td>
+      <td> </td>
+      <td> </td>
+      <td>10.513</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="references">References</h3>
+
+<ol>
+  <li>Forrest M. Mims III, 1992, <a href="https://pdfs.semanticscholar.org/68d0/254593e8a993571cee32564a3fc295d5daf3.pdf">Sun photometer with light-emitting diodes as spectrally selective detectors</a></li>
+  <li>HAZE-SPAN, 1998, <a href="http://haze.concord.org/">Haze Sun Photometer Atmospheric Network</a></li>
+  <li>David R. Brooks, 2001, <a href="https://userpages.umbc.edu/~martins/PHYS650/LED_Photometer_BrooksJGR2001.pdf">Developoment of an inexpensive hendheld LED-based Sun photometer for the Globe program</a></li>
+  <li>Gregory Garza, 2013, <a href="https://pdfs.semanticscholar.org/df58/6feea8d50844e68c3d9831b5aa589415166d.pdf">Atmosphere Observation by the Method of LED Sun Photometry</a></li>
+  <li>Forrest M. Mims III, March 2015, Make, <a href="https://makezine.com/projects/twilight-photometer/">Build a Twilight Photometer to Detect Stratospheric Particles</a></li>
+</ol>
+
+  </div><a class="u-url" href="/sensors%20and%20circuits/2018/10/30/using-leds-to-measure-narrow-spectral-bands.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <header>Learn Make Teach Share</header>
+        <header class='subtitle'>Help create a kinder more interesting world.</header>
+        <ul class="contact-list">
+          <li class="p-name"><a class="u-email" href="mailto:stephen.bannasch@gmail.com">stephen.bannasch@gmail.com</a></li>
+          <li>
+            <a class="u-email" href="https://https://github.com/stepheneb" target="_blank" title="github">github</a>,
+            <a class="u-email" href="https://stepheneb.github.io/resume.html" target="_blank" title="resume">resume</a>,
+            <a class="u-email" href="https://stepheneb.github.io/imaginationandlogic.html" target="_blank" title="Imagination & Logic">Imagination  & Logic (consulting)</a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>Learn something new. Make something that entertains you or does something useful ... or both! Share this with people you meet! Help other folks learn how to do it.
+</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/stepheneb" target="_blank" title="stepheneb"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/stephen-bannasch-b34b3643" target="_blank" title="stephen-bannasch-b34b3643"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://ruby.social/@stepheneb" target="_blank" title="stepheneb"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#mastodon"></use></svg></a></li><li><a href="https://learnmaketeachshare.org/feed.xml" title="RSS Feed"><i class="rss"></i></a></li>
+</ul>
+</div>
+
+  </div>
+
+</footer><div id="rel-me-links">
+      <a rel="me" href="https://ruby.social/@stepheneb">Mastodon</a>
+      <a rel="me" href="https://hachyderm.io/@stepheneb">Mastodon</a>
+    </div>
+  </body>
+
+</html>
